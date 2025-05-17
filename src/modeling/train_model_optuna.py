@@ -51,6 +51,7 @@ def objective(trial, X_train, y_train, X_val, y_val, scale_pos_weight):
     }
     
     model = xgb.XGBClassifier(**param)
+    
     model.fit(
         X_train, y_train,
         eval_set=[(X_val, y_val)],
@@ -74,13 +75,18 @@ def main():
     # 타임스탬프 생성 (모델 버전 관리용)
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     
+    # 현재 스크립트의 절대 경로를 가져옴
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    # 프로젝트 루트 디렉토리 경로
+    project_root = os.path.abspath(os.path.join(script_dir, "..", ".."))
+    
     # 결과 디렉토리 생성
-    model_dir = "../../outputs/models"
+    model_dir = os.path.join(project_root, "outputs", "models")
     os.makedirs(model_dir, exist_ok=True)
     os.makedirs(os.path.join(model_dir, "plots"), exist_ok=True)
     
     # 데이터 로드
-    input_file = "../../outputs/data/weather_data_with_wind.csv"
+    input_file = os.path.join(project_root, "outputs", "data", "weather_data_with_wind.csv")
     print(f"데이터 로드 중: {input_file}")
     df = pd.read_csv(input_file, parse_dates=['acq_date'])
     print(f"로드 완료: {len(df)}행, {len(df.columns)}열")
@@ -151,6 +157,7 @@ def main():
     final_params['random_state'] = 42
     
     final_model = xgb.XGBClassifier(**final_params)
+    
     final_model.fit(
         X_train, y_train,
         eval_set=[(X_train, y_train), (X_test, y_test)],
@@ -211,17 +218,17 @@ def main():
     plt.tight_layout()
     
     # 저장
-    plot_path = f"{model_dir}/plots/optuna_results_{timestamp}.png"
+    plot_path = os.path.join(model_dir, "plots", f"optuna_results_{timestamp}.png")
     plt.savefig(plot_path)
     print(f"Optuna 최적화 결과 시각화 저장: {plot_path}")
     
     # 모델 저장
-    model_file = f"{model_dir}/xgboost_optuna_model_{timestamp}.json"
+    model_file = os.path.join(model_dir, f"xgboost_optuna_model_{timestamp}.json")
     final_model.save_model(model_file)
     print(f"모델 저장 완료: {model_file}")
     
     # 최적 하이퍼파라미터 저장
-    params_file = f"{model_dir}/best_params_{timestamp}.pkl"
+    params_file = os.path.join(model_dir, f"best_params_{timestamp}.pkl")
     joblib.dump(best_params, params_file)
     print(f"최적 하이퍼파라미터 저장 완료: {params_file}")
     

@@ -37,9 +37,35 @@ PoF(Probability of Fire) 모델을 위한 데이터 수집 스크립트 디렉�
 - 데이터 출처: ERA5-Land hourly data from 1950 to present
 - API 링크: [ERA5-Land 데이터셋](https://cds.climate.copernicus.eu/datasets/reanalysis-era5-land?tab=download)
 
+### API 키 설정
+
+#### 보안 관련 중요 사항
+
+Copernicus Climate Data Store API 키는 민감 정보이므로 `.env` 파일을 통해 안전하게 관리합니다.
+이 방식을 사용하면 API 키가 코드에 직접 포함되거나 원격 저장소에 실수로 업로드되는 것을 방지할 수 있습니다.
+
+#### .env 파일 설정 방법
+
+1. 프로젝트 루트 디렉토리에 `.env` 파일을 생성합니다
+2. 다음 내용을 입력합니다 (여러분의 API 키로 대체):
+
+```
+# Copernicus Climate Data Store API 설정
+CDS_API_URL=https://cds.climate.copernicus.eu/api
+CDS_API_KEY=your-api-key-here
+```
+
+3. `.env` 파일은 `.gitignore`에 포함되어 있으므로 원격 저장소에 업로드되지 않습니다.
+
+#### API 키 발급 방법
+
+1. [Copernicus Climate Data Store](https://cds.climate.copernicus.eu/) 계정 생성
+2. 로그인 후 우측 상단의 프로필을 클릭하고 'API Key' 메뉴 선택
+3. 'Show API key' 버튼을 클릭하여 본인의 API 키 확인
+
 ### 수집 방법
 
-1. CDS API 계정 및 API 키를 생성하고 설정 (`~/.cdsapirc` 파일 필요)
+1. 위에서 설명한 대로 `.env` 파일에 API 키를 설정합니다
 2. `collect_weather.py` 스크립트를 실행하여 데이터 수집
 
 ```bash
@@ -53,7 +79,13 @@ python collect_weather.py --start_year 2024 --end_year 2024 --start_month 1 --en
 # collect_weather.py에 구현된 코드와 유사합니다
 import cdsapi
 import calendar
+from dotenv import load_dotenv
+import os
 
+# .env 파일에서 환경 변수 로드
+load_dotenv()
+
+# API 클라이언트 초기화 (인증은 자동으로 처리됨)
 c = cdsapi.Client()
 
 # 수집 기간 설정
