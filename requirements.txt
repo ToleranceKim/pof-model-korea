@@ -1,0 +1,19 @@
+# 데이터 처리 관련
+pandas>=1.3.0
+numpy>=1.20.0
+xarray>=0.20.0
+netCDF4>=1.5.7
+
+# 데이터 수집 관련
+cdsapi>=0.5.0
+
+# 시각화 관련
+matplotlib>=3.4.0
+seaborn>=0.11.0
+
+# 머신러닝 관련
+scikit-learn>=1.0.0
+xgboost>=1.5.0
+
+# 유틸리티
+tqdm>=4.60.0 
