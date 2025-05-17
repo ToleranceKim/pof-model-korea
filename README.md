@@ -128,49 +128,54 @@ ERA5 확정값은 약 3 개월 지연 후 공개됩니다.
 
 ## 7. 파이프라인 최적화
 
-### 7.1 개선된 파이프라인 구조
+### 7.1 파이프라인 구조
 
-데이터 수집과 전처리를 분리하여 효율성과 유연성을 높인 파이프라인 구조를 적용했습니다:
-
-1. **데이터 수집 단계** (`collect_data.bat`)
+1. **데이터 수집 단계** (`collect_data.py`)
 
    - 산불 데이터 확인 (data/raw/DL_FIRE_M-C61_613954/fire_archive_M-C61_613954.csv)
    - 날씨 데이터 수집 (ERA5-Land, 설정 가능한 기간)
    - 출력: data/raw 디렉토리에 저장된 NetCDF 파일들
 
-2. **데이터 전처리 단계** (`process_data.bat`)
+2. **데이터 전처리 단계** (`process_data.py`)
 
    - 산불 데이터 전처리 → `af_flag_korea.csv` 생성
    - 날씨 데이터 전처리 및 풍속 계산, 산불 데이터와 병합
    - 데이터 차원 일치 검증
    - 출력: `outputs/data/weather_data_with_wind.csv`
 
-3. **통합 실행** (`run.bat`)
+3. **통합 실행** (`run.py`)
+
    - 위 두 단계를 순차적으로 실행하는 통합 스크립트
+
+4. **모델링 실행** (`run_modeling.py`)
+   - 기본 XGBoost 모델 훈련
+   - Optuna를 사용한 하이퍼파라미터 튜닝(선택 사항)
 
 ### 7.2 파이프라인 실행 방법
 
 ```bash
 # 전체 파이프라인 실행 (수집 + 전처리)
-run.bat
+python run.py
 
-# 데이터 수집만 실행 (기간 설정은 collect_data.bat 파일 내에서 수정)
-collect_data.bat
+# 데이터 수집만 실행
+python collect_data.py --start_year 2024 --end_year 2024 --start_month 1 --end_month 12
 
 # 전처리만 실행 (이미 데이터가 수집된 경우)
-process_data.bat
+python process_data.py
+
+# 모델링 실행
+python run_modeling.py
 ```
 
 ### 7.3 데이터 수집 기간 설정
 
-`collect_data.bat` 파일에서 다음 변수를 수정하여 날씨 데이터 수집 기간을 설정할 수 있습니다:
+`collect_data.py` 스크립트는 명령줄 인자를 통해 데이터 수집 기간을 설정할 수 있습니다:
 
-```batch
-set START_YEAR=2024   # 시작 연도
-set END_YEAR=2024     # 종료 연도
-set START_MONTH=1     # 시작 월(1-12)
-set END_MONTH=12      # 종료 월(1-12)
+```bash
+python collect_data.py --start_year 2024 --end_year 2024 --start_month 1 --end_month 12
 ```
+
+기본값은 2024년 전체 기간으로 설정되어 있습니다.
 
 ### 7.4 데이터 차원 검증
 
@@ -182,10 +187,3 @@ set END_MONTH=12      # 종료 월(1-12)
 - 중복 데이터 및 결측치 존재 여부
 
 등을 확인하고 경고 메시지를 출력합니다.
-
-### 7.5 최적화 효과
-
-- **모듈화**: 데이터 수집과 전처리를 분리하여 필요한 단계만 실행 가능
-- **유연성**: 날씨 데이터 수집 기간을 쉽게 설정 가능
-- **검증**: 데이터 차원 일치 검증 단계 추가로 품질 보장
-- **정확성**: 산불 데이터 경로 오류 수정 및 적절한 병합 방식 적용
