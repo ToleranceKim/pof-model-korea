@@ -23,12 +23,36 @@ def check_environment():
             missing_packages.append(package)
     
     if missing_packages:
-        print(f"필요한 패키지를 설치합니다: {', '.join(missing_packages)}")
-        try:
-            subprocess.run([sys.executable, "-m", "pip", "install"] + missing_packages, check=True)
-        except subprocess.CalledProcessError:
-            print("오류: 패키지 설치 실패")
+        print(f"오류: 필요한 패키지가 설치되어 있지 않습니다: {', '.join(missing_packages)}")
+        print("다음 명령어로 필요한 패키지를 설치해주세요:")
+        print("pip install -r requirements.txt")
+        return False
+    
+    # XGBoost 버전 확인
+    try:
+        import xgboost as xgb
+        xgb_version = xgb.__version__
+        print(f"XGBoost 버전: {xgb_version}")
+        
+        # 버전 분해
+        major, minor, *rest = xgb_version.split('.')
+        version_int = int(major) * 100 + int(minor)
+        
+        if version_int >= 300:  # 3.0.0 이상인 경우
+            print("\n경고: XGBoost 3.0.0 이상 버전은 현재 코드와 호환되지 않습니다.")
+            print("다음 명령어로 호환되는 버전(1.7.6)으로 다운그레이드해주세요:")
+            print("pip install xgboost==1.7.6")
             return False
+        
+        if version_int < 100:  # 1.0.0 미만일 경우
+            print("\n경고: 설치된 XGBoost 버전이 오래되었습니다.")
+            print("현재 모델 코드는 XGBoost 1.7.6 버전에 최적화되어 있습니다.")
+            print("다음 명령어로 설치해주세요:")
+            print("pip install xgboost==1.7.6")
+            return False
+    except Exception as e:
+        print(f"XGBoost 버전 확인 중 오류: {e}")
+        return False
     
     print("패키지 확인 완료")
     return True

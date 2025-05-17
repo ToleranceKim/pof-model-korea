@@ -18,13 +18,18 @@ def main():
     start_time = time.time() 
     print("=== 산불 예측 모델 학습 시작 ===") 
  
+    # 현재 스크립트의 절대 경로를 가져옴
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    # 프로젝트 루트 디렉토리 경로
+    project_root = os.path.abspath(os.path.join(script_dir, "..", ".."))
+    
     # 결과 디렉토리 생성 
-    model_dir = "../../outputs/models" 
+    model_dir = os.path.join(project_root, "outputs", "models")
     os.makedirs(model_dir, exist_ok=True) 
     os.makedirs(os.path.join(model_dir, "plots"), exist_ok=True) 
  
     # 데이터 로드 
-    input_file = "../../outputs/data/weather_data_with_wind.csv" 
+    input_file = os.path.join(project_root, "outputs", "data", "weather_data_with_wind.csv")
     print(f"데이터 로드 중: {input_file}") 
     df = pd.read_csv(input_file, parse_dates=['acq_date']) 
     print(f"로드 완료: {len(df)}행, {len(df.columns)}열") 
@@ -74,7 +79,7 @@ def main():
         max_depth=5, 
         min_child_weight=1, 
         subsample=0.8, 
-        colsample_bytree=0.8, 
+        colsample_bytree=0.8,
         random_state=42 
     ) 
     
@@ -116,11 +121,11 @@ def main():
     xgb.plot_importance(model, max_num_features=len(features)) 
     plt.title("특성 중요도") 
     plt.tight_layout() 
-    plt.savefig(f"{model_dir}/plots/feature_importance.png") 
-    print(f"특성 중요도 시각화 저장: {model_dir}/plots/feature_importance.png") 
+    plt.savefig(os.path.join(model_dir, "plots", "feature_importance.png"))
+    print(f"특성 중요도 시각화 저장: {os.path.join(model_dir, 'plots', 'feature_importance.png')}") 
     
     # 모델 저장 
-    model_file = f"{model_dir}/xgboost_weather_model.json" 
+    model_file = os.path.join(model_dir, "xgboost_weather_model.json")
     model.save_model(model_file) 
     print(f"모델 저장 완료: {model_file}") 
     

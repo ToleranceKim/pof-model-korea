@@ -7,6 +7,42 @@ import os
 import sys
 import argparse
 from datetime import datetime
+from dotenv import load_dotenv
+from pathlib import Path
+
+def create_cdsapirc_from_env():
+    """
+    .env 파일의 환경변수를 사용하여 ~/.cdsapirc 파일을 생성합니다.
+    이렇게 하면 cdsapi가 자동으로 인증 정보를 찾을 수 있습니다.
+    """
+    # .env 파일 로드
+    load_dotenv()
+    
+    # 환경 변수에서 API 정보 가져오기
+    cds_api_url = os.getenv('CDS_API_URL')
+    cds_api_key = os.getenv('CDS_API_KEY')
+    
+    if not cds_api_url or not cds_api_key:
+        print("오류: CDS_API_URL 또는 CDS_API_KEY 환경변수가 설정되지 않았습니다.")
+        print(".env 파일이 프로젝트 루트 디렉토리에 있는지 확인하고, 필요한 변수가 설정되어 있는지 확인하세요.")
+        return False
+    
+    # ~/.cdsapirc 파일 경로 구성
+    home_dir = str(Path.home())
+    cdsapirc_path = os.path.join(home_dir, '.cdsapirc')
+    
+    # 파일 내용 구성
+    content = f"url: {cds_api_url}\nkey: {cds_api_key}\n"
+    
+    try:
+        # 파일에 내용 쓰기
+        with open(cdsapirc_path, 'w') as f:
+            f.write(content)
+        print(f"CDS API 설정이 {cdsapirc_path}에 작성되었습니다.")
+        return True
+    except Exception as e:
+        print(f"~/.cdsapirc 파일 생성 중 오류 발생: {e}")
+        return False
 
 def collect_weather(start_year, end_year, start_month, end_month, output_dir):
     """
@@ -32,6 +68,10 @@ def collect_weather(start_year, end_year, start_month, end_month, output_dir):
     print("=== 날씨 데이터 수집 시작 ===")
     
     try:
+        # .env에서 CDS API 설정 생성
+        if not create_cdsapirc_from_env():
+            return []
+            
         c = cdsapi.Client()
         
         # 시작-종료 년월 범위 내의 모든 년월 조합 생성
