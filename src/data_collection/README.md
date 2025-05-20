@@ -123,3 +123,51 @@ for year in years:
             target_file
         )
 ```
+
+## 3. 낙뢰 데이터 수집 제약사항
+
+### 1. 데이터 가용성 문제
+
+- 낙뢰 플래시 밀도(파라미터 228050, shortName=litoti)는 공개 CDS API를 통해 접근할 수 없음
+- 해당 변수는 ECMWF 백엔드 데이터 명세서에는 존재하나, 공개 API 파라미터 목록에는 포함되어 있지 않음
+- 이는 Copernicus CDS의 공개 데이터셋(reanalysis-era5-complete)에 해당 변수가 포함되지 않기 때문
+
+### 2. 접근 권한 요구사항
+
+ECMWF 운영 예보 데이터에 접근하기 위해서는 다음 중 하나의 자격이 필요:
+
+1. ECMWF 회원국 및 협력국 사용자
+
+   - 국가기상청(NMHS) 소속자 또는 그 권한을 받은 사용자만 접근 가능
+   - 별도 비용 없이 전체 아카이브 접근 가능
+   - Computing Representative를 통해 접근 권한 획득 필요
+
+2. WMO 회원국 연구자
+
+   - 국가기상청(NMHS) 소속 연구자는 "non-commercial licence" 신청 가능
+   - 연구 및 검증 목적으로 실시간(valid) 예보 제품 무료 사용 가능
+   - 라이선스 신청 및 승인 절차 필요
+
+3. 상업 사용자
+   - Commercial Web Products Standard Licence 구매 필요
+   - 연간 사용료 EUR 6,000 (소기업 50% 할인 가능)
+   - 연구 목적 시 면제 가능성 있음 (별도 심사)
+
+### 3. 대체 데이터 소스
+
+1. AWS Open Data
+
+   - "ecmwf-forecasts" S3 버킷을 통해 일부 실시간 예보 파라미터 무료 제공
+   - 단, 낙뢰 파라미터 포함 여부 확인 필요
+
+2. 대체 모델링 방법
+   - Proxy 모델: CAPE, 대류강수량 등을 이용한 parameterization
+   - 위성/지상 관측 데이터: WWLLN, LIS/OTD 등
+
+### 4. 참고사항
+
+- PoF 논문에서 사용된 낙뢰 데이터는 ECMWF 운영 예보 MARS 데이터를 통해 수집됨
+- Copernicus CDS API만으로는 해당 데이터 수집이 불가능
+- MarsNoDataError는 권한 문제가 아닌, 요청한 데이터셋에 해당 변수가 존재하지 않아서 발생
+
+## 기타 데이터 수집

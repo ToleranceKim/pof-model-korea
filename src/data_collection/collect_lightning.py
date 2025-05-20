@@ -154,9 +154,9 @@ def create_env_file():
         print(f"상세 오류: {traceback.format_exc()}")
         return False
 
-def test_lightning_availability(year, month, day, variable_name):
+def test_lightning_availability(year, month, day):
     """
-    번개 데이터의 가용성을 테스트합니다.
+    ERA5-Complete에서 번개 데이터의 가용성을 테스트합니다.
     
     Parameters:
     -----------
@@ -166,8 +166,6 @@ def test_lightning_availability(year, month, day, variable_name):
         테스트할 월 (1-12)
     day : int
         테스트할 일
-    variable_name : str
-        테스트할 변수명
         
     Returns:
     --------
@@ -179,7 +177,15 @@ def test_lightning_availability(year, month, day, variable_name):
             return False
             
         print(f"\n=== {year}년 {month:02d}월 {day:02d}일 번개 데이터 가용성 테스트 ===")
-        print(f"테스트 변수: {variable_name}")
+        print(f"테스트 변수: 낙뢰 밀도 (param: 228.228)")
+        
+        # 2000년 1월 1일 이전인지 확인
+        test_date = datetime(year, month, day)
+        min_date = datetime(2000, 1, 1)
+        if test_date < min_date:
+            print(f" 오류: 낙뢰 변수는 {min_date.strftime('%Y-%m-%d')}부터 사용 가능합니다.")
+            print(f"   테스트 날짜({test_date.strftime('%Y-%m-%d')})가 이 기간보다 이전입니다.")
+            return False
         
         try:
             c = cdsapi.Client(debug=True)
@@ -193,35 +199,38 @@ def test_lightning_availability(year, month, day, variable_name):
         import tempfile
         import os
         temp_dir = tempfile.gettempdir()
-        test_file = os.path.join(temp_dir, f"cds_test_{year}{month:02d}{day:02d}_{variable_name}.nc")
+        test_file = os.path.join(temp_dir, f"cds_test_{year}{month:02d}{day:02d}_lightning.grib")
         
         print(f"API 요청 전송 중... (최소 데이터셋 - 단일 시간점)")
         print(f"요청 파라미터:")
         request_params = {
-            'variable': [variable_name],
-            'product_type': 'reanalysis',
-            'year': f'{year}',
-            'month': f'{month:02d}',
-            'day': f'{day:02d}',
-            'time': ['00:00'],  # 단일 시간만 요청
-            'area': [39, 124, 33, 132],
-            'format': 'netcdf'
+            'class': 'od',                       # 운영 예보(Operational Deterministic)
+            'stream': 'oper',                    # 고해상도 예보
+            'type': 'fc',                        # Forecast
+            'date': f"{year}-{month:02d}-{day:02d}",
+            'time': ['00:00', '06:00', '12:00', '18:00'],  # 예보 초기화 시각
+            'param': '228050',                   # Total lightning flash density
+            'levtype': 'sfc',                    # Surface
+            'grid': '0.1/0.1',
+            'area': '39/124/33/132',            # N/W/S/E
+            'format': 'grib'
         }
         pprint.pprint(request_params)
         
         try:
             print(f"테스트 파일: {test_file}")
             print("데이터 요청 시작 (취소할 경우 Ctrl+C를 누르세요)...")
+            print("(ERA5-Complete는 테이프 아카이브에서 데이터를 가져오므로 시간이 오래 걸릴 수 있습니다)")
             
             # 실제 요청 전송 - 성공 여부만 확인
             result = c.retrieve(
-                'reanalysis-era5-single-levels',
+                'reanalysis-era5-complete',
                 request_params,
                 test_file
             )
             
-            print("\n✅ 테스트 성공! 데이터 요청이 정상적으로 처리되었습니다.")
-            print(f"✅ {variable_name} 변수는 {year}년 {month:02d}월 {day:02d}일에 사용 가능합니다.")
+            print("\n 테스트 성공! 데이터 요청이 정상적으로 처리되었습니다.")
+            print(f" 낙뢰 밀도 데이터는 {year}년 {month:02d}월 {day:02d}일에 사용 가능합니다.")
             
             # 테스트 파일 정보 출력
             if os.path.exists(test_file):
@@ -240,16 +249,8 @@ def test_lightning_availability(year, month, day, variable_name):
             return True
             
         except Exception as e:
-            print(f"\n❌ API 요청 실패: {e}")
+            print(f"\n API 요청 실패: {e}")
             print(f"상세 오류: {traceback.format_exc()}")
-            
-            if "Cannot load dictionary values into a string" in str(e) or "ResourceNotFound" in str(e):
-                print("\n💡 힌트: 변수명이 정확하지 않을 수 있습니다.")
-                print("다음 변수명을 시도해보세요:")
-                print("- 'litoti' (변수 약어)")
-                print("- 'total_lightning_flash_density' (변수 전체 이름)")
-            elif "FileNotFoundError" in str(e):
-                print("\n💡 힌트: 요청한 날짜에 데이터가 없을 수 있습니다. 더 과거 날짜를 시도해보세요.")
             
             # 일부 성공한 경우 임시 파일 정리
             if os.path.exists(test_file):
@@ -261,25 +262,26 @@ def test_lightning_availability(year, month, day, variable_name):
                     
             return False
     except Exception as e:
-        print(f"\n❌ 테스트 실패: {e}")
+        print(f"\n 테스트 실패: {e}")
         print(f"상세 오류: {traceback.format_exc()}")
         return False
 
-def collect_lightning(start_year, end_year, start_month, end_month, output_dir):
+def collect_lightning(start_year, end_year, start_month, end_month, output_dir, output_format='netcdf'):
     """
-    ERA5 단층(single-levels) 번개 데이터를 수집합니다.
+    ERA5-Complete에서 번개 데이터를 수집합니다.
     
-    수집 변수: 'litoti' (Instantaneous total lightning flash density)
-    단위: km-2 day-1 (제곱킬로미터당 하루에 발생하는 번개 수)
-    GRIB 파라미터 ID: 228050
+    수집 변수: '228.228' (Instantaneous total lightning flash density)
+    단위: flashes m⁻² s⁻¹ (→ 변환 시 86400 * 1e6 = flashes km⁻² day⁻¹)
     
     참고: 이 파라미터는 지정된 시간의 총 번개 발생률을 제공합니다.
     구름-지상 번개(cloud-to-ground)와 구름 내 번개(intra-cloud) 모두 포함됩니다.
     
+     중요: 낙뢰 데이터는 2000년 1월 1일 이후부터만 사용 가능합니다.
+    
     Parameters:
     -----------
     start_year : int
-        시작 연도
+        시작 연도 (2000 이후)
     end_year : int
         종료 연도
     start_month : int
@@ -288,6 +290,8 @@ def collect_lightning(start_year, end_year, start_month, end_month, output_dir):
         종료 월 (1-12)
     output_dir : str
         출력 디렉토리 경로
+    output_format : str
+        출력 파일 형식 ('netcdf' 또는 'grib')
     
     Returns:
     --------
@@ -299,6 +303,16 @@ def collect_lightning(start_year, end_year, start_month, end_month, output_dir):
         # .env에서 CDS API 설정 생성
         if not create_cdsapirc_from_env():
             return []
+        
+        # 2000년 1월 1일 이전 데이터 요청 방지
+        min_date = datetime(2000, 1, 1)
+        start_date = datetime(start_year, start_month, 1)
+        
+        if start_date < min_date:
+            print(f"경고: 낙뢰 데이터는 {min_date.strftime('%Y-%m-%d')} 이후부터만 사용 가능합니다.")
+            print(f"   시작 날짜를 {min_date.strftime('%Y-%m-%d')}로 조정합니다.")
+            start_year = 2000
+            start_month = 1
         
         print("CDS API 클라이언트 초기화 중...")    
         try:
@@ -316,41 +330,54 @@ def collect_lightning(start_year, end_year, start_month, end_month, output_dir):
             month_end = end_month if year == end_year else 12
             
             for month in range(month_start, month_end + 1):
-                year_month_pairs.append((year, month))
+                # 각 월의 시작일과 마지막 일 구하기
+                _, last_day = calendar.monthrange(year, month)
+                year_month_pairs.append((year, month, 1, last_day))
         
-        print(f"수집 기간: {start_year}-{start_month:02d} ~ {end_year}-{end_month:02d} ({len(year_month_pairs)} 개월)")
+        print(f"수집 기간: {start_year}-{start_month:02d} ~ {end_year}-{end_month:02d}")
+        print(f"요청 개월 수: {len(year_month_pairs)}")
         
         # 출력 디렉토리 생성
         os.makedirs(output_dir, exist_ok=True)
         downloaded_files = []
         
         # BBOX 확장: 북위 39도까지 포함
-        bbox = [39, 124, 33, 132]  # [북위, 서경, 남위, 동경]
-        print(f"지역 범위: 북위 {bbox[0]}-{bbox[2]}도, 동경 {bbox[3]}-{bbox[1]}도")
+        bbox = '39/124/33/132'  # [북위/서경/남위/동경] 형식으로 변경
+        print(f"지역 범위: 북위 {bbox.split('/')[0]}-{bbox.split('/')[2]}도, 동경 {bbox.split('/')[3]}-{bbox.split('/')[1]}도")
         
-        for year, month in year_month_pairs:
-            # 해당 월의 실제 일수만 추리기
-            max_day = calendar.monthrange(year, month)[1]
-            day_list = [f"{d:02d}" for d in range(1, max_day+1)]
+        # 출력 형식 설정
+        file_format = output_format.lower()
+        if file_format not in ['netcdf', 'grib']:
+            print(f"지원하지 않는 출력 형식: {output_format}. 기본값 'netcdf'로 설정합니다.")
+            file_format = 'netcdf'
+        
+        file_extension = '.nc' if file_format == 'netcdf' else '.grib'
+        
+        for year, month, start_day, end_day in year_month_pairs:
+            # 날짜 범위 문자열 생성
+            date_str = f"{year}-{month:02d}-{start_day:02d}/to/{year}-{month:02d}-{end_day:02d}"
             
             # 시간 목록
             times = [f"{h:02d}:00" for h in range(0,24)]
             
-            target_file = os.path.join(output_dir, f"era5_ltg_{year}{month:02d}.nc")
-            print(f"Retrieving {target_file} ...")
+            target_file = os.path.join(output_dir, f"era5_ltg_{year}{month:02d}{file_extension}")
+            print(f"Retrieving {target_file} for period {date_str}...")
             
             try:
+                print("데이터 요청 중... (ERA5-Complete는 테이프 아카이브에서 데이터를 가져오므로 시간이 오래 걸릴 수 있습니다)")
                 c.retrieve(
-                    'reanalysis-era5-single-levels',
+                    'reanalysis-era5-complete',
                     {
-                        'variable': ['litoti'],  # ECMWF 파라미터 DB에 따른 정확한 변수명
-                        'product_type': 'reanalysis',
-                        'year':   [f"{year}"],
-                        'month':  [f"{month:02d}"],
-                        'day':    day_list,
-                        'time':   times,
-                        'area':   bbox,
-                        'format': 'netcdf'
+                        'class': 'od',                       # 운영 예보(Operational Deterministic)
+                        'stream': 'oper',                    # 고해상도 예보
+                        'type': 'fc',                        # Forecast
+                        'date': date_str,
+                        'time': ['00:00', '06:00', '12:00', '18:00'],  # 예보 초기화 시각
+                        'param': '228050',                   # Total lightning flash density
+                        'levtype': 'sfc',                    # Surface
+                        'grid': '0.1/0.1',
+                        'area': bbox,
+                        'format': file_format
                     },
                     target_file
                 )
@@ -370,15 +397,15 @@ def collect_lightning(start_year, end_year, start_month, end_month, output_dir):
         return []
 
 def main():
-    parser = argparse.ArgumentParser(description='ERA5 단층(single-levels) 번개 데이터 수집 (변수: litoti)')
+    parser = argparse.ArgumentParser(description='ERA5-Complete 번개 데이터 수집 (변수: 228.228 - Instantaneous total lightning flash density)')
     
     # 현재 연도와 월 구하기
     current_year = datetime.now().year
     current_month = datetime.now().month
     
     # 명령행 인자 정의
-    parser.add_argument('--start_year', type=int, default=current_year,
-                        help='시작 연도 (기본값: 현재 연도)')
+    parser.add_argument('--start_year', type=int, default=2000,
+                        help='시작 연도 (기본값: 2000, 최소값: 2000)')
     parser.add_argument('--end_year', type=int, default=current_year,
                         help='종료 연도 (기본값: 현재 연도)')
     parser.add_argument('--start_month', type=int, default=1,
@@ -387,14 +414,14 @@ def main():
                         help='종료 월, 1-12 (기본값: 현재 월)')
     parser.add_argument('--output_dir', type=str, default='../../data/raw',
                         help='출력 디렉토리 경로 (기본값: ../../data/raw)')
+    parser.add_argument('--output_format', type=str, choices=['netcdf', 'grib'], default='netcdf',
+                        help='출력 파일 형식 (기본값: netcdf)')
     parser.add_argument('--check_config', action='store_true',
                         help='CDS API 설정만 확인하고 종료')
     parser.add_argument('--create_env', action='store_true',
                         help='.env 파일을 새로 생성')
     parser.add_argument('--test', action='store_true',
                         help='변수 가용성 테스트만 수행 (데이터 다운로드 없음)')
-    parser.add_argument('--var', type=str, default='litoti',
-                        help='테스트할 변수명 (기본값: litoti)')
     parser.add_argument('--test_date', type=str,
                         help='테스트할 날짜 (YYYY-MM-DD 형식)')
     
@@ -414,16 +441,26 @@ def main():
         if args.test_date:
             try:
                 test_date = datetime.strptime(args.test_date, "%Y-%m-%d")
+                # 미래 날짜 체크
+                current_date = datetime.now()
+                if test_date > current_date:
+                    print(f"경고: 미래 날짜({test_date.strftime('%Y-%m-%d')})는 사용할 수 없습니다.")
+                    print(f"현재 날짜({current_date.strftime('%Y-%m-%d')}) 이전의 날짜를 사용해주세요.")
+                    return 1
             except ValueError:
                 print("오류: 날짜 형식은 YYYY-MM-DD여야 합니다.")
                 return 1
         else:
-            # 현재 날짜에서 3개월 전 데이터로 테스트
-            test_date = datetime.now() - timedelta(days=90)
+            # 현재 날짜에서 3개월 전 데이터로 테스트 (단, 2000년 1월 1일 이후인지 확인)
+            current_date = datetime.now()
+            test_date = current_date - timedelta(days=90)
+            min_date = datetime(2000, 1, 1)
+            if test_date < min_date:
+                test_date = min_date
         
+        print(f"테스트 날짜: {test_date.strftime('%Y-%m-%d')}")
         success = test_lightning_availability(
-            test_date.year, test_date.month, test_date.day, 
-            args.var
+            test_date.year, test_date.month, test_date.day
         )
         return 0 if success else 1
     
@@ -458,11 +495,19 @@ def main():
         print("오류: 같은 해에서는 시작 월이 종료 월보다 작거나 같아야 합니다.")
         return 1
     
+    # 2000년 1월 1일 이전 데이터 요청 방지
+    if args.start_year < 2000:
+        print("경고: 낙뢰 데이터는 2000년 1월 1일 이후부터만 사용 가능합니다.")
+        print("   시작 날짜를 2000년 1월로 조정합니다.")
+        args.start_year = 2000
+        args.start_month = 1
+    
     # 데이터 수집 실행
     files = collect_lightning(
         args.start_year, args.end_year,
         args.start_month, args.end_month,
-        args.output_dir
+        args.output_dir,
+        args.output_format
     )
     
     if not files:
