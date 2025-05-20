@@ -12,16 +12,17 @@
 pof-model-test/
 │
 ├── README.md                  # 프로젝트 개요 및 사용법
-├── requirements.txt           # 필요 패키지 목록 [신규]
+├── requirements.txt           # 필요 패키지 목록
 ├── run_pipeline.bat           # 전체 파이프라인 실행 스크립트
 │
 ├── data/                      # 원시 데이터 저장
-│   ├── raw/                   # 수집된 원본 데이터 [신규]
+│   ├── raw/                   # 수집된 원본 데이터
 │   │   └── era5_korea_*.nc    # ERA5 날씨 데이터
-│   └── reference/             # 참조 데이터 [신규]
+│   └── reference/             # 참조 데이터
 │       └── af_flag_korea.csv  # 산불 발생 데이터
+│       └── road_density_0.1deg.csv  # 도로 밀도 데이터
 │
-├── src/                       # 소스 코드 [신규]
+├── src/                       # 소스 코드
 │   ├── data_collection/       # 데이터 수집 관련 코드
 │   │   └── collect_weather.py # 날씨 데이터 수집
 │   │
@@ -34,7 +35,7 @@ pof-model-test/
 ├── processed_data/            # 전처리된 중간 데이터
 │   └── era5_korea_*.csv       # 전처리된 날씨 데이터
 │
-└── outputs/                   # 최종 결과물 [신규]
+└── outputs/                   # 최종 결과물
     ├── data/                  # 최종 데이터셋
     │   └── weather_data.csv   # 모델링용 최종 데이터
     │
