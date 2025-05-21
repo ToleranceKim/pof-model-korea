@@ -3,14 +3,18 @@ pandas>=1.3.0
 numpy>=1.19.5
 xarray>=0.20.0
 netCDF4>=1.5.7
+cfgrib>=0.9.9
 
 # 데이터 수집 관련
 cdsapi>=0.5.0
 python-dotenv>=0.20.0
+ecmwf-opendata>=0.1.0
+eccodes>=1.5.0
 
 # 시각화 관련
 matplotlib>=3.4.0
 seaborn>=0.11.0
+cartopy>=0.21.0
 
 # 머신러닝 관련
 scikit-learn>=1.4.0
