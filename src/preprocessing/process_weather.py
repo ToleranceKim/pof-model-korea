@@ -20,12 +20,12 @@ def process_netcdf_from_zip(zip_file_path, output_dir):
         output_dir: 출력 디렉토리
         
     Returns:
-        처리된 CSV 파일 경로 또는 None (처리 실패 시)
+        처리된 Parquet 파일 경로 또는 None (처리 실패 시)
     """
     # 파일명에서 연월 추출
     file_name = os.path.basename(zip_file_path)
     year_month = file_name.split('_')[-1].split('.')[0]
-    output_file = os.path.join(output_dir, f"era5_korea_{year_month}.csv")
+    output_file = os.path.join(output_dir, f"era5_korea_{year_month}.parquet")
     
     # 이미 처리된 파일이면 건너뜀
     if os.path.exists(output_file):
@@ -193,9 +193,9 @@ def process_netcdf_from_zip(zip_file_path, output_dir):
             null_counts = result_df.isnull().sum()
             print(f"\nNull value counts in final dataframe:\n{null_counts}")
             
-            # csv 저장
+            # csv 저장 부분을 parquet로 변경
             print(f"\nSaving to {output_file}")
-            result_df.to_csv(output_file, index=False)
+            result_df.to_parquet(output_file, index=False)
             print(f"Successfully saved {output_file} with shape {result_df.shape}")
             
             return output_file
@@ -237,7 +237,7 @@ def main():
                         help='처리된 데이터 저장 디렉토리 경로')
     parser.add_argument('--target_path', type=str, default='../ml_modeling/af_flag_korea.csv',
                         help='타겟 데이터 CSV 파일 경로')
-    parser.add_argument('--final_output', type=str, default='../ml_modeling/weather_data.csv',
+    parser.add_argument('--final_output', type=str, default='../ml_modeling/weather_data.parquet',
                         help='최종 병합된 데이터 저장 경로')
     parser.add_argument('--test_mode', action='store_true',
                         help='테스트 모드 (일부 파일만 처리)')
@@ -270,12 +270,12 @@ def main():
         # 각 파일 처리 후 메모리 정리
         gc.collect()
     
-    # 모든 CSV 파일 병합
+    # 모든 Parquet 파일 병합
     if csv_files:
-        print(f"Merging {len(csv_files)} CSV files")
+        print(f"Merging {len(csv_files)} Parquet files")
         dfs = []
-        for csv_file in tqdm(csv_files):
-            df = pd.read_csv(csv_file, parse_dates=['acq_date'])
+        for parquet_file in tqdm(csv_files):
+            df = pd.read_parquet(parquet_file)
             dfs.append(df)
             # 메모리 정리
             del df
@@ -328,9 +328,9 @@ def main():
                 print(f"Final data shape: {final_df.shape}")
                 print(f"Positive samples: {final_df.af_flag.sum()} ({final_df.af_flag.mean()*100:.2f}%)")
                 
-                # 최종 데이터 저장
+                # 최종 데이터 저장 (Parquet 형식으로)
                 print(f"Saving final data to {args.final_output}")
-                final_df.to_csv(args.final_output, index=False)
+                final_df.to_parquet(args.final_output, index=False)
                 
                 # 메모리 정리
                 del target_df
@@ -339,8 +339,8 @@ def main():
                 gc.collect()
             else:
                 print(f"Target file not found: {args.target_path}")
-                # 타겟 데이터 없이 저장
-                merged_df.to_csv(args.final_output, index=False)
+                # 타겟 데이터 없이 저장 (Parquet 형식으로)
+                merged_df.to_parquet(args.final_output, index=False)
                 
                 # 메모리 정리
                 del merged_df

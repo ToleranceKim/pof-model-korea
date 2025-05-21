@@ -35,24 +35,10 @@ def try_load_dotenv_with_encodings():
         print(f"파일 헤더 읽기 실패: {e}")
     
     # 여러 인코딩으로 시도
-    env_vars = {}
     for encoding in encodings:
         try:
             print(f"인코딩 '{encoding}'으로 시도 중...")
-            with open(env_file, 'r', encoding=encoding) as f:
-                content = f.read()
-                
-            # 직접 환경 변수 파싱
-            for line in content.splitlines():
-                line = line.strip()
-                if not line or line.startswith('#'):
-                    continue
-                key, value = line.split('=', 1)
-                key = key.strip()
-                value = value.strip().strip('"').strip("'")
-                os.environ[key] = value
-                env_vars[key] = value
-                
+            load_dotenv(env_file, encoding=encoding)
             print(f"인코딩 '{encoding}'으로 .env 파일 로드 성공")
             return True
         except UnicodeDecodeError:
