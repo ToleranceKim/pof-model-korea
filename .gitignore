@@ -14,6 +14,9 @@
 *.tax2010
 *.vcf
 *.xml
+*.tif
+*.nc
+*.parquet
 
 ### Python ###
 # Byte-compiled / optimized / DLL files
@@ -186,5 +189,10 @@ poetry.toml
 
 # LSP config files
 pyrightconfig.json
+
+# uv local configuration file
+.python-version
+pyproject.toml
+uv.lock
 
 # End of https://www.toptal.com/developers/gitignore/api/python,data
