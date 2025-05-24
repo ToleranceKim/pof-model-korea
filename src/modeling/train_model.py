@@ -7,7 +7,7 @@ import numpy as np
 import matplotlib.pyplot as plt 
 import seaborn as sns 
 from sklearn.model_selection import train_test_split 
-import xgboost as xgb 
+import xgboost as xgb
 from sklearn.metrics import roc_auc_score, confusion_matrix, classification_report 
 import time 
  

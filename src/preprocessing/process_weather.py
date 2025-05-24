@@ -25,12 +25,14 @@ def process_netcdf_from_zip(zip_file_path, output_dir):
     # 파일명에서 연월 추출
     file_name = os.path.basename(zip_file_path)
     year_month = file_name.split('_')[-1].split('.')[0]
-    output_file = os.path.join(output_dir, f"era5_korea_{year_month}.parquet")
+    output_base = os.path.join(output_dir, f"era5_korea_{year_month}")
+    output_parquet = f"{output_base}.parquet"
+    output_csv = f"{output_base}.csv"
     
     # 이미 처리된 파일이면 건너뜀
-    if os.path.exists(output_file):
-        print(f"File already processed: {output_file}")
-        return output_file
+    if os.path.exists(output_parquet) and os.path.exists(output_csv):
+        print(f"File already processed: {output_parquet} and {output_csv}")
+        return output_parquet
     
     print(f"Processing: {zip_file_path}")
     
@@ -193,12 +195,23 @@ def process_netcdf_from_zip(zip_file_path, output_dir):
             null_counts = result_df.isnull().sum()
             print(f"\nNull value counts in final dataframe:\n{null_counts}")
             
-            # csv 저장 부분을 parquet로 변경
-            print(f"\nSaving to {output_file}")
-            result_df.to_parquet(output_file, index=False)
-            print(f"Successfully saved {output_file} with shape {result_df.shape}")
+            # U10, V10 풍속 성분을 결합하여 10m 풍속 크기(wind10m) 계산
+            if '10u' in result_df.columns and '10v' in result_df.columns:
+                print("10u, 10v 풍속 성분을 결합하여 10m 풍속 크기(wind10m) 계산")
+                result_df['wind10m'] = np.sqrt(result_df['10u']**2 + result_df['10v']**2)
+                print(f"wind10m 변수 추가 완료: 범위 {result_df['wind10m'].min():.2f} ~ {result_df['wind10m'].max():.2f} m/s")
             
-            return output_file
+            # Parquet 형식으로 저장
+            print(f"\nSaving to {output_parquet}")
+            result_df.to_parquet(output_parquet, index=False)
+            
+            # CSV 형식으로도 저장
+            print(f"Saving to {output_csv}")
+            result_df.to_csv(output_csv, index=False)
+            
+            print(f"Successfully saved files with shape {result_df.shape}")
+            
+            return output_parquet
             
         finally:
             # 명시적으로 메모리 해제
@@ -235,10 +248,10 @@ def main():
                         help='기상 데이터 디렉토리 경로')
     parser.add_argument('--output_dir', type=str, default='../processed_data',
                         help='처리된 데이터 저장 디렉토리 경로')
-    parser.add_argument('--target_path', type=str, default='../ml_modeling/af_flag_korea.csv',
-                        help='타겟 데이터 CSV 파일 경로')
-    parser.add_argument('--final_output', type=str, default='../ml_modeling/weather_data.parquet',
-                        help='최종 병합된 데이터 저장 경로')
+    parser.add_argument('--target_path', type=str, default=None,
+                        help='타겟 데이터 CSV 파일 경로 (사용하지 않음)')
+    parser.add_argument('--final_output', type=str, default=None,
+                        help='최종 병합된 데이터 저장 경로 (사용하지 않음)')
     parser.add_argument('--test_mode', action='store_true',
                         help='테스트 모드 (일부 파일만 처리)')
     parser.add_argument('--max_files', type=int, default=2,
@@ -261,91 +274,17 @@ def main():
     print(f"Found {len(weather_files)} weather files")
     
     # 각 파일 처리
-    csv_files = []
+    processed_files = []
     for file_path in tqdm(weather_files):
-        csv_file = process_netcdf_from_zip(file_path, args.output_dir)
-        if csv_file:
-            csv_files.append(csv_file)
+        processed_file = process_netcdf_from_zip(file_path, args.output_dir)
+        if processed_file:
+            processed_files.append(processed_file)
         
         # 각 파일 처리 후 메모리 정리
         gc.collect()
     
-    # 모든 Parquet 파일 병합
-    if csv_files:
-        print(f"Merging {len(csv_files)} Parquet files")
-        dfs = []
-        for parquet_file in tqdm(csv_files):
-            df = pd.read_parquet(parquet_file)
-            dfs.append(df)
-            # 메모리 정리
-            del df
-            gc.collect()
-        
-        if dfs:
-            merged_df = pd.concat(dfs, ignore_index=True)
-            print(f"Final merged data shape: {merged_df.shape}")
-            
-            # 타겟 데이터 로드
-            if os.path.exists(args.target_path):
-                print(f"Loading target data: {args.target_path}")
-                target_df = pd.read_csv(args.target_path, parse_dates=['acq_date'])
-                target_df = target_df[['acq_date', 'grid_id', 'af_flag']]
-                
-                # 병합 전 grid_id 범위 확인 출력
-                print(f"날씨 데이터 grid_id 범위: {merged_df.grid_id.min()} - {merged_df.grid_id.max()}")
-                print(f"타겟 데이터 grid_id 범위: {target_df.grid_id.min()} - {target_df.grid_id.max()}")
-                
-                # 데이터 병합 - 'right' 방식으로 변경하여 모든 타겟 데이터 보존
-                print("Merging with target data (right join to preserve all target data)")
-                final_df = merged_df.merge(target_df, on=['acq_date', 'grid_id'], how='right')
-                
-                # 결측치 처리
-                if final_df.isnull().sum().sum() > 0:
-                    print("처리 중인 결측치:", final_df.isnull().sum())
-                    
-                    # 각 컬럼별 결측치 처리
-                    for col in ['t2m', 'td2m', '10u', '10v']:
-                        if col in final_df.columns and final_df[col].isnull().sum() > 0:
-                            col_mean = merged_df[col].mean()
-                            print(f"{col} 결측치를 평균값 {col_mean:.4f}로 대체")
-                            final_df[col].fillna(col_mean, inplace=True)
-                    
-                    # 강수량의 경우 0으로 대체
-                    if 'tp' in final_df.columns and final_df['tp'].isnull().sum() > 0:
-                        print("tp(강수량) 결측치를 0으로 대체")
-                        final_df['tp'].fillna(0, inplace=True)
-                
-                # af_flag 값 정리
-                print("타겟 데이터 통계")
-                final_df['af_flag'] = final_df['af_flag'].fillna(0).astype('uint8')
-                
-                # U10, V10 풍속 성분을 결합하여 10m 풍속 크기(wind10m) 계산
-                if '10u' in final_df.columns and '10v' in final_df.columns:
-                    print("U10, V10 풍속 성분을 결합하여 10m 풍속 크기(wind10m) 계산")
-                    final_df['wind10m'] = np.sqrt(final_df['10u']**2 + final_df['10v']**2)
-                    print(f"wind10m 변수 추가 완료: 범위 {final_df['wind10m'].min():.2f} ~ {final_df['wind10m'].max():.2f} m/s")
-                
-                print(f"Final data shape: {final_df.shape}")
-                print(f"Positive samples: {final_df.af_flag.sum()} ({final_df.af_flag.mean()*100:.2f}%)")
-                
-                # 최종 데이터 저장 (Parquet 형식으로)
-                print(f"Saving final data to {args.final_output}")
-                final_df.to_parquet(args.final_output, index=False)
-                
-                # 메모리 정리
-                del target_df
-                del merged_df
-                del final_df
-                gc.collect()
-            else:
-                print(f"Target file not found: {args.target_path}")
-                # 타겟 데이터 없이 저장 (Parquet 형식으로)
-                merged_df.to_parquet(args.final_output, index=False)
-                
-                # 메모리 정리
-                del merged_df
-                gc.collect()
-    
+    # 병합 과정 제거 - 개별 파일만 처리
+    print(f"Processed {len(processed_files)} files. All files saved to {args.output_dir}")
     print("Done!")
 
 if __name__ == '__main__':
