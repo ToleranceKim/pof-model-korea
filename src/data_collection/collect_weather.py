@@ -111,7 +111,7 @@ def create_cdsapirc_from_env():
 
 def collect_weather(start_year, end_year, start_month, end_month, output_dir):
     """
-    ERA5-Land 날씨 데이터를 수집합니다.
+    ERA5 날씨 데이터를 수집합니다. (이전에는 ERA5-Land 사용)
     
     Parameters:
     -----------
@@ -172,7 +172,7 @@ def collect_weather(start_year, end_year, start_month, end_month, output_dir):
             print(f"Retrieving {target_file} ...")
             
             c.retrieve(
-                'reanalysis-era5-land',
+                'reanalysis-era5-single-levels',  # ERA5-Land 대신 ERA5 사용
                 {
                     'variable': [
                         '2m_temperature','2m_dewpoint_temperature',
@@ -200,7 +200,7 @@ def collect_weather(start_year, end_year, start_month, end_month, output_dir):
         return []
 
 def main():
-    parser = argparse.ArgumentParser(description='ERA5-Land 날씨 데이터 수집')
+    parser = argparse.ArgumentParser(description='ERA5 날씨 데이터 수집 (이전에는 ERA5-Land 사용)')
     
     # 현재 연도와 월 구하기
     current_year = datetime.now().year

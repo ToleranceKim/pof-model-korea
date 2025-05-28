@@ -37,9 +37,16 @@ def join_datasets(weather_file, target_file, output_file, join_type='inner'):
     
     # 타겟 데이터 로드
     print(f"타겟 데이터 로드 중: {target_file}")
-    target_df = pd.read_csv(target_file, parse_dates=['acq_date'])
+    # 명시적으로 parse_dates 설정하여 acq_date 열을 datetime으로 변환
+    target_df = pd.read_csv(target_file)
+    target_df['acq_date'] = pd.to_datetime(target_df['acq_date'])
     target_df = target_df[['acq_date', 'grid_id', 'af_flag']]
     print(f"타겟 데이터 로드 완료: {target_df.shape}")
+    
+    # 날씨 데이터 acq_date 타입 확인 및 출력
+    print(f"\n데이터 타입 정보:")
+    print(f"날씨 데이터 acq_date 타입: {weather_df.acq_date.dtype}")
+    print(f"타겟 데이터 acq_date 타입: {target_df.acq_date.dtype}")
     
     # 병합 전 grid_id 범위 확인 출력
     print(f"\n데이터 범위 정보:")

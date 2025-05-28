@@ -160,8 +160,8 @@ def process_netcdf_from_zip(zip_file_path, output_dir):
                     print(f"Created dataframe for {var_name} with shape: {var_df.shape}")
                     
                     if not var_df.empty:
-                        # 필요한 컬럼만 선택
-                        var_df = var_df[['acq_date', 'grid_id', target_name]]
+                        # 필요한 컬럼만 선택 (위경도 컬럼 포함)
+                        var_df = var_df[['acq_date', 'grid_id', 'latitude', 'longitude', target_name]]
                         all_results.append(var_df)
                     else:
                         print(f"Warning: Empty dataframe for {var_name}")
@@ -188,7 +188,7 @@ def process_netcdf_from_zip(zip_file_path, output_dir):
             for i, df in enumerate(all_results[1:], 1):
                 var_name = list(var_mapping.values())[i]
                 print(f"Merging {var_name} dataframe, before merge: {result_df.shape}")
-                result_df = pd.merge(result_df, df, on=['acq_date', 'grid_id'], how='outer')
+                result_df = pd.merge(result_df, df, on=['acq_date', 'grid_id', 'latitude', 'longitude'], how='outer')
                 print(f"After merge with {var_name}: {result_df.shape}")
             
             # 결측값 확인
