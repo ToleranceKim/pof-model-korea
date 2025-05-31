@@ -10,8 +10,13 @@ import traceback
 import pandas as pd
 import numpy as np
 import xarray as xr
+import json
 from pathlib import Path
 from datetime import datetime, timedelta
+import matplotlib.pyplot as plt
+import matplotlib.colors as mcolors
+from matplotlib.patches import Patch
+import matplotlib.ticker as mticker
 
 # 로깅 설정
 logging.basicConfig(
@@ -69,9 +74,10 @@ def collect_forecast_data(target_date=None, output_dir=None, steps=None, max_ret
         # 기본 변수 설정 (ECMWF Open Data에서 직접 수집 가능한 기상 변수만)
         variables = ["2t", "2d", "10u", "10v", "tp"]
         
-        # 한국 영역 설정 (North/West/South/East)
-        area = [39, 124, 33, 132]  # 북위, 서경, 남위, 동경
-        logger.info(f"지역 설정: 북위 {area[0]}°, 서경 {area[1]}°, 남위 {area[2]}°, 동경 {area[3]}°")
+        # 한국 영역 설정
+        lat_min, lat_max = 33, 39  # 남위, 북위
+        lon_min, lon_max = 124, 132  # 서경, 동경
+        logger.info(f"관심 영역: 한국 (위도 {lat_min}°-{lat_max}°, 경도 {lon_min}°-{lon_max}°)")
         
         # 출력 디렉토리 생성
         os.makedirs(output_dir, exist_ok=True)
@@ -114,7 +120,7 @@ def collect_forecast_data(target_date=None, output_dir=None, steps=None, max_ret
                 # 재시도 로직 추가
                 for attempt in range(max_retries):
                     try:
-                        # ECMWF Open Data에서 데이터 다운로드 (date=-1 사용)
+                        # ECMWF Open Data에서 데이터 다운로드 (area 매개변수 제거)
                         client.retrieve(
                             date=-1,           # 가장 최신 예보 사용
                             time=forecast_hour,
@@ -122,7 +128,6 @@ def collect_forecast_data(target_date=None, output_dir=None, steps=None, max_ret
                             stream="oper",     # 고해상도 운영예보
                             type="fc",         # forecast
                             param=variable,
-                            area=area,         # 한국 지역으로 제한
                             target=target_file
                         )
                         logger.info(f"다운로드 완료: {target_file}")
@@ -154,7 +159,112 @@ def collect_forecast_data(target_date=None, output_dir=None, steps=None, max_ret
         logger.debug(traceback.format_exc())
         return []
 
-def grib_to_dataframe(grib_file):
+def interpolate_to_01deg(ds, var_name, lat_min=33, lat_max=39, lon_min=124, lon_max=132):
+    """
+    xarray 데이터셋을 0.1° 격자로 선형 보간합니다.
+    
+    Parameters:
+    -----------
+    ds : xarray.Dataset
+        보간할 데이터셋
+    var_name : str
+        보간할 변수 이름
+    lat_min, lat_max : float
+        위도 범위
+    lon_min, lon_max : float
+        경도 범위
+    
+    Returns:
+    --------
+    pandas.DataFrame : 보간된 데이터프레임
+    """
+    try:
+        logger.info(f"0.1° 격자로 선형 보간 시작: {var_name}")
+        
+        # 0.1° 격자 생성
+        target_lat = np.arange(lat_min, lat_max + 0.01, 0.1)
+        target_lon = np.arange(lon_min, lon_max + 0.01, 0.1)
+        
+        # 데이터 변수 선택
+        da = ds[var_name]
+        
+        # 차원에 따른 처리
+        if len(da.shape) == 2:  # [lat, lon]
+            logger.info(f"2D 데이터 보간 중: {da.shape}")
+            
+            # xarray DataArray 형태로 만들기
+            target_lat_da = xr.DataArray(target_lat, dims=['latitude'])
+            target_lon_da = xr.DataArray(target_lon, dims=['longitude'])
+            
+            # 선형 보간 수행
+            interpolated = da.interp(
+                latitude=target_lat_da,
+                longitude=target_lon_da,
+                method='linear'
+            )
+            
+            # DataFrame으로 변환
+            rows = []
+            
+            for i, lat in enumerate(target_lat):
+                for j, lon in enumerate(target_lon):
+                    try:
+                        value = float(interpolated[i, j].values)
+                        row = {'latitude': lat, 'longitude': lon, var_name: value}
+                        rows.append(row)
+                    except (IndexError, ValueError) as e:
+                        logger.debug(f"보간 값 추출 중 오류: {e} (위치: {lat}, {lon})")
+                        continue
+            
+        elif len(da.shape) == 3 and 'time' in ds.coords:  # [time, lat, lon]
+            logger.info(f"3D 데이터 보간 중: {da.shape}")
+            times = pd.to_datetime(ds.time.values)
+            
+            # xarray DataArray 형태로 만들기
+            target_lat_da = xr.DataArray(target_lat, dims=['latitude'])
+            target_lon_da = xr.DataArray(target_lon, dims=['longitude'])
+            
+            # 선형 보간 수행
+            interpolated = da.interp(
+                latitude=target_lat_da,
+                longitude=target_lon_da,
+                method='linear'
+            )
+            
+            # DataFrame으로 변환
+            rows = []
+            
+            for t, time_val in enumerate(times):
+                for i, lat in enumerate(target_lat):
+                    for j, lon in enumerate(target_lon):
+                        try:
+                            value = float(interpolated[t, i, j].values)
+                            row = {
+                                'time': time_val,
+                                'latitude': lat, 
+                                'longitude': lon, 
+                                var_name: value
+                            }
+                            rows.append(row)
+                        except (IndexError, ValueError) as e:
+                            logger.debug(f"보간 값 추출 중 오류: {e} (위치: {time_val}, {lat}, {lon})")
+                            continue
+        else:
+            logger.error(f"지원하지 않는 데이터 형식: {da.shape}")
+            return None
+        
+        # DataFrame 생성
+        df = pd.DataFrame(rows)
+        logger.info(f"보간된 데이터프레임 생성 완료: {len(rows)}개 레코드")
+        
+        return df
+        
+    except Exception as e:
+        logger.error(f"보간 중 오류 발생: {e}")
+        logger.debug(traceback.format_exc())
+        return None
+
+def grib_to_dataframe(grib_file, interpolate=True):
     """
     GRIB2 파일을 Pandas DataFrame으로 변환합니다.
     
@@ -162,6 +272,8 @@ def grib_to_dataframe(grib_file):
     -----------
     grib_file : str
         입력 GRIB2 파일 경로
+    interpolate : bool, optional
+        0.1° 격자로 선형 보간 수행 여부 (기본값: True)
     
     Returns:
     --------
@@ -189,62 +301,185 @@ def grib_to_dataframe(grib_file):
         var_name = var_names[0]
         logger.info(f"처리할 변수: {var_name}")
         
-        # 데이터 배열 가져오기
-        da = ds[var_name]
-        
         # 위도/경도 확인
         if 'latitude' in ds.coords and 'longitude' in ds.coords:
-            # 격자 형태의 위도/경도 데이터
-            lats = ds.latitude.values
-            lons = ds.longitude.values
+            # 데이터 배열 가져오기
+            da = ds[var_name]
             
             # 데이터 배열의 shape 확인
             logger.info(f"데이터 배열 shape: {da.shape}")
             
-            # 2D 위도/경도 격자이면 평탄화
+            # 한국 지역 경계 정의
+            lat_min, lat_max = 33, 39  # 남위, 북위
+            lon_min, lon_max = 124, 132  # 서경, 동경
+            
+            # 좌표계 정보 확인
+            lats = ds.latitude.values
+            lons = ds.longitude.values
+            logger.info(f"위도 범위: {lats.min():.2f} ~ {lats.max():.2f}, 크기: {lats.shape}")
+            logger.info(f"경도 범위: {lons.min():.2f} ~ {lons.max():.2f}, 크기: {lons.shape}")
+            
+            # 좌표 방향 확인 (위도가 내림차순인지)
+            lat_descending = lats[0] > lats[-1] if len(lats) > 1 else False
+            
+            # 한국 지역 데이터 추출
+            region_da = None
+            
+            # 두 가지 방법 시도
+            try:
+                # 1. slice 메서드 사용
+                if lat_descending:
+                    logger.info("위도가 내림차순으로 정렬되어 있습니다 (북→남)")
+                    lat_sel = slice(lat_max, lat_min)
+                else:
+                    logger.info("위도가 오름차순으로 정렬되어 있습니다 (남→북)")
+                    lat_sel = slice(lat_min, lat_max)
+                
+                region_da = da.sel(latitude=lat_sel, longitude=slice(lon_min, lon_max))
+                logger.info(f"한국 영역 선택 완료 (slice 방식): {region_da.shape}")
+                
+                # 선택된 영역이 비어있으면 다른 방법 시도
+                if region_da.size == 0:
+                    raise ValueError("선택된 영역이 비어있습니다")
+                    
+            except Exception as e:
+                logger.warning(f"slice 방식 선택 중 오류 발생: {e}")
+                logger.warning("isel 방식으로 재시도합니다")
+                
+                try:
+                    # 2. Boolean 마스킹 및 isel 메서드 사용
+                    lat_mask = (lats >= lat_min) & (lats <= lat_max)
+                    lon_mask = (lons >= lon_min) & (lons <= lon_max)
+                    
+                    if np.any(lat_mask) and np.any(lon_mask):
+                        region_da = da.isel(latitude=lat_mask, longitude=lon_mask)
+                        logger.info(f"한국 영역 선택 완료 (마스킹 방식): {region_da.shape}")
+                    else:
+                        logger.warning(f"유효한 마스크를 생성할 수 없습니다: lat_mask={np.sum(lat_mask)}, lon_mask={np.sum(lon_mask)}")
+                        raise ValueError("유효한 마스크를 생성할 수 없습니다")
+                except Exception as e2:
+                    logger.warning(f"마스킹 방식 선택 중 오류 발생: {e2}")
+                    logger.warning("전체 데이터를 사용합니다")
+                    region_da = da
+            
+            # 선택된 영역이 비어있는지 최종 확인
+            if region_da is None or region_da.size == 0:
+                logger.warning("선택된 영역이 비어있어 원본 데이터를 사용합니다")
+                region_da = da
+            
+            # DataFrame으로 변환할 데이터 생성
             rows = []
             
-            # 위도/경도 평탄화 준비
-            lat_vals = lats.flatten() if hasattr(lats, 'flatten') else lats
-            lon_vals = lons.flatten() if hasattr(lons, 'flatten') else lons
+            # 선형 보간이 활성화되어 있으면 0.1° 격자로 보간
+            if interpolate:
+                logger.info(f"선택된 영역을 0.1° 격자로 보간합니다")
+                
+                # 0.1° 격자 생성
+                target_lat = np.arange(lat_min, lat_max + 0.01, 0.1)
+                target_lon = np.arange(lon_min, lon_max + 0.01, 0.1)
+                
+                # 격자 정보 로깅
+                logger.info(f"보간 격자: 위도 {len(target_lat)}개, 경도 {len(target_lon)}개 포인트")
+                
+                # xarray DataArray 형태로 만들기
+                target_lat_da = xr.DataArray(target_lat, dims=['latitude'])
+                target_lon_da = xr.DataArray(target_lon, dims=['longitude'])
+                
+                try:
+                    # 선형 보간 수행
+                    logger.info("선형 보간 시작...")
+                    interpolated = region_da.interp(
+                        latitude=target_lat_da,
+                        longitude=target_lon_da,
+                        method='linear'
+                    )
+                    logger.info(f"선형 보간 완료: {interpolated.shape}")
+                    
+                    # 차원에 따른 처리
+                    if len(interpolated.shape) == 2:  # [lat, lon]
+                        for i, lat in enumerate(target_lat):
+                            for j, lon in enumerate(target_lon):
+                                try:
+                                    value = float(interpolated[i, j].values)
+                                    row = {'latitude': lat, 'longitude': lon, var_name: value}
+                                    rows.append(row)
+                                except (IndexError, ValueError) as e:
+                                    logger.debug(f"보간 값 추출 중 오류: {e} (위치: {lat}, {lon})")
+                                    continue
+                    
+                    elif len(interpolated.shape) == 3 and 'time' in region_da.coords:  # [time, lat, lon]
+                        times = pd.to_datetime(region_da.time.values)
+                        
+                        for t, time_val in enumerate(times):
+                            for i, lat in enumerate(target_lat):
+                                for j, lon in enumerate(target_lon):
+                                    try:
+                                        value = float(interpolated[t, i, j].values)
+                                        row = {
+                                            'time': time_val,
+                                            'latitude': lat, 
+                                            'longitude': lon, 
+                                            var_name: value
+                                        }
+                                        rows.append(row)
+                                    except (IndexError, ValueError) as e:
+                                        logger.debug(f"보간 값 추출 중 오류: {e} (위치: {time_val}, {lat}, {lon})")
+                                        continue
+                                        
+                except Exception as e:
+                    logger.error(f"선형 보간 중 오류 발생: {e}")
+                    logger.warning("보간을 건너뛰고 원본 데이터 포인트를 사용합니다")
+                    interpolate = False  # 보간 실패 시 원본 데이터 사용으로 변경
             
-            # 차원에 따른 처리
-            if len(da.shape) == 2:  # [lat, lon]
-                data_values = da.values
+            # 보간하지 않거나 보간에 실패한 경우 원본 데이터 사용
+            if not interpolate or not rows:
+                logger.info("원본 데이터 포인트를 사용합니다")
                 
-                for i, lat in enumerate(lat_vals):
-                    for j, lon in enumerate(lon_vals):
-                        try:
-                            value = data_values[i, j]
-                            row = {'latitude': lat, 'longitude': lon, var_name: value}
-                            rows.append(row)
-                        except IndexError:
-                            continue
-                            
-            elif len(da.shape) == 3 and 'time' in ds.coords:  # [time, lat, lon]
-                times = pd.to_datetime(ds.time.values)
-                data_values = da.values
-                
-                for t, time_val in enumerate(times):
-                    for i, lat in enumerate(lat_vals):
-                        for j, lon in enumerate(lon_vals):
+                # 원본 데이터 처리
+                if len(region_da.shape) == 2:  # [lat, lon]
+                    region_lats = region_da.latitude.values
+                    region_lons = region_da.longitude.values
+                    data_values = region_da.values
+                    
+                    for i, lat in enumerate(region_lats):
+                        for j, lon in enumerate(region_lons):
                             try:
-                                value = data_values[t, i, j]
-                                row = {
-                                    'time': time_val,
-                                    'latitude': lat, 
-                                    'longitude': lon, 
-                                    var_name: value
-                                }
-                                rows.append(row)
-                            except IndexError:
+                                # 한국 지역으로 재필터링 (확인용)
+                                if lat_min <= lat <= lat_max and lon_min <= lon <= lon_max:
+                                    value = float(data_values[i, j])
+                                    row = {'latitude': lat, 'longitude': lon, var_name: value}
+                                    rows.append(row)
+                            except (IndexError, ValueError) as e:
+                                logger.debug(f"값 추출 중 오류: {e} (위치: {lat}, {lon})")
                                 continue
-            else:
-                logger.error(f"지원하지 않는 데이터 형식: {da.shape}")
-                return None
-                
+                                
+                elif len(region_da.shape) == 3 and 'time' in region_da.coords:  # [time, lat, lon]
+                    region_lats = region_da.latitude.values
+                    region_lons = region_da.longitude.values
+                    times = pd.to_datetime(region_da.time.values)
+                    data_values = region_da.values
+                    
+                    for t, time_val in enumerate(times):
+                        for i, lat in enumerate(region_lats):
+                            for j, lon in enumerate(region_lons):
+                                try:
+                                    # 한국 지역으로 재필터링 (확인용)
+                                    if lat_min <= lat <= lat_max and lon_min <= lon <= lon_max:
+                                        value = float(data_values[t, i, j])
+                                        row = {
+                                            'time': time_val,
+                                            'latitude': lat, 
+                                            'longitude': lon, 
+                                            var_name: value
+                                        }
+                                        rows.append(row)
+                                except (IndexError, ValueError) as e:
+                                    logger.debug(f"값 추출 중 오류: {e} (위치: {time_val}, {lat}, {lon})")
+                                    continue
+            
             # DataFrame 생성
             df = pd.DataFrame(rows)
+            logger.info(f"데이터프레임 생성 완료: {len(rows)}개 레코드")
             
         else:
             # 다른 형태의 데이터
@@ -353,7 +588,206 @@ def calculate_wind10m(df_u10, df_v10):
     
     return df_merged
 
-def process_forecast_step(target_date, step, forecast_dir, output_dir):
+def grid_id_to_latlon(grid_id):
+    """
+    grid_id를 위도/경도로 변환합니다.
+    
+    Parameters:
+    -----------
+    grid_id : int
+        변환할 grid_id
+    
+    Returns:
+    --------
+    tuple : (latitude, longitude)
+    """
+    lat_bin = ((grid_id // 3600) - 900)
+    lon_bin = ((grid_id % 3600) - 1800)
+    lat = lat_bin * 0.1
+    lon = lon_bin * 0.1
+    return lat, lon
+
+def visualize_grid_distribution(df, valid_grid_ids, filter_stats, output_base):
+    """
+    grid_id의 지리적 분포를 시각화합니다.
+    
+    Parameters:
+    -----------
+    df : pandas.DataFrame
+        필터링된 데이터프레임
+    valid_grid_ids : set
+        유효한 grid_id 집합
+    filter_stats : dict
+        필터링 통계 정보
+    output_base : str
+        출력 파일 기본 경로
+    """
+    try:
+        # 필요한 라이브러리가 있는지 확인
+        try:
+            import matplotlib.pyplot as plt
+            import matplotlib.ticker as mticker
+        except ImportError:
+            logger.warning("matplotlib 라이브러리가 설치되어 있지 않아 시각화를 건너뜁니다.")
+            return
+        
+        logger.info("격자 분포 시각화 중...")
+        
+        # 한국 지역 경계 설정
+        min_lat, max_lat = 33, 39
+        min_lon, max_lon = 124, 132
+        
+        # 유효한 grid_id의 위도/경도 계산
+        valid_lats, valid_lons = [], []
+        for gid in valid_grid_ids:
+            lat, lon = grid_id_to_latlon(gid)
+            valid_lats.append(lat)
+            valid_lons.append(lon)
+        
+        # 데이터프레임에 있는 grid_id의 위도/경도
+        data_grid_ids = set(df['grid_id'].unique())
+        data_lats, data_lons = [], []
+        for gid in data_grid_ids:
+            lat, lon = grid_id_to_latlon(gid)
+            data_lats.append(lat)
+            data_lons.append(lon)
+        
+        # 누락된 grid_id의 위도/경도
+        missing_grid_ids = filter_stats.get('missing_grid_ids', [])
+        missing_lats, missing_lons = [], []
+        for gid in missing_grid_ids:
+            lat, lon = grid_id_to_latlon(gid)
+            missing_lats.append(lat)
+            missing_lons.append(lon)
+        
+        # 첫 번째 시각화: 격자 분포
+        plt.figure(figsize=(10, 8))
+        
+        # 기본 지도 설정
+        plt.scatter(valid_lons, valid_lats, s=5, c='lightgray', alpha=0.3, label='기대 grid_id')
+        plt.scatter(data_lons, data_lats, s=15, c='blue', alpha=0.7, label='수집된 grid_id')
+        
+        # 누락된 grid_id가 있는 경우에만 표시
+        if missing_lats:
+            plt.scatter(missing_lons, missing_lats, s=10, c='red', alpha=0.7, label='누락된 grid_id')
+        
+        # 그래프 설정
+        plt.title('Grid ID 분포')
+        plt.xlabel('경도')
+        plt.ylabel('위도')
+        plt.grid(True, linestyle='--', alpha=0.5)
+        plt.xlim(min_lon - 0.5, max_lon + 0.5)
+        plt.ylim(min_lat - 0.5, max_lat + 0.5)
+        
+        # 범례 추가
+        plt.legend(loc='upper right')
+        
+        # 통계 정보 추가
+        info_text = (
+            f"전체 grid_id: {filter_stats['expected_grid_ids']}\n"
+            f"수집된 grid_id: {filter_stats['actual_grid_ids']}\n"
+            f"누락된 grid_id: {len(missing_grid_ids)}\n"
+            f"수집률: {filter_stats['actual_grid_ids']/filter_stats['expected_grid_ids']*100:.1f}%"
+        )
+        plt.annotate(info_text, xy=(0.02, 0.02), xycoords='axes fraction', 
+                    bbox=dict(boxstyle="round,pad=0.5", fc="white", alpha=0.8))
+        
+        # 저장
+        viz_file = f"{output_base}_grid_distribution.png"
+        plt.savefig(viz_file, dpi=150, bbox_inches='tight')
+        plt.close()
+        
+        logger.info(f"격자 분포 시각화 저장: {viz_file}")
+        
+    except Exception as e:
+        logger.error(f"시각화 중 오류 발생: {e}")
+        logger.debug(traceback.format_exc())
+
+def filter_by_grid_ids(df, grid_ids_file=None):
+    """
+    지정된 grid_id 목록에 해당하는 데이터만 필터링합니다.
+    
+    Parameters:
+    -----------
+    df : pandas.DataFrame
+        필터링할 데이터프레임
+    grid_ids_file : str, optional
+        grid_id 목록이 저장된 JSON 파일 경로
+        
+    Returns:
+    --------
+    pandas.DataFrame : 필터링된 데이터프레임
+    dict : 필터링 결과 통계 정보
+    """
+    logger.info("지정된 grid_id로 데이터 필터링 중...")
+    
+    # 필터링 결과 통계
+    stats = {
+        'total_records_before': int(len(df)),  # int64를 int로 변환
+        'unique_grid_ids_before': int(df['grid_id'].nunique() if 'grid_id' in df.columns else 0),  # int64를 int로 변환
+        'expected_grid_ids': 0,
+        'actual_grid_ids': 0,
+        'missing_grid_ids': [],
+        'extra_grid_ids': []
+    }
+    
+    # 기본 grid_id 파일 경로 설정
+    if grid_ids_file is None:
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        grid_ids_file = os.path.join(script_dir, "korea_land_grid_ids.json")
+    
+    # 파일에서 grid_id 목록 로드
+    if os.path.exists(grid_ids_file):
+        try:
+            with open(grid_ids_file, 'r') as f:
+                valid_grid_ids = set(json.load(f))
+            logger.info(f"{len(valid_grid_ids)}개의 grid_id 로드 완료")
+            stats['expected_grid_ids'] = len(valid_grid_ids)
+        except Exception as e:
+            logger.error(f"grid_id 파일 로드 중 오류: {e}")
+            return df, stats
+    else:
+        # 기본 grid_id 목록 (파일이 없는 경우)
+        logger.warning(f"grid_id 파일이 없습니다: {grid_ids_file}")
+        logger.warning("grid_id 필터링을 건너뜁니다.")
+        return df, stats
+    
+    # 원본 데이터 크기 기록
+    original_size = len(df)
+    
+    # grid_id로 필터링
+    if 'grid_id' in df.columns:
+        # 데이터프레임에 있는 grid_id 중 유효하지 않은 것들 확인
+        existing_grid_ids = set(df['grid_id'].unique().tolist())  # NumPy 배열을 리스트로 변환
+        stats['extra_grid_ids'] = sorted([int(x) for x in list(existing_grid_ids - valid_grid_ids)])  # int64를 int로 변환
+        
+        # 필터링 수행
+        df = df[df['grid_id'].isin(valid_grid_ids)]
+        
+        # 필터링 후 통계
+        filtered_grid_ids = set(df['grid_id'].unique().tolist())  # NumPy 배열을 리스트로 변환
+        stats['actual_grid_ids'] = len(filtered_grid_ids)
+        stats['missing_grid_ids'] = sorted([int(x) for x in list(valid_grid_ids - filtered_grid_ids)])  # int64를 int로 변환
+        
+        # 결과 로그
+        logger.info(f"grid_id 필터링 완료: {original_size}개 → {len(df)}개 레코드 ({len(df)/original_size*100:.1f}%)")
+        logger.info(f"기대 grid_id 개수: {stats['expected_grid_ids']}, 실제 grid_id 개수: {stats['actual_grid_ids']}")
+        
+        if stats['missing_grid_ids']:
+            missing_count = len(stats['missing_grid_ids'])
+            logger.warning(f"{missing_count}개의 grid_id가 누락되었습니다 ({missing_count/stats['expected_grid_ids']*100:.1f}%)")
+            if missing_count <= 10:
+                logger.warning(f"누락된 grid_id: {stats['missing_grid_ids']}")
+            else:
+                logger.warning(f"누락된 grid_id 일부: {stats['missing_grid_ids'][:10]}...")
+        else:
+            logger.info("모든 기대 grid_id가 포함되었습니다.")
+    else:
+        logger.error("데이터프레임에 grid_id 컬럼이 없습니다.")
+    
+    return df, stats
+
+def process_forecast_step(target_date, step, forecast_dir, output_dir, grid_ids_file=None, visualize=False, interpolate=True):
     """
     특정 예보 시간의 모든 변수를 처리하고 통합합니다.
     
@@ -367,6 +801,12 @@ def process_forecast_step(target_date, step, forecast_dir, output_dir):
         예보 데이터 디렉토리 경로
     output_dir : str
         출력 디렉토리 경로
+    grid_ids_file : str, optional
+        grid_id 목록이 저장된 JSON 파일 경로
+    visualize : bool, optional
+        시각화 생성 여부 (기본값: False)
+    interpolate : bool, optional
+        0.1° 격자로 선형 보간 수행 여부 (기본값: True)
     
     Returns:
     --------
@@ -393,8 +833,8 @@ def process_forecast_step(target_date, step, forecast_dir, output_dir):
                 logger.warning(f"파일을 찾을 수 없음: {file_path}")
                 continue
             
-            # GRIB2 파일을 데이터프레임으로 변환
-            df = grib_to_dataframe(file_path)
+            # GRIB2 파일을 데이터프레임으로 변환 (선형 보간 적용 여부 전달)
+            df = grib_to_dataframe(file_path, interpolate=interpolate)
             
             if df is not None:
                 # grid_id 계산
@@ -476,6 +916,9 @@ def process_forecast_step(target_date, step, forecast_dir, output_dir):
                 axis=1
             )
         
+        # 지정된 grid_id로 필터링
+        final_df, filter_stats = filter_by_grid_ids(final_df, grid_ids_file)
+        
         # 출력 디렉토리 생성
         os.makedirs(output_dir, exist_ok=True)
         
@@ -491,6 +934,43 @@ def process_forecast_step(target_date, step, forecast_dir, output_dir):
         logger.info(f"결과 저장 중: {output_parquet}")
         final_df.to_parquet(output_parquet, index=False)
         
+        # 필터링 결과 요약 저장
+        if filter_stats.get('expected_grid_ids', 0) > 0:
+            try:
+                # JSON 직렬화를 위해 NumPy 타입을 Python 기본 타입으로 변환
+                serializable_stats = {
+                    'total_records_before': int(filter_stats['total_records_before']),
+                    'unique_grid_ids_before': int(filter_stats['unique_grid_ids_before']),
+                    'expected_grid_ids': int(filter_stats['expected_grid_ids']),
+                    'actual_grid_ids': int(filter_stats['actual_grid_ids']),
+                    'missing_grid_ids': [int(x) for x in filter_stats['missing_grid_ids']],
+                    'extra_grid_ids': [int(x) for x in filter_stats['extra_grid_ids']]
+                }
+                
+                # 모든 정보를 하나의 JSON 파일에 저장 (missing_grid_ids.json 파일은 생성하지 않음)
+                summary_file = f"{output_base}_filter_summary.json"
+                with open(summary_file, 'w') as f:
+                    json.dump(serializable_stats, f, indent=2)
+                logger.info(f"필터링 결과 요약 저장: {summary_file}")
+                
+                # 시각화 생성 (선택적)
+                if visualize and grid_ids_file is not None:
+                    try:
+                        # grid_id 목록 로드
+                        try:
+                            with open(grid_ids_file, 'r') as f:
+                                valid_grid_ids = set(json.load(f))
+                            visualize_grid_distribution(final_df, valid_grid_ids, serializable_stats, output_base)
+                        except Exception as e:
+                            logger.error(f"시각화를 위한 grid_id 로드 중 오류: {e}")
+                            logger.debug(traceback.format_exc())
+                    except Exception as e:
+                        logger.error(f"시각화 생성 중 오류 발생: {e}")
+                        logger.debug(traceback.format_exc())
+            except Exception as e:
+                logger.error(f"필터링 결과 저장 중 오류 발생: {e}")
+                logger.debug(traceback.format_exc())
+        
         logger.info(f"=== 예보 시간 +{step}h (D+{step//24}) 처리 완료 ===")
         logger.info(f"처리된 행 수: {len(final_df)}, 열 수: {len(final_df.columns)}")
         
@@ -501,7 +981,7 @@ def process_forecast_step(target_date, step, forecast_dir, output_dir):
         logger.debug(traceback.format_exc())
         return None
 
-def process_all_forecast_steps(target_date=None, forecast_dir=None, output_dir=None, steps=None):
+def process_all_forecast_steps(target_date=None, forecast_dir=None, output_dir=None, steps=None, grid_ids_file=None, visualize=False, interpolate=True):
     """
     모든 예보 시간을 처리합니다.
     
@@ -515,6 +995,12 @@ def process_all_forecast_steps(target_date=None, forecast_dir=None, output_dir=N
         출력 디렉토리 경로 (기본값: 프로젝트 루트/data/processed/forecast)
     steps : list, optional
         처리할 예보 시간(시간) 목록 (기본값: 24시간 간격으로 24~120시간, D+1에서 D+5)
+    grid_ids_file : str, optional
+        grid_id 목록이 저장된 JSON 파일 경로
+    visualize : bool, optional
+        시각화 생성 여부 (기본값: False)
+    interpolate : bool, optional
+        0.1° 격자로 선형 보간 수행 여부 (기본값: True)
     
     Returns:
     --------
@@ -548,7 +1034,7 @@ def process_all_forecast_steps(target_date=None, forecast_dir=None, output_dir=N
     # 모든 예보 시간 처리
     processed_files = []
     for step in steps:
-        output_file = process_forecast_step(target_date, step, forecast_dir, output_dir)
+        output_file = process_forecast_step(target_date, step, forecast_dir, output_dir, grid_ids_file, visualize, interpolate)
         if output_file:
             processed_files.append(output_file)
     
@@ -572,6 +1058,12 @@ def main():
                         help='예보 데이터 수집 여부 (기본값: False)')
     parser.add_argument('--process_only', action='store_true',
                         help='기존 다운로드된 데이터만 처리 (기본값: False)')
+    parser.add_argument('--grid_ids_file', type=str, default=None,
+                        help='유효한 grid_id 목록이 저장된 JSON 파일 경로')
+    parser.add_argument('--visualize', action='store_true',
+                        help='필터링 결과 시각화 생성 (기본값: False)')
+    parser.add_argument('--no_interpolate', action='store_true',
+                        help='0.1° 격자로 선형 보간을 비활성화 (기본값: 보간 활성화)')
     
     args = parser.parse_args()
     
@@ -590,7 +1082,10 @@ def main():
         target_date=args.date,
         forecast_dir=args.forecast_dir,
         output_dir=args.output_dir,
-        steps=args.steps
+        steps=args.steps,
+        grid_ids_file=args.grid_ids_file,
+        visualize=args.visualize,
+        interpolate=not args.no_interpolate
     )
     
     return 0
