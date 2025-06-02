@@ -20,7 +20,7 @@ import matplotlib.ticker as mticker
 
 # 로깅 설정
 logging.basicConfig(
-    level=logging.INFO,
+    level=logging.DEBUG,
     format='%(asctime)s - %(levelname)s - %(message)s',
     datefmt='%Y-%m-%d %H:%M:%S'
 )
@@ -546,6 +546,8 @@ def calculate_wind10m(df_u10, df_v10):
     pandas.DataFrame : wind10m 변수가 추가된 데이터프레임
     """
     logger.info("u10와 v10 성분으로 wind10m 계산 중...")
+    logger.debug(f"df_u10 컬럼: {list(df_u10.columns)}")
+    logger.debug(f"df_v10 컬럼: {list(df_v10.columns)}")
     
     # u10/v10 컬럼이 있는지 확인 (변수명이 다를 수 있음)
     u10_col = None
@@ -563,6 +565,8 @@ def calculate_wind10m(df_u10, df_v10):
     if u10_col is None or v10_col is None:
         logger.error(f"바람 성분 컬럼을 찾을 수 없습니다. 사용 가능한 컬럼: {list(df_u10.columns)} / {list(df_v10.columns)}")
         return None
+        
+    logger.debug(f"사용할 컬럼명: u10_col={u10_col}, v10_col={v10_col}")
     
     # 공통 키로 데이터프레임 병합
     if 'time' in df_u10.columns and 'time' in df_v10.columns:
@@ -570,20 +574,41 @@ def calculate_wind10m(df_u10, df_v10):
     else:
         merge_keys = ['grid_id', 'latitude', 'longitude']
     
+    logger.debug(f"병합 키: {merge_keys}")
+    
     # 데이터프레임 병합
     df_merged = pd.merge(df_u10, df_v10, on=merge_keys, how='inner')
+    logger.debug(f"병합된 데이터프레임 컬럼: {list(df_merged.columns)}")
     
     # 결합된 데이터프레임에서 wind10m 계산: √(u10² + v10²)
     df_merged['wind10m'] = np.sqrt(df_merged[u10_col]**2 + df_merged[v10_col]**2)
     
-    # 이제 필요한 컬럼만 남기기
-    cols_to_keep = merge_keys + ['wind10m']
+    # 이제 필요한 컬럼만 남기기 (바람 성분 변수도 포함)
+    cols_to_keep = merge_keys + ['wind10m', u10_col, v10_col]
+    logger.debug(f"유지할 컬럼: {cols_to_keep}")
+    
     if 'source_x' in df_merged.columns:
         df_merged = df_merged[cols_to_keep + ['source_x']]
         df_merged = df_merged.rename(columns={'source_x': 'source'})
     else:
         df_merged = df_merged[cols_to_keep]
     
+    # 10u, 10v 변수 이름을 표준화
+    if u10_col in df_merged.columns and u10_col != '10u':
+        df_merged = df_merged.rename(columns={u10_col: '10u'})
+    if v10_col in df_merged.columns and v10_col != '10v':
+        df_merged = df_merged.rename(columns={v10_col: '10v'})
+    
+    # 열 이름 충돌 해결 (병합 후 접미사가 붙은 경우)
+    for col in df_merged.columns:
+        if col.endswith('_x') and col.replace('_x', '') != 'source':
+            original_col = col.replace('_x', '')
+            df_merged = df_merged.rename(columns={col: original_col})
+        elif col.endswith('_y'):
+            # _y 접미사 열은 제거 (이미 _x 버전을 유지했으므로)
+            df_merged = df_merged.drop(columns=[col])
+    
+    logger.debug(f"최종 wind10m 데이터프레임 컬럼: {list(df_merged.columns)}")
     logger.info(f"wind10m 계산 완료: 범위 {df_merged['wind10m'].min():.2f} ~ {df_merged['wind10m'].max():.2f} m/s")
     
     return df_merged
@@ -851,6 +876,23 @@ def process_forecast_step(target_date, step, forecast_dir, output_dir, grid_ids_
             wind_df = calculate_wind10m(dfs['10u'], dfs['10v'])
             if wind_df is not None:
                 dfs['wind10m'] = wind_df
+                
+                # 대신 풍속 계산에 사용된 변수들의 이름을 확인
+                u10_col = None
+                for col in dfs['10u'].columns:
+                    if col in ['u10', '10u']:
+                        u10_col = col
+                        break
+                        
+                v10_col = None
+                for col in dfs['10v'].columns:
+                    if col in ['v10', '10v']:
+                        v10_col = col
+                        break
+                
+                # 로그 출력
+                logger.info(f"바람 성분 변수 이름: {u10_col}, {v10_col}")
+                logger.info(f"wind10m 데이터프레임 컬럼: {list(wind_df.columns)}")
         
         # 최종 데이터프레임 초기화
         final_df = None
@@ -867,7 +909,18 @@ def process_forecast_step(target_date, step, forecast_dir, output_dir, grid_ids_
         }
         
         # 변수별 처리 및 병합
+        logger.debug(f"처리할 변수 목록: {list(dfs.keys())}")
+
         for var_name, df in dfs.items():
+            # wind10m은 이미 10u, 10v 변수를 포함하므로 원본 10u, 10v는 처리하지 않음
+            # 10u와 10v 변수를 최종 출력에 포함하기 위해 이 조건을 주석 처리
+            # if var_name in ['10u', '10v'] and 'wind10m' in dfs:
+            #     logger.info(f"변수 {var_name}는 wind10m에 이미 포함되어 있어 개별 처리를 건너뜁니다.")
+            #     continue
+            
+            logger.debug(f"변수 {var_name} 처리 중...")
+            logger.debug(f"원본 컬럼: {list(df.columns)}")
+            
             # 변수명 표준화 (10u와 10v도 포함)
             processed_df = df.copy()
             
@@ -875,6 +928,9 @@ def process_forecast_step(target_date, step, forecast_dir, output_dir, grid_ids_
             for orig_name, new_name in var_name_mapping.items():
                 if orig_name in processed_df.columns:
                     processed_df = processed_df.rename(columns={orig_name: new_name})
+                    logger.debug(f"컬럼 이름 변경: {orig_name} -> {new_name}")
+            
+            logger.debug(f"매핑 후 컬럼: {list(processed_df.columns)}")
             
             # 특수 처리: 강수량 단위 변환 (m -> mm)
             if 'tp' in processed_df.columns:
@@ -888,15 +944,41 @@ def process_forecast_step(target_date, step, forecast_dir, output_dir, grid_ids_
             value_cols = [col for col in processed_df.columns 
                           if col in ['t2m', 'td2m', 'tp', 'wind10m', '10u', '10v']]
             
+            logger.debug(f"선택할 ID 컬럼: {id_cols}")
+            logger.debug(f"선택할 값 컬럼: {value_cols}")
+            
             if value_cols:
                 processed_df = processed_df[id_cols + value_cols]
+                logger.debug(f"선택 후 컬럼: {list(processed_df.columns)}")
                 
                 # 최종 데이터프레임에 병합
                 if final_df is None:
                     final_df = processed_df
+                    logger.debug(f"최초 병합: {list(final_df.columns)}")
                 else:
-                    final_df = pd.merge(final_df, processed_df, on=id_cols, how='outer')
-        
+                    # 병합 전 컬럼 기록
+                    logger.debug(f"병합 전 final_df 컬럼: {list(final_df.columns)}")
+                    logger.debug(f"병합 전 processed_df 컬럼: {list(processed_df.columns)}")
+                    
+                    # 병합 시 충돌 해결을 위한 접미사 설정
+                    final_df = pd.merge(final_df, processed_df, on=id_cols, how='outer', suffixes=('', '_dup'))
+                    
+                    # 병합 후 컬럼 기록
+                    logger.debug(f"병합 후 컬럼: {list(final_df.columns)}")
+                    
+                    # _dup 접미사가 붙은 열 제거 (중복)
+                    dup_cols = [col for col in final_df.columns if col.endswith('_dup')]
+                    if dup_cols:
+                        logger.info(f"중복 열 제거: {dup_cols}")
+                        final_df = final_df.drop(columns=dup_cols)
+                        logger.debug(f"중복 제거 후 컬럼: {list(final_df.columns)}")
+
+        # 최종 데이터프레임 처리 완료 후 컬럼 로깅
+        if final_df is not None:
+            logger.info(f"최종 데이터프레임 컬럼: {list(final_df.columns)}")
+        else:
+            logger.error("최종 데이터프레임이 생성되지 않았습니다.")
+
         # 최종 데이터프레임이 비어있는지 확인
         if final_df is None or final_df.empty:
             logger.error("처리할 데이터가 없습니다.")
