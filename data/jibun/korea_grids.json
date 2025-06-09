@@ -1,0 +1,6044 @@
+[
+  {
+    "grid_id":4438262,
+    "latitude":33.25,
+    "longitude":126.25,
+    "jibun":"제주특별자치도 서귀포시 대정읍 동일리 943-1"
+  },
+  {
+    "grid_id":4438263,
+    "latitude":33.25,
+    "longitude":126.35,
+    "jibun":"제주특별자치도 서귀포시 안덕면 감산리 1212"
+  },
+  {
+    "grid_id":4438264,
+    "latitude":33.25,
+    "longitude":126.45,
+    "jibun":"제주특별자치도 서귀포시 대포동 1080"
+  },
+  {
+    "grid_id":4438265,
+    "latitude":33.25,
+    "longitude":126.55,
+    "jibun":"제주특별자치도 서귀포시 서홍동 502"
+  },
+  {
+    "grid_id":4441862,
+    "latitude":33.35,
+    "longitude":126.25,
+    "jibun":"제주특별자치도 제주시 한림읍 월림리 377-1"
+  },
+  {
+    "grid_id":4441863,
+    "latitude":33.35,
+    "longitude":126.35,
+    "jibun":"제주특별자치도 제주시 한림읍 금악리 산 30"
+  },
+  {
+    "grid_id":4441864,
+    "latitude":33.35,
+    "longitude":126.45,
+    "jibun":"제주특별자치도 서귀포시 색달동 산 1-3"
+  },
+  {
+    "grid_id":4441865,
+    "latitude":33.35,
+    "longitude":126.55,
+    "jibun":"제주특별자치도 서귀포시 상효동 산 1-2"
+  },
+  {
+    "grid_id":4441866,
+    "latitude":33.35,
+    "longitude":126.65,
+    "jibun":"제주특별자치도 서귀포시 남원읍 한남리 산 2-1"
+  },
+  {
+    "grid_id":4441867,
+    "latitude":33.35,
+    "longitude":126.75,
+    "jibun":"제주특별자치도 서귀포시 표선면 가시리 3475"
+  },
+  {
+    "grid_id":4441868,
+    "latitude":33.35,
+    "longitude":126.85,
+    "jibun":"제주특별자치도 서귀포시 성산읍 신천리 853"
+  },
+  {
+    "grid_id":4445463,
+    "latitude":33.45,
+    "longitude":126.35,
+    "jibun":"제주특별자치도 제주시 애월읍 상가리 1264-6"
+  },
+  {
+    "grid_id":4445464,
+    "latitude":33.45,
+    "longitude":126.45,
+    "jibun":"제주특별자치도 제주시 해안동 2805"
+  },
+  {
+    "grid_id":4445465,
+    "latitude":33.45,
+    "longitude":126.55,
+    "jibun":"제주특별자치도 제주시 아라일동 400-2"
+  },
+  {
+    "grid_id":4445466,
+    "latitude":33.45,
+    "longitude":126.65,
+    "jibun":"제주특별자치도 제주시 조천읍 교래리 산 119"
+  },
+  {
+    "grid_id":4445467,
+    "latitude":33.45,
+    "longitude":126.75,
+    "jibun":"제주특별자치도 제주시 구좌읍 송당리 2210"
+  },
+  {
+    "grid_id":4445468,
+    "latitude":33.45,
+    "longitude":126.85,
+    "jibun":"제주특별자치도 서귀포시 성산읍 수산리 3038-5"
+  },
+  {
+    "grid_id":4449067,
+    "latitude":33.55,
+    "longitude":126.75,
+    "jibun":"제주특별자치도 제주시 구좌읍 김녕리 1835-2"
+  },
+  {
+    "grid_id":4470665,
+    "latitude":34.15,
+    "longitude":126.55,
+    "jibun":"전라남도 완도군 보길면 부황리 산 31"
+  },
+  {
+    "grid_id":4470666,
+    "latitude":34.15,
+    "longitude":126.65,
+    "jibun":"전라남도 완도군 소안면 미라리 산 146"
+  },
+  {
+    "grid_id":4474274,
+    "latitude":34.25,
+    "longitude":127.45,
+    "jibun":"전라남도 여수시 삼산면 손죽리 산 259-2"
+  },
+  {
+    "grid_id":4477865,
+    "latitude":34.35,
+    "longitude":126.55,
+    "jibun":"전라남도 해남군 송지면 마봉리 산 98-3"
+  },
+  {
+    "grid_id":4477866,
+    "latitude":34.35,
+    "longitude":126.65,
+    "jibun":"전라남도 완도군 군외면 삼두리 산 1-62"
+  },
+  {
+    "grid_id":4477870,
+    "latitude":34.35,
+    "longitude":127.05,
+    "jibun":"전라남도 완도군 금일읍 신구리 산 3"
+  },
+  {
+    "grid_id":4481461,
+    "latitude":34.45,
+    "longitude":126.15,
+    "jibun":"전라남도 진도군 지산면 와우리 산 73"
+  },
+  {
+    "grid_id":4481462,
+    "latitude":34.45,
+    "longitude":126.25,
+    "jibun":"전라남도 진도군 의신면 칠전리 산 164"
+  },
+  {
+    "grid_id":4481463,
+    "latitude":34.45,
+    "longitude":126.35,
+    "jibun":"전라남도 진도군 고군면 금계리 산 33-2"
+  },
+  {
+    "grid_id":4481465,
+    "latitude":34.45,
+    "longitude":126.55,
+    "jibun":"전라남도 해남군 현산면 읍호리 495-3"
+  },
+  {
+    "grid_id":4481466,
+    "latitude":34.45,
+    "longitude":126.65,
+    "jibun":"전라남도 해남군 북평면 동해리 산 49-2"
+  },
+  {
+    "grid_id":4481468,
+    "latitude":34.45,
+    "longitude":126.85,
+    "jibun":"전라남도 장흥군 대덕읍 신리 산 137"
+  },
+  {
+    "grid_id":4481470,
+    "latitude":34.45,
+    "longitude":127.05,
+    "jibun":"전라남도 완도군 금당면 육산리 산 111-1"
+  },
+  {
+    "grid_id":4481471,
+    "latitude":34.45,
+    "longitude":127.15,
+    "jibun":"전라남도 고흥군 금산면 어전리 산 52-1"
+  },
+  {
+    "grid_id":4485062,
+    "latitude":34.55,
+    "longitude":126.25,
+    "jibun":"전라남도 진도군 군내면 녹진리 1980"
+  },
+  {
+    "grid_id":4485064,
+    "latitude":34.55,
+    "longitude":126.45,
+    "jibun":"전라남도 해남군 황산면 한자리 507-1"
+  },
+  {
+    "grid_id":4485065,
+    "latitude":34.55,
+    "longitude":126.55,
+    "jibun":"전라남도 해남군 해남읍 내사리 산 1-1"
+  },
+  {
+    "grid_id":4485066,
+    "latitude":34.55,
+    "longitude":126.65,
+    "jibun":"전라남도 해남군 옥천면 백호리 1282"
+  },
+  {
+    "grid_id":4485067,
+    "latitude":34.55,
+    "longitude":126.75,
+    "jibun":"전라남도 강진군 도암면 학장리 산 114"
+  },
+  {
+    "grid_id":4485068,
+    "latitude":34.55,
+    "longitude":126.85,
+    "jibun":"전라남도 강진군 칠량면 명주리 산 102-3"
+  },
+  {
+    "grid_id":4485069,
+    "latitude":34.55,
+    "longitude":126.95,
+    "jibun":"전라남도 장흥군 관산읍 방촌리 482"
+  },
+  {
+    "grid_id":4485071,
+    "latitude":34.55,
+    "longitude":127.15,
+    "jibun":"전라남도 고흥군 도양읍 용정리 산 13"
+  },
+  {
+    "grid_id":4485072,
+    "latitude":34.55,
+    "longitude":127.25,
+    "jibun":"전라남도 고흥군 풍양면 매곡리 6-33"
+  },
+  {
+    "grid_id":4485073,
+    "latitude":34.55,
+    "longitude":127.35,
+    "jibun":"전라남도 고흥군 포두면 길두리 산 85-1"
+  },
+  {
+    "grid_id":4485077,
+    "latitude":34.55,
+    "longitude":127.75,
+    "jibun":"전라남도 여수시 남면 유송리 459-4"
+  },
+  {
+    "grid_id":4488661,
+    "latitude":34.65,
+    "longitude":126.15,
+    "jibun":"전라남도 신안군 장산면 도창리 산 65-1"
+  },
+  {
+    "grid_id":4488663,
+    "latitude":34.65,
+    "longitude":126.35,
+    "jibun":"전라남도 해남군 화원면 성산리 288-5"
+  },
+  {
+    "grid_id":4488664,
+    "latitude":34.65,
+    "longitude":126.45,
+    "jibun":"전라남도 해남군 산이면 초송리 256-1"
+  },
+  {
+    "grid_id":4488665,
+    "latitude":34.65,
+    "longitude":126.55,
+    "jibun":"전라남도 해남군 마산면 연구리 2538"
+  },
+  {
+    "grid_id":4488666,
+    "latitude":34.65,
+    "longitude":126.65,
+    "jibun":"전라남도 해남군 계곡면 성진리 451-5"
+  },
+  {
+    "grid_id":4488667,
+    "latitude":34.65,
+    "longitude":126.75,
+    "jibun":"전라남도 강진군 강진읍 송전리 1022-6"
+  },
+  {
+    "grid_id":4488668,
+    "latitude":34.65,
+    "longitude":126.85,
+    "jibun":"전라남도 강진군 군동면 풍동리 894-2"
+  },
+  {
+    "grid_id":4488669,
+    "latitude":34.65,
+    "longitude":126.95,
+    "jibun":"전라남도 장흥군 용산면 계산리 산 3-1"
+  },
+  {
+    "grid_id":4488670,
+    "latitude":34.65,
+    "longitude":127.05,
+    "jibun":"전라남도 보성군 회천면 전일리 산 54"
+  },
+  {
+    "grid_id":4488672,
+    "latitude":34.65,
+    "longitude":127.25,
+    "jibun":"전라남도 고흥군 두원면 학곡리 산 200"
+  },
+  {
+    "grid_id":4488673,
+    "latitude":34.65,
+    "longitude":127.35,
+    "jibun":"전라남도 고흥군 점암면 연봉리 산 176"
+  },
+  {
+    "grid_id":4488674,
+    "latitude":34.65,
+    "longitude":127.45,
+    "jibun":"전라남도 고흥군 점암면 여호리 산 252"
+  },
+  {
+    "grid_id":4488677,
+    "latitude":34.65,
+    "longitude":127.75,
+    "jibun":"전라남도 여수시 돌산읍 금봉리 산 56-4"
+  },
+  {
+    "grid_id":4492261,
+    "latitude":34.75,
+    "longitude":126.15,
+    "jibun":"전라남도 신안군 안좌면 금산리 307-6"
+  },
+  {
+    "grid_id":4492264,
+    "latitude":34.75,
+    "longitude":126.45,
+    "jibun":"전라남도 영암군 삼호읍 용앙리 1702-87"
+  },
+  {
+    "grid_id":4492265,
+    "latitude":34.75,
+    "longitude":126.55,
+    "jibun":"전라남도 영암군 학산면 신덕리 산 69"
+  },
+  {
+    "grid_id":4492266,
+    "latitude":34.75,
+    "longitude":126.65,
+    "jibun":"전라남도 영암군 군서면 도갑리 산 44-10"
+  },
+  {
+    "grid_id":4492267,
+    "latitude":34.75,
+    "longitude":126.75,
+    "jibun":"전라남도 강진군 작천면 갈동리 산 52-1"
+  },
+  {
+    "grid_id":4492268,
+    "latitude":34.75,
+    "longitude":126.85,
+    "jibun":"전라남도 장흥군 유치면 신월리 산 131-11"
+  },
+  {
+    "grid_id":4492269,
+    "latitude":34.75,
+    "longitude":126.95,
+    "jibun":"전라남도 장흥군 장동면 만년리 산 84"
+  },
+  {
+    "grid_id":4492270,
+    "latitude":34.75,
+    "longitude":127.05,
+    "jibun":"전라남도 보성군 보성읍 쾌상리 산 158"
+  },
+  {
+    "grid_id":4492271,
+    "latitude":34.75,
+    "longitude":127.15,
+    "jibun":"전라남도 보성군 득량면 마천리 754-23"
+  },
+  {
+    "grid_id":4492273,
+    "latitude":34.75,
+    "longitude":127.35,
+    "jibun":"전라남도 고흥군 남양면 중산리 39-8"
+  },
+  {
+    "grid_id":4492276,
+    "latitude":34.75,
+    "longitude":127.65,
+    "jibun":"전라남도 여수시 안산동 368-5"
+  },
+  {
+    "grid_id":4492279,
+    "latitude":34.75,
+    "longitude":127.95,
+    "jibun":"경상남도 남해군 이동면 신전리 산 116-20"
+  },
+  {
+    "grid_id":4492280,
+    "latitude":34.75,
+    "longitude":128.05,
+    "jibun":"경상남도 남해군 미조면 송정리 산 65-1"
+  },
+  {
+    "grid_id":4492285,
+    "latitude":34.75,
+    "longitude":128.55,
+    "jibun":"경상남도 통영시 한산면 추봉리 산 149-1"
+  },
+  {
+    "grid_id":4495862,
+    "latitude":34.85,
+    "longitude":126.25,
+    "jibun":"전라남도 신안군 압해읍 송공리 산 89-13"
+  },
+  {
+    "grid_id":4495863,
+    "latitude":34.85,
+    "longitude":126.35,
+    "jibun":"전라남도 신안군 압해읍 분매리 296-1"
+  },
+  {
+    "grid_id":4495864,
+    "latitude":34.85,
+    "longitude":126.45,
+    "jibun":"전라남도 무안군 삼향읍 유교리 산 36-2"
+  },
+  {
+    "grid_id":4495865,
+    "latitude":34.85,
+    "longitude":126.55,
+    "jibun":"전라남도 무안군 일로읍 복룡리 2816"
+  },
+  {
+    "grid_id":4495866,
+    "latitude":34.85,
+    "longitude":126.65,
+    "jibun":"전라남도 영암군 도포면 영호리 1024-5"
+  },
+  {
+    "grid_id":4495867,
+    "latitude":34.85,
+    "longitude":126.75,
+    "jibun":"전라남도 영암군 금정면 아천리 46"
+  },
+  {
+    "grid_id":4495868,
+    "latitude":34.85,
+    "longitude":126.85,
+    "jibun":"전라남도 영암군 금정면 청용리 산 102"
+  },
+  {
+    "grid_id":4495869,
+    "latitude":34.85,
+    "longitude":126.95,
+    "jibun":"전라남도 화순군 청풍면 신석리 산 24-1"
+  },
+  {
+    "grid_id":4495870,
+    "latitude":34.85,
+    "longitude":127.05,
+    "jibun":"전라남도 화순군 이양면 구례리 451-2"
+  },
+  {
+    "grid_id":4495871,
+    "latitude":34.85,
+    "longitude":127.15,
+    "jibun":"전라남도 보성군 겸백면 석호리 산 83-3"
+  },
+  {
+    "grid_id":4495872,
+    "latitude":34.85,
+    "longitude":127.25,
+    "jibun":"전라남도 보성군 벌교읍 옥전리 산 101"
+  },
+  {
+    "grid_id":4495873,
+    "latitude":34.85,
+    "longitude":127.35,
+    "jibun":"전라남도 보성군 벌교읍 회정리 산 40-63"
+  },
+  {
+    "grid_id":4495874,
+    "latitude":34.85,
+    "longitude":127.45,
+    "jibun":"전라남도 순천시 별량면 마산리 산 39-1"
+  },
+  {
+    "grid_id":4495875,
+    "latitude":34.85,
+    "longitude":127.55,
+    "jibun":"전라남도 여수시 율촌면 가장리 1099"
+  },
+  {
+    "grid_id":4495877,
+    "latitude":34.85,
+    "longitude":127.75,
+    "jibun":"전라남도 여수시 낙포동 323"
+  },
+  {
+    "grid_id":4495878,
+    "latitude":34.85,
+    "longitude":127.85,
+    "jibun":"경상남도 남해군 서면 노구리 산 98-1"
+  },
+  {
+    "grid_id":4495880,
+    "latitude":34.85,
+    "longitude":128.05,
+    "jibun":"경상남도 남해군 창선면 진동리 산 154-4"
+  },
+  {
+    "grid_id":4495884,
+    "latitude":34.85,
+    "longitude":128.45,
+    "jibun":"경상남도 통영시 용남면 화삼리 1269"
+  },
+  {
+    "grid_id":4495885,
+    "latitude":34.85,
+    "longitude":128.55,
+    "jibun":"경상남도 거제시 거제면 내간리 산 45-1"
+  },
+  {
+    "grid_id":4495886,
+    "latitude":34.85,
+    "longitude":128.65,
+    "jibun":"경상남도 거제시 문동동 산 98-3"
+  },
+  {
+    "grid_id":4499463,
+    "latitude":34.95,
+    "longitude":126.35,
+    "jibun":"전라남도 무안군 운남면 연리 1587-6"
+  },
+  {
+    "grid_id":4499464,
+    "latitude":34.95,
+    "longitude":126.45,
+    "jibun":"전라남도 무안군 청계면 태봉리 361"
+  },
+  {
+    "grid_id":4499465,
+    "latitude":34.95,
+    "longitude":126.55,
+    "jibun":"전라남도 나주시 동강면 곡천리 산 11-3"
+  },
+  {
+    "grid_id":4499466,
+    "latitude":34.95,
+    "longitude":126.65,
+    "jibun":"전라남도 나주시 왕곡면 신포리 109"
+  },
+  {
+    "grid_id":4499467,
+    "latitude":34.95,
+    "longitude":126.75,
+    "jibun":"전라남도 나주시 봉황면 욱곡리 493-2"
+  },
+  {
+    "grid_id":4499468,
+    "latitude":34.95,
+    "longitude":126.85,
+    "jibun":"전라남도 나주시 다도면 방산리 산 355"
+  },
+  {
+    "grid_id":4499469,
+    "latitude":34.95,
+    "longitude":126.95,
+    "jibun":"전라남도 화순군 춘양면 회송리 518-1"
+  },
+  {
+    "grid_id":4499470,
+    "latitude":34.95,
+    "longitude":127.05,
+    "jibun":"전라남도 화순군 한천면 고시리 산 98"
+  },
+  {
+    "grid_id":4499471,
+    "latitude":34.95,
+    "longitude":127.15,
+    "jibun":"전라남도 보성군 문덕면 봉갑리 산 105"
+  },
+  {
+    "grid_id":4499472,
+    "latitude":34.95,
+    "longitude":127.25,
+    "jibun":"전라남도 순천시 송광면 구룡리 산 139"
+  },
+  {
+    "grid_id":4499473,
+    "latitude":34.95,
+    "longitude":127.35,
+    "jibun":"전라남도 순천시 낙안면 금산리 산 139"
+  },
+  {
+    "grid_id":4499474,
+    "latitude":34.95,
+    "longitude":127.45,
+    "jibun":"전라남도 순천시 상사면 흘산리 산 63-1"
+  },
+  {
+    "grid_id":4499475,
+    "latitude":34.95,
+    "longitude":127.55,
+    "jibun":"전라남도 순천시 해룡면 복성리 75"
+  },
+  {
+    "grid_id":4499476,
+    "latitude":34.95,
+    "longitude":127.65,
+    "jibun":"전라남도 광양시 광양읍 죽림리 산 124-2"
+  },
+  {
+    "grid_id":4499477,
+    "latitude":34.95,
+    "longitude":127.75,
+    "jibun":"전라남도 광양시 태인동 산 37-1"
+  },
+  {
+    "grid_id":4499478,
+    "latitude":34.95,
+    "longitude":127.85,
+    "jibun":"경상남도 하동군 금남면 송문리 산 192"
+  },
+  {
+    "grid_id":4499480,
+    "latitude":34.95,
+    "longitude":128.05,
+    "jibun":"경상남도 사천시 실안동 산 100"
+  },
+  {
+    "grid_id":4499481,
+    "latitude":34.95,
+    "longitude":128.15,
+    "jibun":"경상남도 고성군 하이면 와룡리 산 107-1"
+  },
+  {
+    "grid_id":4499482,
+    "latitude":34.95,
+    "longitude":128.25,
+    "jibun":"경상남도 고성군 삼산면 삼봉리 768"
+  },
+  {
+    "grid_id":4499483,
+    "latitude":34.95,
+    "longitude":128.35,
+    "jibun":"경상남도 고성군 고성읍 월평리 167-5"
+  },
+  {
+    "grid_id":4499486,
+    "latitude":34.95,
+    "longitude":128.65,
+    "jibun":"경상남도 거제시 하청면 하청리 1092"
+  },
+  {
+    "grid_id":4503061,
+    "latitude":35.05,
+    "longitude":126.15,
+    "jibun":"전라남도 신안군 지도읍 당촌리 1457"
+  },
+  {
+    "grid_id":4503062,
+    "latitude":35.05,
+    "longitude":126.25,
+    "jibun":"전라남도 신안군 지도읍 자동리 207"
+  },
+  {
+    "grid_id":4503063,
+    "latitude":35.05,
+    "longitude":126.35,
+    "jibun":"전라남도 무안군 현경면 오류리 1106"
+  },
+  {
+    "grid_id":4503064,
+    "latitude":35.05,
+    "longitude":126.45,
+    "jibun":"전라남도 무안군 현경면 해운리 1158-6"
+  },
+  {
+    "grid_id":4503065,
+    "latitude":35.05,
+    "longitude":126.55,
+    "jibun":"전라남도 함평군 학교면 월산리 1537"
+  },
+  {
+    "grid_id":4503066,
+    "latitude":35.05,
+    "longitude":126.65,
+    "jibun":"전라남도 나주시 다시면 청정리 산 37-1"
+  },
+  {
+    "grid_id":4503067,
+    "latitude":35.05,
+    "longitude":126.75,
+    "jibun":"전라남도 나주시 금천면 원곡리 759"
+  },
+  {
+    "grid_id":4503068,
+    "latitude":35.05,
+    "longitude":126.85,
+    "jibun":"전라남도 나주시 남평읍 수원리 212-5"
+  },
+  {
+    "grid_id":4503069,
+    "latitude":35.05,
+    "longitude":126.95,
+    "jibun":"전라남도 화순군 화순읍 계소리 696-4"
+  },
+  {
+    "grid_id":4503070,
+    "latitude":35.05,
+    "longitude":127.05,
+    "jibun":"전라남도 화순군 동면 오동리 산 110"
+  },
+  {
+    "grid_id":4503071,
+    "latitude":35.05,
+    "longitude":127.15,
+    "jibun":"전라남도 화순군 동복면 구암리 산 89"
+  },
+  {
+    "grid_id":4503072,
+    "latitude":35.05,
+    "longitude":127.25,
+    "jibun":"전라남도 순천시 주암면 대광리 산 18-1"
+  },
+  {
+    "grid_id":4503073,
+    "latitude":35.05,
+    "longitude":127.35,
+    "jibun":"전라남도 순천시 승주읍 유흥리 산 87"
+  },
+  {
+    "grid_id":4503074,
+    "latitude":35.05,
+    "longitude":127.45,
+    "jibun":"전라남도 순천시 서면 학구리 산 44"
+  },
+  {
+    "grid_id":4503075,
+    "latitude":35.05,
+    "longitude":127.55,
+    "jibun":"전라남도 광양시 봉강면 신룡리 산 168"
+  },
+  {
+    "grid_id":4503076,
+    "latitude":35.05,
+    "longitude":127.65,
+    "jibun":"전라남도 광양시 진상면 황죽리 산 272"
+  },
+  {
+    "grid_id":4503077,
+    "latitude":35.05,
+    "longitude":127.75,
+    "jibun":"전라남도 광양시 진월면 월길리 1271-2"
+  },
+  {
+    "grid_id":4503078,
+    "latitude":35.05,
+    "longitude":127.85,
+    "jibun":"경상남도 하동군 양보면 박달리 1243"
+  },
+  {
+    "grid_id":4503079,
+    "latitude":35.05,
+    "longitude":127.95,
+    "jibun":"경상남도 사천시 곤양면 맥사리 산 34"
+  },
+  {
+    "grid_id":4503080,
+    "latitude":35.05,
+    "longitude":128.05,
+    "jibun":"경상남도 사천시 사남면 초전리 939-3"
+  },
+  {
+    "grid_id":4503081,
+    "latitude":35.05,
+    "longitude":128.15,
+    "jibun":"경상남도 사천시 정동면 감곡리 산 132-1"
+  },
+  {
+    "grid_id":4503082,
+    "latitude":35.05,
+    "longitude":128.25,
+    "jibun":"경상남도 고성군 대가면 신전리 828-3"
+  },
+  {
+    "grid_id":4503083,
+    "latitude":35.05,
+    "longitude":128.35,
+    "jibun":"경상남도 고성군 마암면 화산리 858-2"
+  },
+  {
+    "grid_id":4503084,
+    "latitude":35.05,
+    "longitude":128.45,
+    "jibun":"경상남도 고성군 동해면 외산리 산 166"
+  },
+  {
+    "grid_id":4503088,
+    "latitude":35.05,
+    "longitude":128.85,
+    "jibun":"부산광역시 강서구 동선동 산 74-2"
+  },
+  {
+    "grid_id":4506664,
+    "latitude":35.15,
+    "longitude":126.45,
+    "jibun":"전라남도 함평군 손불면 동암리 795-2"
+  },
+  {
+    "grid_id":4506665,
+    "latitude":35.15,
+    "longitude":126.55,
+    "jibun":"전라남도 함평군 해보면 대각리 산 116"
+  },
+  {
+    "grid_id":4506666,
+    "latitude":35.15,
+    "longitude":126.65,
+    "jibun":"전라남도 함평군 나산면 용두리 산 2"
+  },
+  {
+    "grid_id":4506667,
+    "latitude":35.15,
+    "longitude":126.75,
+    "jibun":"광주광역시 광산구 서봉동 575"
+  },
+  {
+    "grid_id":4506668,
+    "latitude":35.15,
+    "longitude":126.85,
+    "jibun":"광주광역시 서구 치평동 1256-1"
+  },
+  {
+    "grid_id":4506669,
+    "latitude":35.15,
+    "longitude":126.95,
+    "jibun":"광주광역시 동구 지산동 산 56-1"
+  },
+  {
+    "grid_id":4506670,
+    "latitude":35.15,
+    "longitude":127.05,
+    "jibun":"전라남도 담양군 가사문학면 경상리 산 99"
+  },
+  {
+    "grid_id":4506671,
+    "latitude":35.15,
+    "longitude":127.15,
+    "jibun":"전라남도 화순군 백아면 용곡리 산 166"
+  },
+  {
+    "grid_id":4506672,
+    "latitude":35.15,
+    "longitude":127.25,
+    "jibun":"전라남도 곡성군 석곡면 당월리 산 210-1"
+  },
+  {
+    "grid_id":4506673,
+    "latitude":35.15,
+    "longitude":127.35,
+    "jibun":"전라남도 곡성군 죽곡면 동계리 산 246"
+  },
+  {
+    "grid_id":4506674,
+    "latitude":35.15,
+    "longitude":127.45,
+    "jibun":"전라남도 순천시 황전면 선변리 산 77"
+  },
+  {
+    "grid_id":4506675,
+    "latitude":35.15,
+    "longitude":127.55,
+    "jibun":"전라남도 구례군 간전면 삼산리 산 65"
+  },
+  {
+    "grid_id":4506676,
+    "latitude":35.15,
+    "longitude":127.65,
+    "jibun":"전라남도 광양시 다압면 금천리 1446-3"
+  },
+  {
+    "grid_id":4506677,
+    "latitude":35.15,
+    "longitude":127.75,
+    "jibun":"경상남도 하동군 적량면 서리 산 119"
+  },
+  {
+    "grid_id":4506678,
+    "latitude":35.15,
+    "longitude":127.85,
+    "jibun":"경상남도 하동군 북천면 화정리 1561-5"
+  },
+  {
+    "grid_id":4506679,
+    "latitude":35.15,
+    "longitude":127.95,
+    "jibun":"경상남도 사천시 곤명면 본촌리 437-3"
+  },
+  {
+    "grid_id":4506680,
+    "latitude":35.15,
+    "longitude":128.05,
+    "jibun":"경상남도 진주시 내동면 삼계리 산 36-3"
+  },
+  {
+    "grid_id":4506681,
+    "latitude":35.15,
+    "longitude":128.15,
+    "jibun":"경상남도 진주시 문산읍 두산리 288-1"
+  },
+  {
+    "grid_id":4506682,
+    "latitude":35.15,
+    "longitude":128.25,
+    "jibun":"경상남도 진주시 진성면 대사리 1033"
+  },
+  {
+    "grid_id":4506683,
+    "latitude":35.15,
+    "longitude":128.35,
+    "jibun":"경상남도 진주시 이반성면 길성리 산 34"
+  },
+  {
+    "grid_id":4506684,
+    "latitude":35.15,
+    "longitude":128.45,
+    "jibun":"경상남도 창원시 마산합포구 진북면 금산리 164-2"
+  },
+  {
+    "grid_id":4506685,
+    "latitude":35.15,
+    "longitude":128.55,
+    "jibun":"경상남도 창원시 마산합포구 현동 산 107"
+  },
+  {
+    "grid_id":4506686,
+    "latitude":35.15,
+    "longitude":128.65,
+    "jibun":"경상남도 창원시 진해구 현동 18"
+  },
+  {
+    "grid_id":4506687,
+    "latitude":35.15,
+    "longitude":128.75,
+    "jibun":"경상남도 창원시 진해구 소사동 산 24"
+  },
+  {
+    "grid_id":4506688,
+    "latitude":35.15,
+    "longitude":128.85,
+    "jibun":"부산광역시 강서구 미음동 산 60-2"
+  },
+  {
+    "grid_id":4506689,
+    "latitude":35.15,
+    "longitude":128.95,
+    "jibun":"부산광역시 강서구 대저2동 4467"
+  },
+  {
+    "grid_id":4506690,
+    "latitude":35.15,
+    "longitude":129.05,
+    "jibun":"부산광역시 부산진구 범천동 1193-8"
+  },
+  {
+    "grid_id":4510263,
+    "latitude":35.25,
+    "longitude":126.35,
+    "jibun":"전라남도 영광군 백수읍 하사리 2748"
+  },
+  {
+    "grid_id":4510264,
+    "latitude":35.25,
+    "longitude":126.45,
+    "jibun":"전라남도 영광군 군서면 매산리 290-8"
+  },
+  {
+    "grid_id":4510265,
+    "latitude":35.25,
+    "longitude":126.55,
+    "jibun":"전라남도 영광군 묘량면 영양리 산 133"
+  },
+  {
+    "grid_id":4510266,
+    "latitude":35.25,
+    "longitude":126.65,
+    "jibun":"전라남도 장성군 삼서면 삼계리 산 25"
+  },
+  {
+    "grid_id":4510267,
+    "latitude":35.25,
+    "longitude":126.75,
+    "jibun":"광주광역시 광산구 광산동 산 34-1"
+  },
+  {
+    "grid_id":4510268,
+    "latitude":35.25,
+    "longitude":126.85,
+    "jibun":"전라남도 장성군 진원면 학림리 727-7"
+  },
+  {
+    "grid_id":4510269,
+    "latitude":35.25,
+    "longitude":126.95,
+    "jibun":"전라남도 담양군 봉산면 양지리 51-1"
+  },
+  {
+    "grid_id":4510270,
+    "latitude":35.25,
+    "longitude":127.05,
+    "jibun":"전라남도 담양군 대덕면 운암리 364-40"
+  },
+  {
+    "grid_id":4510271,
+    "latitude":35.25,
+    "longitude":127.15,
+    "jibun":"전라남도 곡성군 겸면 가정리 산 66"
+  },
+  {
+    "grid_id":4510272,
+    "latitude":35.25,
+    "longitude":127.25,
+    "jibun":"전라남도 곡성군 곡성읍 서계리 산 131"
+  },
+  {
+    "grid_id":4510273,
+    "latitude":35.25,
+    "longitude":127.35,
+    "jibun":"전라남도 곡성군 오곡면 침곡리 산 95-5"
+  },
+  {
+    "grid_id":4510274,
+    "latitude":35.25,
+    "longitude":127.45,
+    "jibun":"전라남도 구례군 용방면 신지리 산 23"
+  },
+  {
+    "grid_id":4510275,
+    "latitude":35.25,
+    "longitude":127.55,
+    "jibun":"전라남도 구례군 토지면 문수리 산 17"
+  },
+  {
+    "grid_id":4510276,
+    "latitude":35.25,
+    "longitude":127.65,
+    "jibun":"경상남도 하동군 화개면 용강리 산 17-1"
+  },
+  {
+    "grid_id":4510277,
+    "latitude":35.25,
+    "longitude":127.75,
+    "jibun":"경상남도 산청군 시천면 반천리 산 126"
+  },
+  {
+    "grid_id":4510278,
+    "latitude":35.25,
+    "longitude":127.85,
+    "jibun":"경상남도 산청군 시천면 중태리 산 121"
+  },
+  {
+    "grid_id":4510279,
+    "latitude":35.25,
+    "longitude":127.95,
+    "jibun":"경상남도 산청군 단성면 관정리 270"
+  },
+  {
+    "grid_id":4510280,
+    "latitude":35.25,
+    "longitude":128.05,
+    "jibun":"경상남도 진주시 명석면 왕지리 산 75"
+  },
+  {
+    "grid_id":4510281,
+    "latitude":35.25,
+    "longitude":128.15,
+    "jibun":"경상남도 진주시 대곡면 단목리 131-1"
+  },
+  {
+    "grid_id":4510282,
+    "latitude":35.25,
+    "longitude":128.25,
+    "jibun":"경상남도 진주시 지수면 청담리 산 71-10"
+  },
+  {
+    "grid_id":4510283,
+    "latitude":35.25,
+    "longitude":128.35,
+    "jibun":"경상남도 함안군 군북면 동촌리 산 114-2"
+  },
+  {
+    "grid_id":4510284,
+    "latitude":35.25,
+    "longitude":128.45,
+    "jibun":"경상남도 함안군 산인면 입곡리 산 157-2"
+  },
+  {
+    "grid_id":4510285,
+    "latitude":35.25,
+    "longitude":128.55,
+    "jibun":"경상남도 창원시 마산회원구 두척동 산 38"
+  },
+  {
+    "grid_id":4510286,
+    "latitude":35.25,
+    "longitude":128.65,
+    "jibun":"경상남도 창원시 의창구 명서동 67-10"
+  },
+  {
+    "grid_id":4510287,
+    "latitude":35.25,
+    "longitude":128.75,
+    "jibun":"경상남도 김해시 진례면 송정리 314-9"
+  },
+  {
+    "grid_id":4510288,
+    "latitude":35.25,
+    "longitude":128.85,
+    "jibun":"경상남도 김해시 주촌면 선지리 산 11-1"
+  },
+  {
+    "grid_id":4510289,
+    "latitude":35.25,
+    "longitude":128.95,
+    "jibun":"경상남도 김해시 대동면 예안리 산 85-3"
+  },
+  {
+    "grid_id":4510290,
+    "latitude":35.25,
+    "longitude":129.05,
+    "jibun":"부산광역시 금정구 금성동 산 85-1"
+  },
+  {
+    "grid_id":4510291,
+    "latitude":35.25,
+    "longitude":129.15,
+    "jibun":"부산광역시 기장군 철마면 고촌리 산 95-1"
+  },
+  {
+    "grid_id":4510292,
+    "latitude":35.25,
+    "longitude":129.25,
+    "jibun":"부산광역시 기장군 일광읍 학리 53-18"
+  },
+  {
+    "grid_id":4513864,
+    "latitude":35.35,
+    "longitude":126.45,
+    "jibun":"전라남도 영광군 법성면 대덕리 701-3"
+  },
+  {
+    "grid_id":4513865,
+    "latitude":35.35,
+    "longitude":126.55,
+    "jibun":"전북특별자치도 고창군 공음면 군유리 899"
+  },
+  {
+    "grid_id":4513866,
+    "latitude":35.35,
+    "longitude":126.65,
+    "jibun":"전북특별자치도 고창군 성송면 암치리 산 75"
+  },
+  {
+    "grid_id":4513867,
+    "latitude":35.35,
+    "longitude":126.75,
+    "jibun":"전라남도 장성군 서삼면 장산리 802"
+  },
+  {
+    "grid_id":4513868,
+    "latitude":35.35,
+    "longitude":126.85,
+    "jibun":"전라남도 장성군 장성읍 덕진리 산 37-1"
+  },
+  {
+    "grid_id":4513869,
+    "latitude":35.35,
+    "longitude":126.95,
+    "jibun":"전라남도 담양군 월산면 월평리 490-2"
+  },
+  {
+    "grid_id":4513870,
+    "latitude":35.35,
+    "longitude":127.05,
+    "jibun":"전라남도 담양군 금성면 덕성리 874"
+  },
+  {
+    "grid_id":4513871,
+    "latitude":35.35,
+    "longitude":127.15,
+    "jibun":"전북특별자치도 순창군 순창읍 신남리 산 3-1"
+  },
+  {
+    "grid_id":4513872,
+    "latitude":35.35,
+    "longitude":127.25,
+    "jibun":"전북특별자치도 남원시 대강면 사석리 산 128"
+  },
+  {
+    "grid_id":4513873,
+    "latitude":35.35,
+    "longitude":127.35,
+    "jibun":"전북특별자치도 남원시 송동면 송내리 367-2"
+  },
+  {
+    "grid_id":4513874,
+    "latitude":35.35,
+    "longitude":127.45,
+    "jibun":"전라남도 구례군 산동면 원달리 584-1"
+  },
+  {
+    "grid_id":4513875,
+    "latitude":35.35,
+    "longitude":127.55,
+    "jibun":"전북특별자치도 남원시 산내면 덕동리 562"
+  },
+  {
+    "grid_id":4513876,
+    "latitude":35.35,
+    "longitude":127.65,
+    "jibun":"경상남도 함양군 마천면 삼정리 산 161"
+  },
+  {
+    "grid_id":4513877,
+    "latitude":35.35,
+    "longitude":127.75,
+    "jibun":"경상남도 산청군 삼장면 유평리 산 51"
+  },
+  {
+    "grid_id":4513878,
+    "latitude":35.35,
+    "longitude":127.85,
+    "jibun":"경상남도 산청군 삼장면 홍계리 산 32"
+  },
+  {
+    "grid_id":4513879,
+    "latitude":35.35,
+    "longitude":127.95,
+    "jibun":"경상남도 산청군 신안면 안봉리 산 239-1"
+  },
+  {
+    "grid_id":4513880,
+    "latitude":35.35,
+    "longitude":128.05,
+    "jibun":"경상남도 산청군 생비량면 도리 1571"
+  },
+  {
+    "grid_id":4513881,
+    "latitude":35.35,
+    "longitude":128.15,
+    "jibun":"경상남도 의령군 대의면 천곡리 산 32"
+  },
+  {
+    "grid_id":4513882,
+    "latitude":35.35,
+    "longitude":128.25,
+    "jibun":"경상남도 의령군 가례면 괴진리 산 121"
+  },
+  {
+    "grid_id":4513883,
+    "latitude":35.35,
+    "longitude":128.35,
+    "jibun":"경상남도 의령군 정곡면 가현리 114"
+  },
+  {
+    "grid_id":4513884,
+    "latitude":35.35,
+    "longitude":128.45,
+    "jibun":"경상남도 함안군 대산면 부목리 1233-4"
+  },
+  {
+    "grid_id":4513885,
+    "latitude":35.35,
+    "longitude":128.55,
+    "jibun":"경상남도 함안군 칠북면 검단리 산 35-10"
+  },
+  {
+    "grid_id":4513886,
+    "latitude":35.35,
+    "longitude":128.65,
+    "jibun":"경상남도 창원시 의창구 동읍 봉강리 산 80"
+  },
+  {
+    "grid_id":4513887,
+    "latitude":35.35,
+    "longitude":128.75,
+    "jibun":"경상남도 밀양시 하남읍 백산리 1586"
+  },
+  {
+    "grid_id":4513888,
+    "latitude":35.35,
+    "longitude":128.85,
+    "jibun":"경상남도 김해시 생림면 생철리 1376-25"
+  },
+  {
+    "grid_id":4513889,
+    "latitude":35.35,
+    "longitude":128.95,
+    "jibun":"경상남도 양산시 원동면 서룡리 산 37-3"
+  },
+  {
+    "grid_id":4513890,
+    "latitude":35.35,
+    "longitude":129.05,
+    "jibun":"경상남도 양산시 신기동 산 38"
+  },
+  {
+    "grid_id":4513891,
+    "latitude":35.35,
+    "longitude":129.15,
+    "jibun":"부산광역시 기장군 정관읍 두명리 30-7"
+  },
+  {
+    "grid_id":4513892,
+    "latitude":35.35,
+    "longitude":129.25,
+    "jibun":"부산광역시 기장군 장안읍 기룡리 산 172"
+  },
+  {
+    "grid_id":4517464,
+    "latitude":35.45,
+    "longitude":126.45,
+    "jibun":"전북특별자치도 고창군 상하면 용정리 1507-5"
+  },
+  {
+    "grid_id":4517465,
+    "latitude":35.45,
+    "longitude":126.55,
+    "jibun":"전북특별자치도 고창군 해리면 고성리 295"
+  },
+  {
+    "grid_id":4517466,
+    "latitude":35.45,
+    "longitude":126.65,
+    "jibun":"전북특별자치도 고창군 고창읍 죽림리 산 53"
+  },
+  {
+    "grid_id":4517467,
+    "latitude":35.45,
+    "longitude":126.75,
+    "jibun":"전라남도 장성군 북이면 죽청리 산 70-1"
+  },
+  {
+    "grid_id":4517468,
+    "latitude":35.45,
+    "longitude":126.85,
+    "jibun":"전라남도 장성군 북하면 신성리 산 1-1"
+  },
+  {
+    "grid_id":4517469,
+    "latitude":35.45,
+    "longitude":126.95,
+    "jibun":"전북특별자치도 순창군 복흥면 상송리 산 42-1"
+  },
+  {
+    "grid_id":4517470,
+    "latitude":35.45,
+    "longitude":127.05,
+    "jibun":"전북특별자치도 순창군 구림면 월정리 95-1"
+  },
+  {
+    "grid_id":4517471,
+    "latitude":35.45,
+    "longitude":127.15,
+    "jibun":"전북특별자치도 순창군 인계면 탑리 산 98-1"
+  },
+  {
+    "grid_id":4517472,
+    "latitude":35.45,
+    "longitude":127.25,
+    "jibun":"전북특별자치도 순창군 동계면 신흥리 산 107"
+  },
+  {
+    "grid_id":4517473,
+    "latitude":35.45,
+    "longitude":127.35,
+    "jibun":"전북특별자치도 남원시 내척동 산 59"
+  },
+  {
+    "grid_id":4517474,
+    "latitude":35.45,
+    "longitude":127.45,
+    "jibun":"전북특별자치도 남원시 이백면 내동리 산 24"
+  },
+  {
+    "grid_id":4517475,
+    "latitude":35.45,
+    "longitude":127.55,
+    "jibun":"전북특별자치도 남원시 운봉읍 화수리 136-15"
+  },
+  {
+    "grid_id":4517476,
+    "latitude":35.45,
+    "longitude":127.65,
+    "jibun":"전북특별자치도 남원시 산내면 중황리 산 45"
+  },
+  {
+    "grid_id":4517477,
+    "latitude":35.45,
+    "longitude":127.75,
+    "jibun":"경상남도 함양군 휴천면 대천리 산 81"
+  },
+  {
+    "grid_id":4517478,
+    "latitude":35.45,
+    "longitude":127.85,
+    "jibun":"경상남도 산청군 금서면 특리 산 24-11"
+  },
+  {
+    "grid_id":4517479,
+    "latitude":35.45,
+    "longitude":127.95,
+    "jibun":"경상남도 산청군 차황면 우사리 239"
+  },
+  {
+    "grid_id":4517480,
+    "latitude":35.45,
+    "longitude":128.05,
+    "jibun":"경상남도 합천군 가회면 장대리 산 233"
+  },
+  {
+    "grid_id":4517481,
+    "latitude":35.45,
+    "longitude":128.15,
+    "jibun":"경상남도 합천군 쌍백면 평구리 산 17"
+  },
+  {
+    "grid_id":4517482,
+    "latitude":35.45,
+    "longitude":128.25,
+    "jibun":"경상남도 의령군 궁류면 토곡리 78"
+  },
+  {
+    "grid_id":4517483,
+    "latitude":35.45,
+    "longitude":128.35,
+    "jibun":"경상남도 의령군 부림면 입산리 산 13"
+  },
+  {
+    "grid_id":4517484,
+    "latitude":35.45,
+    "longitude":128.45,
+    "jibun":"경상남도 창녕군 장마면 동정리 541"
+  },
+  {
+    "grid_id":4517485,
+    "latitude":35.45,
+    "longitude":128.55,
+    "jibun":"경상남도 창녕군 도천면 덕곡리 산 34"
+  },
+  {
+    "grid_id":4517486,
+    "latitude":35.45,
+    "longitude":128.65,
+    "jibun":"경상남도 밀양시 무안면 성덕리 302-1"
+  },
+  {
+    "grid_id":4517487,
+    "latitude":35.45,
+    "longitude":128.75,
+    "jibun":"경상남도 밀양시 상남면 기산리 산 31"
+  },
+  {
+    "grid_id":4517488,
+    "latitude":35.45,
+    "longitude":128.85,
+    "jibun":"경상남도 밀양시 삼랑진읍 우곡리 산 98-2"
+  },
+  {
+    "grid_id":4517489,
+    "latitude":35.45,
+    "longitude":128.95,
+    "jibun":"경상남도 양산시 원동면 영포리 산 122-1"
+  },
+  {
+    "grid_id":4517490,
+    "latitude":35.45,
+    "longitude":129.05,
+    "jibun":"경상남도 양산시 상북면 외석리 산 37-1"
+  },
+  {
+    "grid_id":4517491,
+    "latitude":35.45,
+    "longitude":129.15,
+    "jibun":"울산광역시 울주군 웅촌면 고연리 산 212-1"
+  },
+  {
+    "grid_id":4517492,
+    "latitude":35.45,
+    "longitude":129.25,
+    "jibun":"울산광역시 울주군 온양읍 삼광리 산 72"
+  },
+  {
+    "grid_id":4521066,
+    "latitude":35.55,
+    "longitude":126.65,
+    "jibun":"전북특별자치도 고창군 부안면 수앙리 산 35-10"
+  },
+  {
+    "grid_id":4521067,
+    "latitude":35.55,
+    "longitude":126.75,
+    "jibun":"전북특별자치도 고창군 성내면 월성리 254-5"
+  },
+  {
+    "grid_id":4521068,
+    "latitude":35.55,
+    "longitude":126.85,
+    "jibun":"전북특별자치도 정읍시 교암동 산 59"
+  },
+  {
+    "grid_id":4521069,
+    "latitude":35.55,
+    "longitude":126.95,
+    "jibun":"전북특별자치도 정읍시 칠보면 수청리 산 146"
+  },
+  {
+    "grid_id":4521070,
+    "latitude":35.55,
+    "longitude":127.05,
+    "jibun":"전북특별자치도 정읍시 산내면 장금리 1372-3"
+  },
+  {
+    "grid_id":4521071,
+    "latitude":35.55,
+    "longitude":127.15,
+    "jibun":"전북특별자치도 임실군 강진면 필봉리 498"
+  },
+  {
+    "grid_id":4521072,
+    "latitude":35.55,
+    "longitude":127.25,
+    "jibun":"전북특별자치도 임실군 임실읍 이인리 산 214-2"
+  },
+  {
+    "grid_id":4521073,
+    "latitude":35.55,
+    "longitude":127.35,
+    "jibun":"전북특별자치도 남원시 덕과면 용산리 563-1"
+  },
+  {
+    "grid_id":4521074,
+    "latitude":35.55,
+    "longitude":127.45,
+    "jibun":"전북특별자치도 장수군 번암면 국포리 산 117"
+  },
+  {
+    "grid_id":4521075,
+    "latitude":35.55,
+    "longitude":127.55,
+    "jibun":"전북특별자치도 장수군 번암면 죽림리 산 18"
+  },
+  {
+    "grid_id":4521076,
+    "latitude":35.55,
+    "longitude":127.65,
+    "jibun":"경상남도 함양군 백전면 평정리 산 21-1"
+  },
+  {
+    "grid_id":4521077,
+    "latitude":35.55,
+    "longitude":127.75,
+    "jibun":"경상남도 함양군 지곡면 보산리 785-2"
+  },
+  {
+    "grid_id":4521078,
+    "latitude":35.55,
+    "longitude":127.85,
+    "jibun":"경상남도 산청군 생초면 향양리 산 93"
+  },
+  {
+    "grid_id":4521079,
+    "latitude":35.55,
+    "longitude":127.95,
+    "jibun":"경상남도 거창군 신원면 구사리 산 133-1"
+  },
+  {
+    "grid_id":4521080,
+    "latitude":35.55,
+    "longitude":128.05,
+    "jibun":"경상남도 합천군 대병면 상천리 산 1"
+  },
+  {
+    "grid_id":4521081,
+    "latitude":35.55,
+    "longitude":128.15,
+    "jibun":"경상남도 합천군 용주면 성산리 산 40"
+  },
+  {
+    "grid_id":4521082,
+    "latitude":35.55,
+    "longitude":128.25,
+    "jibun":"경상남도 합천군 초계면 택리 78-7"
+  },
+  {
+    "grid_id":4521083,
+    "latitude":35.55,
+    "longitude":128.35,
+    "jibun":"경상남도 합천군 청덕면 적포리 898-1"
+  },
+  {
+    "grid_id":4521084,
+    "latitude":35.55,
+    "longitude":128.45,
+    "jibun":"경상남도 창녕군 대지면 창산리 518-4"
+  },
+  {
+    "grid_id":4521085,
+    "latitude":35.55,
+    "longitude":128.55,
+    "jibun":"경상남도 창녕군 고암면 우천리 산 41"
+  },
+  {
+    "grid_id":4521086,
+    "latitude":35.55,
+    "longitude":128.65,
+    "jibun":"경상남도 밀양시 청도면 고법리 1626"
+  },
+  {
+    "grid_id":4521087,
+    "latitude":35.55,
+    "longitude":128.75,
+    "jibun":"경상남도 밀양시 상동면 옥산리 산 90"
+  },
+  {
+    "grid_id":4521088,
+    "latitude":35.55,
+    "longitude":128.85,
+    "jibun":"경상남도 밀양시 산내면 용전리 산 50"
+  },
+  {
+    "grid_id":4521089,
+    "latitude":35.55,
+    "longitude":128.95,
+    "jibun":"경상남도 밀양시 단장면 구천리 산 46"
+  },
+  {
+    "grid_id":4521090,
+    "latitude":35.55,
+    "longitude":129.05,
+    "jibun":"울산광역시 울주군 상북면 등억알프스리 산 181"
+  },
+  {
+    "grid_id":4521091,
+    "latitude":35.55,
+    "longitude":129.15,
+    "jibun":"울산광역시 울주군 언양읍 반송리 862-4"
+  },
+  {
+    "grid_id":4521092,
+    "latitude":35.55,
+    "longitude":129.25,
+    "jibun":"울산광역시 울주군 범서읍 굴화리 758"
+  },
+  {
+    "grid_id":4521093,
+    "latitude":35.55,
+    "longitude":129.35,
+    "jibun":"울산광역시 중구 반구동 408-6"
+  },
+  {
+    "grid_id":4521094,
+    "latitude":35.55,
+    "longitude":129.45,
+    "jibun":"울산광역시 동구 주전동 산 202-2"
+  },
+  {
+    "grid_id":4524665,
+    "latitude":35.65,
+    "longitude":126.55,
+    "jibun":"전북특별자치도 부안군 변산면 중계리 산 95-6"
+  },
+  {
+    "grid_id":4524666,
+    "latitude":35.65,
+    "longitude":126.65,
+    "jibun":"전북특별자치도 부안군 상서면 청림리 산 118-1"
+  },
+  {
+    "grid_id":4524667,
+    "latitude":35.65,
+    "longitude":126.75,
+    "jibun":"전북특별자치도 정읍시 영원면 풍월리 1617-8"
+  },
+  {
+    "grid_id":4524668,
+    "latitude":35.65,
+    "longitude":126.85,
+    "jibun":"전북특별자치도 정읍시 덕천면 신월리 770"
+  },
+  {
+    "grid_id":4524669,
+    "latitude":35.65,
+    "longitude":126.95,
+    "jibun":"전북특별자치도 정읍시 태인면 거산리 산 3"
+  },
+  {
+    "grid_id":4524670,
+    "latitude":35.65,
+    "longitude":127.05,
+    "jibun":"전북특별자치도 정읍시 산외면 상두리 산 514-1"
+  },
+  {
+    "grid_id":4524671,
+    "latitude":35.65,
+    "longitude":127.15,
+    "jibun":"전북특별자치도 임실군 운암면 입석리 산 4"
+  },
+  {
+    "grid_id":4524672,
+    "latitude":35.65,
+    "longitude":127.25,
+    "jibun":"전북특별자치도 임실군 신평면 호암리 1617"
+  },
+  {
+    "grid_id":4524673,
+    "latitude":35.65,
+    "longitude":127.35,
+    "jibun":"전북특별자치도 임실군 성수면 삼봉리 산 15"
+  },
+  {
+    "grid_id":4524674,
+    "latitude":35.65,
+    "longitude":127.45,
+    "jibun":"전북특별자치도 진안군 백운면 신암리 214"
+  },
+  {
+    "grid_id":4524675,
+    "latitude":35.65,
+    "longitude":127.55,
+    "jibun":"전북특별자치도 장수군 장수읍 노곡리 875-20"
+  },
+  {
+    "grid_id":4524676,
+    "latitude":35.65,
+    "longitude":127.65,
+    "jibun":"경상남도 함양군 서상면 옥산리 산 81-1"
+  },
+  {
+    "grid_id":4524677,
+    "latitude":35.65,
+    "longitude":127.75,
+    "jibun":"경상남도 함양군 서하면 봉전리 산 153-7"
+  },
+  {
+    "grid_id":4524678,
+    "latitude":35.65,
+    "longitude":127.85,
+    "jibun":"경상남도 함양군 안의면 초동리 산 79"
+  },
+  {
+    "grid_id":4524679,
+    "latitude":35.65,
+    "longitude":127.95,
+    "jibun":"경상남도 거창군 남하면 무릉리 1458"
+  },
+  {
+    "grid_id":4524680,
+    "latitude":35.65,
+    "longitude":128.05,
+    "jibun":"경상남도 합천군 봉산면 압곡리 산 41"
+  },
+  {
+    "grid_id":4524681,
+    "latitude":35.65,
+    "longitude":128.15,
+    "jibun":"경상남도 합천군 합천읍 내곡리 산 11"
+  },
+  {
+    "grid_id":4524682,
+    "latitude":35.65,
+    "longitude":128.25,
+    "jibun":"경상남도 합천군 쌍책면 상신리 산 33"
+  },
+  {
+    "grid_id":4524683,
+    "latitude":35.65,
+    "longitude":128.35,
+    "jibun":"경상북도 고령군 우곡면 월오리 347-2"
+  },
+  {
+    "grid_id":4524684,
+    "latitude":35.65,
+    "longitude":128.45,
+    "jibun":"대구광역시 달성군 구지면 가천리 620-97"
+  },
+  {
+    "grid_id":4524685,
+    "latitude":35.65,
+    "longitude":128.55,
+    "jibun":"경상북도 청도군 풍각면 화산리 917"
+  },
+  {
+    "grid_id":4524686,
+    "latitude":35.65,
+    "longitude":128.65,
+    "jibun":"경상북도 청도군 이서면 구라리 734"
+  },
+  {
+    "grid_id":4524687,
+    "latitude":35.65,
+    "longitude":128.75,
+    "jibun":"경상북도 청도군 청도읍 원정리 401-2"
+  },
+  {
+    "grid_id":4524688,
+    "latitude":35.65,
+    "longitude":128.85,
+    "jibun":"경상북도 청도군 매전면 호화리 360"
+  },
+  {
+    "grid_id":4524689,
+    "latitude":35.65,
+    "longitude":128.95,
+    "jibun":"경상북도 청도군 운문면 신원리-2"
+  },
+  {
+    "grid_id":4524690,
+    "latitude":35.65,
+    "longitude":129.05,
+    "jibun":"경상북도 경주시 산내면 대현리 산 361"
+  },
+  {
+    "grid_id":4524691,
+    "latitude":35.65,
+    "longitude":129.15,
+    "jibun":"울산광역시 울주군 두서면 인보리 산 61-1"
+  },
+  {
+    "grid_id":4524692,
+    "latitude":35.65,
+    "longitude":129.25,
+    "jibun":"울산광역시 울주군 범서읍 척과리 산 4-1"
+  },
+  {
+    "grid_id":4524693,
+    "latitude":35.65,
+    "longitude":129.35,
+    "jibun":"울산광역시 북구 중산동 107-2"
+  },
+  {
+    "grid_id":4528266,
+    "latitude":35.75,
+    "longitude":126.65,
+    "jibun":"전북특별자치도 부안군 계화면 의복리 1706"
+  },
+  {
+    "grid_id":4528267,
+    "latitude":35.75,
+    "longitude":126.75,
+    "jibun":"전북특별자치도 부안군 동진면 봉황리 1298"
+  },
+  {
+    "grid_id":4528268,
+    "latitude":35.75,
+    "longitude":126.85,
+    "jibun":"전북특별자치도 김제시 부량면 용성리 225-25"
+  },
+  {
+    "grid_id":4528269,
+    "latitude":35.75,
+    "longitude":126.95,
+    "jibun":"전북특별자치도 김제시 봉남면 내광리 1077"
+  },
+  {
+    "grid_id":4528270,
+    "latitude":35.75,
+    "longitude":127.05,
+    "jibun":"전북특별자치도 김제시 금산면 청도리 산 44"
+  },
+  {
+    "grid_id":4528271,
+    "latitude":35.75,
+    "longitude":127.15,
+    "jibun":"전북특별자치도 완주군 구이면 평촌리 산 223"
+  },
+  {
+    "grid_id":4528272,
+    "latitude":35.75,
+    "longitude":127.25,
+    "jibun":"전북특별자치도 임실군 관촌면 상월리 310-2"
+  },
+  {
+    "grid_id":4528273,
+    "latitude":35.75,
+    "longitude":127.35,
+    "jibun":"전북특별자치도 진안군 마령면 덕천리 401"
+  },
+  {
+    "grid_id":4528274,
+    "latitude":35.75,
+    "longitude":127.45,
+    "jibun":"전북특별자치도 진안군 진안읍 반월리 산 101-2"
+  },
+  {
+    "grid_id":4528275,
+    "latitude":35.75,
+    "longitude":127.55,
+    "jibun":"전북특별자치도 장수군 천천면 용광리 산 95"
+  },
+  {
+    "grid_id":4528276,
+    "latitude":35.75,
+    "longitude":127.65,
+    "jibun":"전북특별자치도 장수군 장계면 명덕리 산 154-1"
+  },
+  {
+    "grid_id":4528277,
+    "latitude":35.75,
+    "longitude":127.75,
+    "jibun":"경상남도 거창군 북상면 월성리 산 280-1"
+  },
+  {
+    "grid_id":4528278,
+    "latitude":35.75,
+    "longitude":127.85,
+    "jibun":"경상남도 거창군 위천면 당산리 산 49"
+  },
+  {
+    "grid_id":4528279,
+    "latitude":35.75,
+    "longitude":127.95,
+    "jibun":"경상남도 거창군 주상면 거기리 372-1"
+  },
+  {
+    "grid_id":4528280,
+    "latitude":35.75,
+    "longitude":128.05,
+    "jibun":"경상남도 합천군 가야면 죽전리 산 156"
+  },
+  {
+    "grid_id":4528281,
+    "latitude":35.75,
+    "longitude":128.15,
+    "jibun":"경상남도 합천군 야로면 하림리 454"
+  },
+  {
+    "grid_id":4528282,
+    "latitude":35.75,
+    "longitude":128.25,
+    "jibun":"경상북도 고령군 대가야읍 중화리 산 108-3"
+  },
+  {
+    "grid_id":4528283,
+    "latitude":35.75,
+    "longitude":128.35,
+    "jibun":"경상북도 고령군 성산면 기족리 556"
+  },
+  {
+    "grid_id":4528284,
+    "latitude":35.75,
+    "longitude":128.45,
+    "jibun":"대구광역시 달성군 논공읍 노이리 산 216"
+  },
+  {
+    "grid_id":4528285,
+    "latitude":35.75,
+    "longitude":128.55,
+    "jibun":"대구광역시 달성군 가창면 정대리 산 231-1"
+  },
+  {
+    "grid_id":4528286,
+    "latitude":35.75,
+    "longitude":128.65,
+    "jibun":"대구광역시 달성군 가창면 옥분리 460-1"
+  },
+  {
+    "grid_id":4528287,
+    "latitude":35.75,
+    "longitude":128.75,
+    "jibun":"경상북도 경산시 남천면 금곡리 산 54-2"
+  },
+  {
+    "grid_id":4528288,
+    "latitude":35.75,
+    "longitude":128.85,
+    "jibun":"경상북도 경산시 남산면 평기리 산 66-1"
+  },
+  {
+    "grid_id":4528289,
+    "latitude":35.75,
+    "longitude":128.95,
+    "jibun":"경상북도 청도군 운문면 서지리 산 2"
+  },
+  {
+    "grid_id":4528290,
+    "latitude":35.75,
+    "longitude":129.05,
+    "jibun":"경상북도 경주시 산내면 의곡리 53-1"
+  },
+  {
+    "grid_id":4528291,
+    "latitude":35.75,
+    "longitude":129.15,
+    "jibun":"경상북도 경주시 내남면 상신리 1215-91"
+  },
+  {
+    "grid_id":4528292,
+    "latitude":35.75,
+    "longitude":129.25,
+    "jibun":"경상북도 경주시 내남면 노곡리 산 80"
+  },
+  {
+    "grid_id":4528293,
+    "latitude":35.75,
+    "longitude":129.35,
+    "jibun":"경상북도 경주시 외동읍 말방리 산 37-1"
+  },
+  {
+    "grid_id":4528294,
+    "latitude":35.75,
+    "longitude":129.45,
+    "jibun":"경상북도 경주시 문무대왕면 구길리 산 110"
+  },
+  {
+    "grid_id":4531863,
+    "latitude":35.85,
+    "longitude":126.35,
+    "jibun":"전북특별자치도 군산시 옥도면 말도리 산 115-55"
+  },
+  {
+    "grid_id":4531867,
+    "latitude":35.85,
+    "longitude":126.75,
+    "jibun":"전북특별자치도 김제시 진봉면 고사리 3293"
+  },
+  {
+    "grid_id":4531868,
+    "latitude":35.85,
+    "longitude":126.85,
+    "jibun":"전북특별자치도 김제시 만경읍 대동리 1096-24"
+  },
+  {
+    "grid_id":4531869,
+    "latitude":35.85,
+    "longitude":126.95,
+    "jibun":"전북특별자치도 김제시 용지면 와룡리 1-6"
+  },
+  {
+    "grid_id":4531870,
+    "latitude":35.85,
+    "longitude":127.05,
+    "jibun":"전북특별자치도 완주군 이서면 반교리 18-2"
+  },
+  {
+    "grid_id":4531871,
+    "latitude":35.85,
+    "longitude":127.15,
+    "jibun":"전북특별자치도 전주시 덕진구 우아동3가 산 31-5"
+  },
+  {
+    "grid_id":4531872,
+    "latitude":35.85,
+    "longitude":127.25,
+    "jibun":"전북특별자치도 완주군 소양면 해월리 1038-59"
+  },
+  {
+    "grid_id":4531873,
+    "latitude":35.85,
+    "longitude":127.35,
+    "jibun":"전북특별자치도 진안군 부귀면 봉암리 산 13"
+  },
+  {
+    "grid_id":4531874,
+    "latitude":35.85,
+    "longitude":127.45,
+    "jibun":"전북특별자치도 진안군 정천면 월평리 산 203"
+  },
+  {
+    "grid_id":4531875,
+    "latitude":35.85,
+    "longitude":127.55,
+    "jibun":"전북특별자치도 진안군 동향면 자산리 1361"
+  },
+  {
+    "grid_id":4531876,
+    "latitude":35.85,
+    "longitude":127.65,
+    "jibun":"전북특별자치도 무주군 안성면 죽천리 2111"
+  },
+  {
+    "grid_id":4531877,
+    "latitude":35.85,
+    "longitude":127.75,
+    "jibun":"전북특별자치도 무주군 설천면 삼공리 산 109"
+  },
+  {
+    "grid_id":4531878,
+    "latitude":35.85,
+    "longitude":127.85,
+    "jibun":"경상남도 거창군 고제면 개명리 산 138-1"
+  },
+  {
+    "grid_id":4531879,
+    "latitude":35.85,
+    "longitude":127.95,
+    "jibun":"경상남도 거창군 웅양면 산포리 534"
+  },
+  {
+    "grid_id":4531880,
+    "latitude":35.85,
+    "longitude":128.05,
+    "jibun":"경상북도 김천시 증산면 황점리 763"
+  },
+  {
+    "grid_id":4531881,
+    "latitude":35.85,
+    "longitude":128.15,
+    "jibun":"경상북도 성주군 가천면 마수리 산 12-7"
+  },
+  {
+    "grid_id":4531882,
+    "latitude":35.85,
+    "longitude":128.25,
+    "jibun":"경상북도 성주군 용암면 상신리 산 93"
+  },
+  {
+    "grid_id":4531883,
+    "latitude":35.85,
+    "longitude":128.35,
+    "jibun":"경상북도 성주군 용암면 기산리 835"
+  },
+  {
+    "grid_id":4531884,
+    "latitude":35.85,
+    "longitude":128.45,
+    "jibun":"대구광역시 달성군 다사읍 매곡리 산 73"
+  },
+  {
+    "grid_id":4531885,
+    "latitude":35.85,
+    "longitude":128.55,
+    "jibun":"대구광역시 달서구 두류동 706-3"
+  },
+  {
+    "grid_id":4531886,
+    "latitude":35.85,
+    "longitude":128.65,
+    "jibun":"대구광역시 수성구 만촌동 875-9"
+  },
+  {
+    "grid_id":4531887,
+    "latitude":35.85,
+    "longitude":128.75,
+    "jibun":"경상북도 경산시 조영동 37"
+  },
+  {
+    "grid_id":4531888,
+    "latitude":35.85,
+    "longitude":128.85,
+    "jibun":"경상북도 경산시 진량읍 현내리 산 114-13"
+  },
+  {
+    "grid_id":4531889,
+    "latitude":35.85,
+    "longitude":128.95,
+    "jibun":"경상북도 영천시 대창면 어방리 산 48"
+  },
+  {
+    "grid_id":4531890,
+    "latitude":35.85,
+    "longitude":129.05,
+    "jibun":"경상북도 경주시 건천읍 송선리 산 195-6"
+  },
+  {
+    "grid_id":4531891,
+    "latitude":35.85,
+    "longitude":129.15,
+    "jibun":"경상북도 경주시 충효동 산 97-1"
+  },
+  {
+    "grid_id":4531892,
+    "latitude":35.85,
+    "longitude":129.25,
+    "jibun":"경상북도 경주시 동천동 산 62-4"
+  },
+  {
+    "grid_id":4531893,
+    "latitude":35.85,
+    "longitude":129.35,
+    "jibun":"경상북도 경주시 황용동 산 1-1"
+  },
+  {
+    "grid_id":4531894,
+    "latitude":35.85,
+    "longitude":129.45,
+    "jibun":"경상북도 포항시 남구 장기면 수성리 산 171-3"
+  },
+  {
+    "grid_id":4535465,
+    "latitude":35.95,
+    "longitude":126.55,
+    "jibun":"전북특별자치도 군산시 오식도동 864"
+  },
+  {
+    "grid_id":4535466,
+    "latitude":35.95,
+    "longitude":126.65,
+    "jibun":"전북특별자치도 군산시 산북동 3469-1"
+  },
+  {
+    "grid_id":4535467,
+    "latitude":35.95,
+    "longitude":126.75,
+    "jibun":"전북특별자치도 군산시 옥산면 쌍봉리 793"
+  },
+  {
+    "grid_id":4535468,
+    "latitude":35.95,
+    "longitude":126.85,
+    "jibun":"전북특별자치도 군산시 대야면 죽산리 산 59-1"
+  },
+  {
+    "grid_id":4535469,
+    "latitude":35.95,
+    "longitude":126.95,
+    "jibun":"전북특별자치도 익산시 남중동 434-2"
+  },
+  {
+    "grid_id":4535470,
+    "latitude":35.95,
+    "longitude":127.05,
+    "jibun":"전북특별자치도 익산시 춘포면 천동리 278-84"
+  },
+  {
+    "grid_id":4535471,
+    "latitude":35.95,
+    "longitude":127.15,
+    "jibun":"전북특별자치도 완주군 봉동읍 구미리 30"
+  },
+  {
+    "grid_id":4535472,
+    "latitude":35.95,
+    "longitude":127.25,
+    "jibun":"전북특별자치도 완주군 동상면 수만리 산 84"
+  },
+  {
+    "grid_id":4535473,
+    "latitude":35.95,
+    "longitude":127.35,
+    "jibun":"전북특별자치도 완주군 동상면 신월리 산 56-4"
+  },
+  {
+    "grid_id":4535474,
+    "latitude":35.95,
+    "longitude":127.45,
+    "jibun":"전북특별자치도 진안군 용담면 와룡리 산 157"
+  },
+  {
+    "grid_id":4535475,
+    "latitude":35.95,
+    "longitude":127.55,
+    "jibun":"전북특별자치도 진안군 용담면 송풍리 산 1"
+  },
+  {
+    "grid_id":4535476,
+    "latitude":35.95,
+    "longitude":127.65,
+    "jibun":"전북특별자치도 무주군 적상면 사천리 산 91"
+  },
+  {
+    "grid_id":4535477,
+    "latitude":35.95,
+    "longitude":127.75,
+    "jibun":"전북특별자치도 무주군 설천면 두길리 산 261"
+  },
+  {
+    "grid_id":4535478,
+    "latitude":35.95,
+    "longitude":127.85,
+    "jibun":"전북특별자치도 무주군 무풍면 증산리 1126"
+  },
+  {
+    "grid_id":4535479,
+    "latitude":35.95,
+    "longitude":127.95,
+    "jibun":"경상북도 김천시 대덕면 조룡리 산 83"
+  },
+  {
+    "grid_id":4535480,
+    "latitude":35.95,
+    "longitude":128.05,
+    "jibun":"경상북도 김천시 지례면 관덕리 산 95"
+  },
+  {
+    "grid_id":4535481,
+    "latitude":35.95,
+    "longitude":128.15,
+    "jibun":"경상북도 성주군 금수강산면 후평리 산 127"
+  },
+  {
+    "grid_id":4535482,
+    "latitude":35.95,
+    "longitude":128.25,
+    "jibun":"경상북도 성주군 초전면 용성리 산 53"
+  },
+  {
+    "grid_id":4535483,
+    "latitude":35.95,
+    "longitude":128.35,
+    "jibun":"경상북도 성주군 선남면 문방리 1451-1"
+  },
+  {
+    "grid_id":4535484,
+    "latitude":35.95,
+    "longitude":128.45,
+    "jibun":"경상북도 칠곡군 지천면 연화리 818-7"
+  },
+  {
+    "grid_id":4535485,
+    "latitude":35.95,
+    "longitude":128.55,
+    "jibun":"대구광역시 북구 읍내동 615"
+  },
+  {
+    "grid_id":4535486,
+    "latitude":35.95,
+    "longitude":128.65,
+    "jibun":"대구광역시 동구 지묘동 산 12-2"
+  },
+  {
+    "grid_id":4535487,
+    "latitude":35.95,
+    "longitude":128.75,
+    "jibun":"경상북도 경산시 와촌면 음양리 산 210-1"
+  },
+  {
+    "grid_id":4535488,
+    "latitude":35.95,
+    "longitude":128.85,
+    "jibun":"경상북도 경산시 와촌면 상암리 산 46"
+  },
+  {
+    "grid_id":4535489,
+    "latitude":35.95,
+    "longitude":128.95,
+    "jibun":"경상북도 영천시 작산동 산 4-1"
+  },
+  {
+    "grid_id":4535490,
+    "latitude":35.95,
+    "longitude":129.05,
+    "jibun":"경상북도 영천시 고경면 오류리 산 79"
+  },
+  {
+    "grid_id":4535491,
+    "latitude":35.95,
+    "longitude":129.15,
+    "jibun":"경상북도 경주시 안강읍 두류리 산 242"
+  },
+  {
+    "grid_id":4535492,
+    "latitude":35.95,
+    "longitude":129.25,
+    "jibun":"경상북도 경주시 강동면 모서리 554"
+  },
+  {
+    "grid_id":4535493,
+    "latitude":35.95,
+    "longitude":129.35,
+    "jibun":"경상북도 포항시 남구 대송면 장동리 273"
+  },
+  {
+    "grid_id":4535494,
+    "latitude":35.95,
+    "longitude":129.45,
+    "jibun":"경상북도 포항시 남구 장기면 정천리 423-1"
+  },
+  {
+    "grid_id":4539066,
+    "latitude":36.05,
+    "longitude":126.65,
+    "jibun":"충청남도 서천군 마서면 월포리 산 36-10"
+  },
+  {
+    "grid_id":4539067,
+    "latitude":36.05,
+    "longitude":126.75,
+    "jibun":"충청남도 서천군 화양면 금당리 341"
+  },
+  {
+    "grid_id":4539068,
+    "latitude":36.05,
+    "longitude":126.85,
+    "jibun":"전북특별자치도 군산시 나포면 나포리 554-4"
+  },
+  {
+    "grid_id":4539069,
+    "latitude":36.05,
+    "longitude":126.95,
+    "jibun":"전북특별자치도 익산시 함열읍 용지리 262-1"
+  },
+  {
+    "grid_id":4539070,
+    "latitude":36.05,
+    "longitude":127.05,
+    "jibun":"전북특별자치도 익산시 낭산면 석천리 산 121"
+  },
+  {
+    "grid_id":4539071,
+    "latitude":36.05,
+    "longitude":127.15,
+    "jibun":"전북특별자치도 완주군 비봉면 대치리 산 61-1"
+  },
+  {
+    "grid_id":4539072,
+    "latitude":36.05,
+    "longitude":127.25,
+    "jibun":"전북특별자치도 완주군 경천면 용복리 산 47-1"
+  },
+  {
+    "grid_id":4539073,
+    "latitude":36.05,
+    "longitude":127.35,
+    "jibun":"전북특별자치도 완주군 운주면 고당리 산 46"
+  },
+  {
+    "grid_id":4539074,
+    "latitude":36.05,
+    "longitude":127.45,
+    "jibun":"충청남도 금산군 남이면 하금리 산 67"
+  },
+  {
+    "grid_id":4539075,
+    "latitude":36.05,
+    "longitude":127.55,
+    "jibun":"충청남도 금산군 부리면 현내리 산 131-1"
+  },
+  {
+    "grid_id":4539076,
+    "latitude":36.05,
+    "longitude":127.65,
+    "jibun":"전북특별자치도 무주군 무주읍 내도리 81-1"
+  },
+  {
+    "grid_id":4539077,
+    "latitude":36.05,
+    "longitude":127.75,
+    "jibun":"충청북도 영동군 용화면 자계리 산 63-2"
+  },
+  {
+    "grid_id":4539078,
+    "latitude":36.05,
+    "longitude":127.85,
+    "jibun":"충청북도 영동군 용화면 조동리 산 1-1"
+  },
+  {
+    "grid_id":4539079,
+    "latitude":36.05,
+    "longitude":127.95,
+    "jibun":"경상북도 김천시 구성면 마산리 산 107"
+  },
+  {
+    "grid_id":4539080,
+    "latitude":36.05,
+    "longitude":128.05,
+    "jibun":"경상북도 김천시 구성면 송죽리 산 136-1"
+  },
+  {
+    "grid_id":4539081,
+    "latitude":36.05,
+    "longitude":128.15,
+    "jibun":"경상북도 김천시 감천면 무안리 704"
+  },
+  {
+    "grid_id":4539082,
+    "latitude":36.05,
+    "longitude":128.25,
+    "jibun":"경상북도 김천시 남면 월명리 산 47"
+  },
+  {
+    "grid_id":4539083,
+    "latitude":36.05,
+    "longitude":128.35,
+    "jibun":"경상북도 칠곡군 약목면 교리 513-1"
+  },
+  {
+    "grid_id":4539084,
+    "latitude":36.05,
+    "longitude":128.45,
+    "jibun":"경상북도 칠곡군 석적읍 망정리 297"
+  },
+  {
+    "grid_id":4539085,
+    "latitude":36.05,
+    "longitude":128.55,
+    "jibun":"경상북도 칠곡군 가산면 금화리 산 49-1"
+  },
+  {
+    "grid_id":4539086,
+    "latitude":36.05,
+    "longitude":128.65,
+    "jibun":"대구광역시 군위군 부계면 동산리 1486"
+  },
+  {
+    "grid_id":4539087,
+    "latitude":36.05,
+    "longitude":128.75,
+    "jibun":"경상북도 영천시 신녕면 부산리 산 20"
+  },
+  {
+    "grid_id":4539088,
+    "latitude":36.05,
+    "longitude":128.85,
+    "jibun":"경상북도 영천시 화산면 화산리 1140"
+  },
+  {
+    "grid_id":4539089,
+    "latitude":36.05,
+    "longitude":128.95,
+    "jibun":"경상북도 영천시 화남면 죽곡리 산 127-3"
+  },
+  {
+    "grid_id":4539090,
+    "latitude":36.05,
+    "longitude":129.05,
+    "jibun":"경상북도 영천시 임고면 금대리 산 10"
+  },
+  {
+    "grid_id":4539091,
+    "latitude":36.05,
+    "longitude":129.15,
+    "jibun":"경상북도 경주시 안강읍 옥산리 산 55-2"
+  },
+  {
+    "grid_id":4539092,
+    "latitude":36.05,
+    "longitude":129.25,
+    "jibun":"경상북도 경주시 강동면 다산리 1087"
+  },
+  {
+    "grid_id":4539093,
+    "latitude":36.05,
+    "longitude":129.35,
+    "jibun":"경상북도 포항시 북구 용흥동 430"
+  },
+  {
+    "grid_id":4539095,
+    "latitude":36.05,
+    "longitude":129.55,
+    "jibun":"경상북도 포항시 남구 호미곶면 대보리 산 129-3"
+  },
+  {
+    "grid_id":4542665,
+    "latitude":36.15,
+    "longitude":126.55,
+    "jibun":"충청남도 서천군 서면 신합리 548"
+  },
+  {
+    "grid_id":4542666,
+    "latitude":36.15,
+    "longitude":126.65,
+    "jibun":"충청남도 서천군 판교면 상좌리 산 104"
+  },
+  {
+    "grid_id":4542667,
+    "latitude":36.15,
+    "longitude":126.75,
+    "jibun":"충청남도 서천군 문산면 지원리 산 30"
+  },
+  {
+    "grid_id":4542668,
+    "latitude":36.15,
+    "longitude":126.85,
+    "jibun":"충청남도 부여군 양화면 초왕리 351-3"
+  },
+  {
+    "grid_id":4542669,
+    "latitude":36.15,
+    "longitude":126.95,
+    "jibun":"전북특별자치도 익산시 용안면 용두리 510-1"
+  },
+  {
+    "grid_id":4542670,
+    "latitude":36.15,
+    "longitude":127.05,
+    "jibun":"충청남도 논산시 채운면 삼거리 123-18"
+  },
+  {
+    "grid_id":4542671,
+    "latitude":36.15,
+    "longitude":127.15,
+    "jibun":"충청남도 논산시 가야곡면 두월리 599-3"
+  },
+  {
+    "grid_id":4542672,
+    "latitude":36.15,
+    "longitude":127.25,
+    "jibun":"충청남도 논산시 양촌면 반암리 산 3-3"
+  },
+  {
+    "grid_id":4542673,
+    "latitude":36.15,
+    "longitude":127.35,
+    "jibun":"충청남도 금산군 진산면 묵산리 산 60"
+  },
+  {
+    "grid_id":4542674,
+    "latitude":36.15,
+    "longitude":127.45,
+    "jibun":"충청남도 금산군 금성면 두곡리 산 36-52"
+  },
+  {
+    "grid_id":4542675,
+    "latitude":36.15,
+    "longitude":127.55,
+    "jibun":"충청남도 금산군 제원면 동곡리 산 41"
+  },
+  {
+    "grid_id":4542676,
+    "latitude":36.15,
+    "longitude":127.65,
+    "jibun":"충청북도 영동군 양산면 수두리 산 39"
+  },
+  {
+    "grid_id":4542677,
+    "latitude":36.15,
+    "longitude":127.75,
+    "jibun":"충청북도 영동군 양강면 괴목리 700"
+  },
+  {
+    "grid_id":4542678,
+    "latitude":36.15,
+    "longitude":127.85,
+    "jibun":"충청북도 영동군 영동읍 화신리 산 1"
+  },
+  {
+    "grid_id":4542679,
+    "latitude":36.15,
+    "longitude":127.95,
+    "jibun":"충청북도 영동군 매곡면 강진리 산 150"
+  },
+  {
+    "grid_id":4542680,
+    "latitude":36.15,
+    "longitude":128.05,
+    "jibun":"경상북도 김천시 봉산면 예지리 산 16"
+  },
+  {
+    "grid_id":4542681,
+    "latitude":36.15,
+    "longitude":128.15,
+    "jibun":"경상북도 김천시 개령면 황계리 1401-4"
+  },
+  {
+    "grid_id":4542682,
+    "latitude":36.15,
+    "longitude":128.25,
+    "jibun":"경상북도 김천시 아포읍 국사리 288"
+  },
+  {
+    "grid_id":4542683,
+    "latitude":36.15,
+    "longitude":128.35,
+    "jibun":"경상북도 구미시 고아읍 문성리 828-1"
+  },
+  {
+    "grid_id":4542684,
+    "latitude":36.15,
+    "longitude":128.45,
+    "jibun":"경상북도 구미시 산동읍 봉산리 521"
+  },
+  {
+    "grid_id":4542685,
+    "latitude":36.15,
+    "longitude":128.55,
+    "jibun":"대구광역시 군위군 효령면 내리리 산 31-1"
+  },
+  {
+    "grid_id":4542686,
+    "latitude":36.15,
+    "longitude":128.65,
+    "jibun":"대구광역시 군위군 우보면 달산리 산 143-1"
+  },
+  {
+    "grid_id":4542687,
+    "latitude":36.15,
+    "longitude":128.75,
+    "jibun":"대구광역시 군위군 의흥면 매성리 513"
+  },
+  {
+    "grid_id":4542688,
+    "latitude":36.15,
+    "longitude":128.85,
+    "jibun":"대구광역시 군위군 삼국유사면 인곡리 산 44"
+  },
+  {
+    "grid_id":4542689,
+    "latitude":36.15,
+    "longitude":128.95,
+    "jibun":"경상북도 영천시 화북면 용소리 산 55-1"
+  },
+  {
+    "grid_id":4542690,
+    "latitude":36.15,
+    "longitude":129.05,
+    "jibun":"경상북도 포항시 북구 죽장면 일광리 산 70-1"
+  },
+  {
+    "grid_id":4542691,
+    "latitude":36.15,
+    "longitude":129.15,
+    "jibun":"경상북도 포항시 북구 기북면 용기리 산 27-5"
+  },
+  {
+    "grid_id":4542692,
+    "latitude":36.15,
+    "longitude":129.25,
+    "jibun":"경상북도 포항시 북구 신광면 상읍리 산 10"
+  },
+  {
+    "grid_id":4542693,
+    "latitude":36.15,
+    "longitude":129.35,
+    "jibun":"경상북도 포항시 북구 흥해읍 용천리 산 34"
+  },
+  {
+    "grid_id":4546265,
+    "latitude":36.25,
+    "longitude":126.55,
+    "jibun":"충청남도 보령시 웅천읍 관당리 74-3"
+  },
+  {
+    "grid_id":4546266,
+    "latitude":36.25,
+    "longitude":126.65,
+    "jibun":"충청남도 보령시 미산면 용수리 2-4"
+  },
+  {
+    "grid_id":4546267,
+    "latitude":36.25,
+    "longitude":126.75,
+    "jibun":"충청남도 부여군 홍산면 상천리 산 73"
+  },
+  {
+    "grid_id":4546268,
+    "latitude":36.25,
+    "longitude":126.85,
+    "jibun":"충청남도 부여군 규암면 노화리 20-5"
+  },
+  {
+    "grid_id":4546269,
+    "latitude":36.25,
+    "longitude":126.95,
+    "jibun":"충청남도 부여군 부여읍 현북리 758-3"
+  },
+  {
+    "grid_id":4546270,
+    "latitude":36.25,
+    "longitude":127.05,
+    "jibun":"충청남도 논산시 광석면 득윤리 306-1"
+  },
+  {
+    "grid_id":4546271,
+    "latitude":36.25,
+    "longitude":127.15,
+    "jibun":"충청남도 논산시 상월면 숙진리 산 50-1"
+  },
+  {
+    "grid_id":4546272,
+    "latitude":36.25,
+    "longitude":127.25,
+    "jibun":"충청남도 계룡시 두마면 농소리 427"
+  },
+  {
+    "grid_id":4546273,
+    "latitude":36.25,
+    "longitude":127.35,
+    "jibun":"대전광역시 서구 산직동 산 8-1"
+  },
+  {
+    "grid_id":4546274,
+    "latitude":36.25,
+    "longitude":127.45,
+    "jibun":"대전광역시 동구 장척동 산 24-2"
+  },
+  {
+    "grid_id":4546275,
+    "latitude":36.25,
+    "longitude":127.55,
+    "jibun":"충청북도 옥천군 군서면 금산리 132-2"
+  },
+  {
+    "grid_id":4546276,
+    "latitude":36.25,
+    "longitude":127.65,
+    "jibun":"충청북도 옥천군 이원면 용방리 556"
+  },
+  {
+    "grid_id":4546277,
+    "latitude":36.25,
+    "longitude":127.75,
+    "jibun":"충청북도 영동군 심천면 단전리 산 46"
+  },
+  {
+    "grid_id":4546278,
+    "latitude":36.25,
+    "longitude":127.85,
+    "jibun":"충청북도 영동군 황간면 회포리 산 1-1"
+  },
+  {
+    "grid_id":4546279,
+    "latitude":36.25,
+    "longitude":127.95,
+    "jibun":"충청북도 영동군 황간면 난곡리 산 23-1"
+  },
+  {
+    "grid_id":4546280,
+    "latitude":36.25,
+    "longitude":128.05,
+    "jibun":"경상북도 상주시 공성면 영오리 산 82"
+  },
+  {
+    "grid_id":4546281,
+    "latitude":36.25,
+    "longitude":128.15,
+    "jibun":"경상북도 김천시 감문면 송북리 산 179"
+  },
+  {
+    "grid_id":4546282,
+    "latitude":36.25,
+    "longitude":128.25,
+    "jibun":"경상북도 구미시 옥성면 덕촌리 698-1"
+  },
+  {
+    "grid_id":4546283,
+    "latitude":36.25,
+    "longitude":128.35,
+    "jibun":"경상북도 구미시 해평면 낙산리 382-1"
+  },
+  {
+    "grid_id":4546284,
+    "latitude":36.25,
+    "longitude":128.45,
+    "jibun":"대구광역시 군위군 소보면 달산리 산 115-1"
+  },
+  {
+    "grid_id":4546285,
+    "latitude":36.25,
+    "longitude":128.55,
+    "jibun":"대구광역시 군위군 군위읍 내량리 산 7-3"
+  },
+  {
+    "grid_id":4546286,
+    "latitude":36.25,
+    "longitude":128.65,
+    "jibun":"경상북도 의성군 금성면 명덕리 산 80"
+  },
+  {
+    "grid_id":4546287,
+    "latitude":36.25,
+    "longitude":128.75,
+    "jibun":"경상북도 의성군 가음면 이리 산 66"
+  },
+  {
+    "grid_id":4546288,
+    "latitude":36.25,
+    "longitude":128.85,
+    "jibun":"경상북도 의성군 춘산면 신흥리 산 36"
+  },
+  {
+    "grid_id":4546289,
+    "latitude":36.25,
+    "longitude":128.95,
+    "jibun":"경상북도 청송군 안덕면 성재리 산 71"
+  },
+  {
+    "grid_id":4546290,
+    "latitude":36.25,
+    "longitude":129.05,
+    "jibun":"경상북도 청송군 현동면 눌인리 산 41-2"
+  },
+  {
+    "grid_id":4546291,
+    "latitude":36.25,
+    "longitude":129.15,
+    "jibun":"경상북도 청송군 부남면 양숙리 산 22"
+  },
+  {
+    "grid_id":4546292,
+    "latitude":36.25,
+    "longitude":129.25,
+    "jibun":"경상북도 포항시 북구 죽장면 상옥리 산 2-2"
+  },
+  {
+    "grid_id":4546293,
+    "latitude":36.25,
+    "longitude":129.35,
+    "jibun":"경상북도 포항시 북구 송라면 대전리 1020"
+  },
+  {
+    "grid_id":4549866,
+    "latitude":36.35,
+    "longitude":126.65,
+    "jibun":"충청남도 보령시 성주면 성주리 산 39"
+  },
+  {
+    "grid_id":4549867,
+    "latitude":36.35,
+    "longitude":126.75,
+    "jibun":"충청남도 부여군 외산면 문신리 산 42-1"
+  },
+  {
+    "grid_id":4549868,
+    "latitude":36.35,
+    "longitude":126.85,
+    "jibun":"충청남도 부여군 은산면 가곡리 산 1-9"
+  },
+  {
+    "grid_id":4549869,
+    "latitude":36.35,
+    "longitude":126.95,
+    "jibun":"충청남도 청양군 청남면 청소리 556"
+  },
+  {
+    "grid_id":4549870,
+    "latitude":36.35,
+    "longitude":127.05,
+    "jibun":"충청남도 공주시 이인면 달산리 산 3-10"
+  },
+  {
+    "grid_id":4549871,
+    "latitude":36.35,
+    "longitude":127.15,
+    "jibun":"충청남도 공주시 계룡면 하대리 1196"
+  },
+  {
+    "grid_id":4549872,
+    "latitude":36.35,
+    "longitude":127.25,
+    "jibun":"충청남도 공주시 반포면 학봉리 산 22-1"
+  },
+  {
+    "grid_id":4549873,
+    "latitude":36.35,
+    "longitude":127.35,
+    "jibun":"대전광역시 서구 월평동 186-7"
+  },
+  {
+    "grid_id":4549874,
+    "latitude":36.35,
+    "longitude":127.45,
+    "jibun":"대전광역시 동구 가양동 675"
+  },
+  {
+    "grid_id":4549875,
+    "latitude":36.35,
+    "longitude":127.55,
+    "jibun":"충청북도 옥천군 군북면 추소리 산 47"
+  },
+  {
+    "grid_id":4549876,
+    "latitude":36.35,
+    "longitude":127.65,
+    "jibun":"충청북도 옥천군 동이면 석탄리 944"
+  },
+  {
+    "grid_id":4549877,
+    "latitude":36.35,
+    "longitude":127.75,
+    "jibun":"충청북도 옥천군 청성면 화성리 산 62-1"
+  },
+  {
+    "grid_id":4549878,
+    "latitude":36.35,
+    "longitude":127.85,
+    "jibun":"충청북도 옥천군 청산면 삼방리 산 28"
+  },
+  {
+    "grid_id":4549879,
+    "latitude":36.35,
+    "longitude":127.95,
+    "jibun":"경상북도 상주시 모서면 지산리 2-1"
+  },
+  {
+    "grid_id":4549880,
+    "latitude":36.35,
+    "longitude":128.05,
+    "jibun":"경상북도 상주시 내서면 노류리 988"
+  },
+  {
+    "grid_id":4549881,
+    "latitude":36.35,
+    "longitude":128.15,
+    "jibun":"경상북도 상주시 양촌동 782"
+  },
+  {
+    "grid_id":4549882,
+    "latitude":36.35,
+    "longitude":128.25,
+    "jibun":"경상북도 구미시 옥성면 옥관리 산 7"
+  },
+  {
+    "grid_id":4549883,
+    "latitude":36.35,
+    "longitude":128.35,
+    "jibun":"경상북도 의성군 단밀면 생송리 산 69-1"
+  },
+  {
+    "grid_id":4549884,
+    "latitude":36.35,
+    "longitude":128.45,
+    "jibun":"경상북도 의성군 구천면 위성리 334"
+  },
+  {
+    "grid_id":4549885,
+    "latitude":36.35,
+    "longitude":128.55,
+    "jibun":"경상북도 의성군 비안면 산제리 산 20"
+  },
+  {
+    "grid_id":4549886,
+    "latitude":36.35,
+    "longitude":128.65,
+    "jibun":"경상북도 의성군 안평면 신월리 산 55"
+  },
+  {
+    "grid_id":4549887,
+    "latitude":36.35,
+    "longitude":128.75,
+    "jibun":"경상북도 의성군 점곡면 황룡리 산 65"
+  },
+  {
+    "grid_id":4549888,
+    "latitude":36.35,
+    "longitude":128.85,
+    "jibun":"경상북도 의성군 옥산면 금학리 산 66"
+  },
+  {
+    "grid_id":4549889,
+    "latitude":36.35,
+    "longitude":128.95,
+    "jibun":"경상북도 안동시 길안면 대사리 산 151-3"
+  },
+  {
+    "grid_id":4549890,
+    "latitude":36.35,
+    "longitude":129.05,
+    "jibun":"경상북도 청송군 부남면 감연리 산 42"
+  },
+  {
+    "grid_id":4549891,
+    "latitude":36.35,
+    "longitude":129.15,
+    "jibun":"경상북도 청송군 주왕산면 주산지리 산 5"
+  },
+  {
+    "grid_id":4549892,
+    "latitude":36.35,
+    "longitude":129.25,
+    "jibun":"경상북도 영덕군 달산면 봉산리 산 47"
+  },
+  {
+    "grid_id":4549893,
+    "latitude":36.35,
+    "longitude":129.35,
+    "jibun":"경상북도 영덕군 남정면 중화리 산 104"
+  },
+  {
+    "grid_id":4553463,
+    "latitude":36.45,
+    "longitude":126.35,
+    "jibun":"충청남도 태안군 안면읍 신야리 211"
+  },
+  {
+    "grid_id":4553465,
+    "latitude":36.45,
+    "longitude":126.55,
+    "jibun":"충청남도 보령시 오천면 교성리 1215-10"
+  },
+  {
+    "grid_id":4553466,
+    "latitude":36.45,
+    "longitude":126.65,
+    "jibun":"충청남도 보령시 청소면 성연리 산 32-101"
+  },
+  {
+    "grid_id":4553467,
+    "latitude":36.45,
+    "longitude":126.75,
+    "jibun":"충청남도 청양군 화성면 신정리 산 69-35"
+  },
+  {
+    "grid_id":4553468,
+    "latitude":36.45,
+    "longitude":126.85,
+    "jibun":"충청남도 청양군 대치면 주정리 산 99-12"
+  },
+  {
+    "grid_id":4553469,
+    "latitude":36.45,
+    "longitude":126.95,
+    "jibun":"충청남도 청양군 정산면 송학리 산 53"
+  },
+  {
+    "grid_id":4553470,
+    "latitude":36.45,
+    "longitude":127.05,
+    "jibun":"충청남도 공주시 우성면 보흥리 산 27-1"
+  },
+  {
+    "grid_id":4553471,
+    "latitude":36.45,
+    "longitude":127.15,
+    "jibun":"충청남도 공주시 소학동 546"
+  },
+  {
+    "grid_id":4553472,
+    "latitude":36.45,
+    "longitude":127.25,
+    "jibun":"세종특별자치시 금남면 원봉리 산 6-2"
+  },
+  {
+    "grid_id":4553473,
+    "latitude":36.45,
+    "longitude":127.35,
+    "jibun":"세종특별자치시 금남면 달전리 산 24-1"
+  },
+  {
+    "grid_id":4553474,
+    "latitude":36.45,
+    "longitude":127.45,
+    "jibun":"충청북도 청주시 서원구 현도면 노산리 899"
+  },
+  {
+    "grid_id":4553475,
+    "latitude":36.45,
+    "longitude":127.55,
+    "jibun":"충청북도 보은군 회남면 남대문리 산 99-1"
+  },
+  {
+    "grid_id":4553476,
+    "latitude":36.45,
+    "longitude":127.65,
+    "jibun":"충청북도 보은군 수한면 장선리 279"
+  },
+  {
+    "grid_id":4553477,
+    "latitude":36.45,
+    "longitude":127.75,
+    "jibun":"충청북도 보은군 탄부면 고승리 27"
+  },
+  {
+    "grid_id":4553478,
+    "latitude":36.45,
+    "longitude":127.85,
+    "jibun":"충청북도 보은군 마로면 적암리 산 55"
+  },
+  {
+    "grid_id":4553479,
+    "latitude":36.45,
+    "longitude":127.95,
+    "jibun":"경상북도 상주시 화서면 상현리 산 56"
+  },
+  {
+    "grid_id":4553480,
+    "latitude":36.45,
+    "longitude":128.05,
+    "jibun":"경상북도 상주시 내서면 서만리 산 168"
+  },
+  {
+    "grid_id":4553481,
+    "latitude":36.45,
+    "longitude":128.15,
+    "jibun":"경상북도 상주시 부원동 310-2"
+  },
+  {
+    "grid_id":4553482,
+    "latitude":36.45,
+    "longitude":128.25,
+    "jibun":"경상북도 상주시 도남동 산 19"
+  },
+  {
+    "grid_id":4553483,
+    "latitude":36.45,
+    "longitude":128.35,
+    "jibun":"경상북도 의성군 다인면 서릉리 231-2"
+  },
+  {
+    "grid_id":4553484,
+    "latitude":36.45,
+    "longitude":128.45,
+    "jibun":"경상북도 의성군 안사면 만리리 산 160"
+  },
+  {
+    "grid_id":4553485,
+    "latitude":36.45,
+    "longitude":128.55,
+    "jibun":"경상북도 의성군 신평면 용봉리 산 67"
+  },
+  {
+    "grid_id":4553486,
+    "latitude":36.45,
+    "longitude":128.65,
+    "jibun":"경상북도 안동시 일직면 원리 산 64"
+  },
+  {
+    "grid_id":4553487,
+    "latitude":36.45,
+    "longitude":128.75,
+    "jibun":"경상북도 의성군 점곡면 송내리 산 60-2"
+  },
+  {
+    "grid_id":4553488,
+    "latitude":36.45,
+    "longitude":128.85,
+    "jibun":"경상북도 안동시 길안면 현하리 산 146-1"
+  },
+  {
+    "grid_id":4553489,
+    "latitude":36.45,
+    "longitude":128.95,
+    "jibun":"경상북도 안동시 길안면 구수리 923-1"
+  },
+  {
+    "grid_id":4553490,
+    "latitude":36.45,
+    "longitude":129.05,
+    "jibun":"경상북도 청송군 파천면 관리 산 100"
+  },
+  {
+    "grid_id":4553491,
+    "latitude":36.45,
+    "longitude":129.15,
+    "jibun":"경상북도 청송군 청송읍 월외리 산 60-1"
+  },
+  {
+    "grid_id":4553492,
+    "latitude":36.45,
+    "longitude":129.25,
+    "jibun":"경상북도 영덕군 지품면 낙평리 산 1-1"
+  },
+  {
+    "grid_id":4553493,
+    "latitude":36.45,
+    "longitude":129.35,
+    "jibun":"경상북도 영덕군 영덕읍 화천리 산 80-5"
+  },
+  {
+    "grid_id":4557063,
+    "latitude":36.55,
+    "longitude":126.35,
+    "jibun":"충청남도 태안군 안면읍 정당리 산 26-12"
+  },
+  {
+    "grid_id":4557065,
+    "latitude":36.55,
+    "longitude":126.55,
+    "jibun":"충청남도 홍성군 결성면 성곡리 206-14"
+  },
+  {
+    "grid_id":4557066,
+    "latitude":36.55,
+    "longitude":126.65,
+    "jibun":"충청남도 홍성군 구항면 청광리 산 10"
+  },
+  {
+    "grid_id":4557067,
+    "latitude":36.55,
+    "longitude":126.75,
+    "jibun":"충청남도 예산군 광시면 운산리 산 21-1"
+  },
+  {
+    "grid_id":4557068,
+    "latitude":36.55,
+    "longitude":126.85,
+    "jibun":"충청남도 청양군 운곡면 미량리 1062-6"
+  },
+  {
+    "grid_id":4557069,
+    "latitude":36.55,
+    "longitude":126.95,
+    "jibun":"충청남도 공주시 유구읍 석남리 270-9"
+  },
+  {
+    "grid_id":4557070,
+    "latitude":36.55,
+    "longitude":127.05,
+    "jibun":"충청남도 공주시 사곡면 대중리 산 9-1"
+  },
+  {
+    "grid_id":4557071,
+    "latitude":36.55,
+    "longitude":127.15,
+    "jibun":"충청남도 공주시 의당면 월곡리 산 3-3"
+  },
+  {
+    "grid_id":4557072,
+    "latitude":36.55,
+    "longitude":127.25,
+    "jibun":"세종특별자치시 연기면 눌왕리 535-1"
+  },
+  {
+    "grid_id":4557073,
+    "latitude":36.55,
+    "longitude":127.35,
+    "jibun":"세종특별자치시 연동면 응암리 312-4"
+  },
+  {
+    "grid_id":4557074,
+    "latitude":36.55,
+    "longitude":127.45,
+    "jibun":"충청북도 청주시 서원구 남이면 척산리 산 98-1"
+  },
+  {
+    "grid_id":4557075,
+    "latitude":36.55,
+    "longitude":127.55,
+    "jibun":"충청북도 청주시 상당구 가덕면 인차리 산 22-2"
+  },
+  {
+    "grid_id":4557076,
+    "latitude":36.55,
+    "longitude":127.65,
+    "jibun":"충청북도 보은군 내북면 아곡리 97"
+  },
+  {
+    "grid_id":4557077,
+    "latitude":36.55,
+    "longitude":127.75,
+    "jibun":"충청북도 보은군 산외면 문암리 산 20"
+  },
+  {
+    "grid_id":4557078,
+    "latitude":36.55,
+    "longitude":127.85,
+    "jibun":"충청북도 보은군 속리산면 사내리 산 1-1"
+  },
+  {
+    "grid_id":4557079,
+    "latitude":36.55,
+    "longitude":127.95,
+    "jibun":"경상북도 문경시 농암면 내서리 산 9-1"
+  },
+  {
+    "grid_id":4557080,
+    "latitude":36.55,
+    "longitude":128.05,
+    "jibun":"경상북도 문경시 농암면 선곡리 736"
+  },
+  {
+    "grid_id":4557081,
+    "latitude":36.55,
+    "longitude":128.15,
+    "jibun":"경상북도 상주시 이안면 여물리 648-3"
+  },
+  {
+    "grid_id":4557082,
+    "latitude":36.55,
+    "longitude":128.25,
+    "jibun":"경상북도 문경시 영순면 말응리 산 51"
+  },
+  {
+    "grid_id":4557083,
+    "latitude":36.55,
+    "longitude":128.35,
+    "jibun":"경상북도 예천군 지보면 매창리 산 52"
+  },
+  {
+    "grid_id":4557084,
+    "latitude":36.55,
+    "longitude":128.45,
+    "jibun":"경상북도 예천군 지보면 암천리 산 61"
+  },
+  {
+    "grid_id":4557085,
+    "latitude":36.55,
+    "longitude":128.55,
+    "jibun":"경상북도 안동시 풍천면 병산리 산 42-1"
+  },
+  {
+    "grid_id":4557086,
+    "latitude":36.55,
+    "longitude":128.65,
+    "jibun":"경상북도 안동시 풍산읍 계평리 산 120"
+  },
+  {
+    "grid_id":4557087,
+    "latitude":36.55,
+    "longitude":128.75,
+    "jibun":"경상북도 안동시 정상동 135-5"
+  },
+  {
+    "grid_id":4557088,
+    "latitude":36.55,
+    "longitude":128.85,
+    "jibun":"경상북도 안동시 임하면 천전리 산 88-1"
+  },
+  {
+    "grid_id":4557089,
+    "latitude":36.55,
+    "longitude":128.95,
+    "jibun":"경상북도 안동시 임동면 고천리 산 84-2"
+  },
+  {
+    "grid_id":4557090,
+    "latitude":36.55,
+    "longitude":129.05,
+    "jibun":"경상북도 청송군 진보면 광덕리 산 11"
+  },
+  {
+    "grid_id":4557091,
+    "latitude":36.55,
+    "longitude":129.15,
+    "jibun":"경상북도 영양군 석보면 신평리 산 1-5"
+  },
+  {
+    "grid_id":4557092,
+    "latitude":36.55,
+    "longitude":129.25,
+    "jibun":"경상북도 영덕군 영해면 대리 산 154-1"
+  },
+  {
+    "grid_id":4557093,
+    "latitude":36.55,
+    "longitude":129.35,
+    "jibun":"경상북도 영덕군 창수면 가산리 590"
+  },
+  {
+    "grid_id":4560663,
+    "latitude":36.65,
+    "longitude":126.35,
+    "jibun":"충청남도 태안군 남면 양잠리 1323"
+  },
+  {
+    "grid_id":4560664,
+    "latitude":36.65,
+    "longitude":126.45,
+    "jibun":"충청남도 서산시 부석면 강당리 1800"
+  },
+  {
+    "grid_id":4560665,
+    "latitude":36.65,
+    "longitude":126.55,
+    "jibun":"충청남도 서산시 고북면 신송리 246"
+  },
+  {
+    "grid_id":4560666,
+    "latitude":36.65,
+    "longitude":126.65,
+    "jibun":"충청남도 예산군 덕산면 둔리 산 30"
+  },
+  {
+    "grid_id":4560667,
+    "latitude":36.65,
+    "longitude":126.75,
+    "jibun":"충청남도 예산군 응봉면 계정리 산 31"
+  },
+  {
+    "grid_id":4560668,
+    "latitude":36.65,
+    "longitude":126.85,
+    "jibun":"충청남도 예산군 대흥면 갈신리 502-1"
+  },
+  {
+    "grid_id":4560669,
+    "latitude":36.65,
+    "longitude":126.95,
+    "jibun":"충청남도 예산군 대술면 이티리 산 80"
+  },
+  {
+    "grid_id":4560670,
+    "latitude":36.65,
+    "longitude":127.05,
+    "jibun":"충청남도 공주시 정안면 문천리 산 56"
+  },
+  {
+    "grid_id":4560671,
+    "latitude":36.65,
+    "longitude":127.15,
+    "jibun":"충청남도 천안시 동남구 광덕면 원덕리 산 21-1"
+  },
+  {
+    "grid_id":4560672,
+    "latitude":36.65,
+    "longitude":127.25,
+    "jibun":"세종특별자치시 전동면 석곡리 산 15"
+  },
+  {
+    "grid_id":4560673,
+    "latitude":36.65,
+    "longitude":127.35,
+    "jibun":"충청북도 청주시 흥덕구 오송읍 호계리 202"
+  },
+  {
+    "grid_id":4560674,
+    "latitude":36.65,
+    "longitude":127.45,
+    "jibun":"충청북도 청주시 흥덕구 봉명동 산 21"
+  },
+  {
+    "grid_id":4560675,
+    "latitude":36.65,
+    "longitude":127.55,
+    "jibun":"충청북도 청주시 상당구 낭성면 현암리 308-71"
+  },
+  {
+    "grid_id":4560676,
+    "latitude":36.65,
+    "longitude":127.65,
+    "jibun":"충청북도 청주시 상당구 미원면 내산리 209-2"
+  },
+  {
+    "grid_id":4560677,
+    "latitude":36.65,
+    "longitude":127.75,
+    "jibun":"충청북도 괴산군 청천면 강평리 377"
+  },
+  {
+    "grid_id":4560678,
+    "latitude":36.65,
+    "longitude":127.85,
+    "jibun":"충청북도 괴산군 청천면 이평리 산 5"
+  },
+  {
+    "grid_id":4560679,
+    "latitude":36.65,
+    "longitude":127.95,
+    "jibun":"경상북도 문경시 가은읍 완장리 산 65-1"
+  },
+  {
+    "grid_id":4560680,
+    "latitude":36.65,
+    "longitude":128.05,
+    "jibun":"경상북도 문경시 가은읍 하괴리 산 165"
+  },
+  {
+    "grid_id":4560681,
+    "latitude":36.65,
+    "longitude":128.15,
+    "jibun":"경상북도 문경시 호계면 견탄리 602-4"
+  },
+  {
+    "grid_id":4560682,
+    "latitude":36.65,
+    "longitude":128.25,
+    "jibun":"경상북도 문경시 산북면 대상리 산 46"
+  },
+  {
+    "grid_id":4560683,
+    "latitude":36.65,
+    "longitude":128.35,
+    "jibun":"경상북도 예천군 유천면 고림리 산 26-1"
+  },
+  {
+    "grid_id":4560684,
+    "latitude":36.65,
+    "longitude":128.45,
+    "jibun":"경상북도 예천군 예천읍 남본리 276-24"
+  },
+  {
+    "grid_id":4560685,
+    "latitude":36.65,
+    "longitude":128.55,
+    "jibun":"경상북도 예천군 보문면 오암리 산 45-4"
+  },
+  {
+    "grid_id":4560686,
+    "latitude":36.65,
+    "longitude":128.65,
+    "jibun":"경상북도 안동시 서후면 재품리 산 3-2"
+  },
+  {
+    "grid_id":4560687,
+    "latitude":36.65,
+    "longitude":128.75,
+    "jibun":"경상북도 안동시 와룡면 주하리 산 195"
+  },
+  {
+    "grid_id":4560688,
+    "latitude":36.65,
+    "longitude":128.85,
+    "jibun":"경상북도 안동시 와룡면 라소리 34"
+  },
+  {
+    "grid_id":4560689,
+    "latitude":36.65,
+    "longitude":128.95,
+    "jibun":"경상북도 안동시 예안면 구룡리 산 151-1"
+  },
+  {
+    "grid_id":4560690,
+    "latitude":36.65,
+    "longitude":129.05,
+    "jibun":"경상북도 영양군 청기면 상청리 산 40"
+  },
+  {
+    "grid_id":4560691,
+    "latitude":36.65,
+    "longitude":129.15,
+    "jibun":"경상북도 영양군 영양읍 대천리 산 91-6"
+  },
+  {
+    "grid_id":4560692,
+    "latitude":36.65,
+    "longitude":129.25,
+    "jibun":"경상북도 영덕군 창수면 백청리 산 53-1"
+  },
+  {
+    "grid_id":4560693,
+    "latitude":36.65,
+    "longitude":129.35,
+    "jibun":"경상북도 영덕군 창수면 삼계리 산 1"
+  },
+  {
+    "grid_id":4564262,
+    "latitude":36.75,
+    "longitude":126.25,
+    "jibun":"충청남도 태안군 근흥면 두야리 산 193-1"
+  },
+  {
+    "grid_id":4564263,
+    "latitude":36.75,
+    "longitude":126.35,
+    "jibun":"충청남도 서산시 부석면 가사리 산 94-17"
+  },
+  {
+    "grid_id":4564264,
+    "latitude":36.75,
+    "longitude":126.45,
+    "jibun":"충청남도 서산시 양대동 산 24-1"
+  },
+  {
+    "grid_id":4564265,
+    "latitude":36.75,
+    "longitude":126.55,
+    "jibun":"충청남도 서산시 해미면 홍천리 987"
+  },
+  {
+    "grid_id":4564266,
+    "latitude":36.75,
+    "longitude":126.65,
+    "jibun":"충청남도 예산군 봉산면 봉림리 산 3"
+  },
+  {
+    "grid_id":4564267,
+    "latitude":36.75,
+    "longitude":126.75,
+    "jibun":"충청남도 예산군 고덕면 상궁리 1066"
+  },
+  {
+    "grid_id":4564268,
+    "latitude":36.75,
+    "longitude":126.85,
+    "jibun":"충청남도 아산시 도고면 봉농리 378"
+  },
+  {
+    "grid_id":4564269,
+    "latitude":36.75,
+    "longitude":126.95,
+    "jibun":"충청남도 아산시 신창면 황산리 353"
+  },
+  {
+    "grid_id":4564270,
+    "latitude":36.75,
+    "longitude":127.05,
+    "jibun":"충청남도 아산시 배방읍 신흥리 산 25"
+  },
+  {
+    "grid_id":4564271,
+    "latitude":36.75,
+    "longitude":127.15,
+    "jibun":"충청남도 천안시 동남구 풍세면 미죽리 121-12"
+  },
+  {
+    "grid_id":4564272,
+    "latitude":36.75,
+    "longitude":127.25,
+    "jibun":"충청남도 천안시 동남구 성남면 신사리 192-3"
+  },
+  {
+    "grid_id":4564273,
+    "latitude":36.75,
+    "longitude":127.35,
+    "jibun":"충청북도 청주시 청원구 오창읍 두릉리 158-1"
+  },
+  {
+    "grid_id":4564274,
+    "latitude":36.75,
+    "longitude":127.45,
+    "jibun":"충청북도 진천군 문백면 도하리 413-2"
+  },
+  {
+    "grid_id":4564275,
+    "latitude":36.75,
+    "longitude":127.55,
+    "jibun":"충청북도 청주시 청원구 북이면 금암리 270-3"
+  },
+  {
+    "grid_id":4564276,
+    "latitude":36.75,
+    "longitude":127.65,
+    "jibun":"충청북도 괴산군 청안면 문방리 452-1"
+  },
+  {
+    "grid_id":4564277,
+    "latitude":36.75,
+    "longitude":127.75,
+    "jibun":"충청북도 괴산군 문광면 방성리 산 42"
+  },
+  {
+    "grid_id":4564278,
+    "latitude":36.75,
+    "longitude":127.85,
+    "jibun":"충청북도 괴산군 칠성면 사은리 산 2-1"
+  },
+  {
+    "grid_id":4564279,
+    "latitude":36.75,
+    "longitude":127.95,
+    "jibun":"충청북도 괴산군 연풍면 적석리 산 42-1"
+  },
+  {
+    "grid_id":4564280,
+    "latitude":36.75,
+    "longitude":128.05,
+    "jibun":"경상북도 문경시 문경읍 각서리 산 27"
+  },
+  {
+    "grid_id":4564281,
+    "latitude":36.75,
+    "longitude":128.15,
+    "jibun":"경상북도 문경시 문경읍 당포리 589"
+  },
+  {
+    "grid_id":4564282,
+    "latitude":36.75,
+    "longitude":128.25,
+    "jibun":"경상북도 문경시 산북면 호암리 산 128"
+  },
+  {
+    "grid_id":4564283,
+    "latitude":36.75,
+    "longitude":128.35,
+    "jibun":"경상북도 문경시 동로면 석항리 산 224"
+  },
+  {
+    "grid_id":4564284,
+    "latitude":36.75,
+    "longitude":128.45,
+    "jibun":"경상북도 예천군 은풍면 우곡리 5"
+  },
+  {
+    "grid_id":4564285,
+    "latitude":36.75,
+    "longitude":128.55,
+    "jibun":"경상북도 예천군 감천면 유리 36"
+  },
+  {
+    "grid_id":4564286,
+    "latitude":36.75,
+    "longitude":128.65,
+    "jibun":"경상북도 영주시 문수면 승문리 67"
+  },
+  {
+    "grid_id":4564287,
+    "latitude":36.75,
+    "longitude":128.75,
+    "jibun":"경상북도 안동시 녹전면 녹래리 산 5"
+  },
+  {
+    "grid_id":4564288,
+    "latitude":36.75,
+    "longitude":128.85,
+    "jibun":"경상북도 안동시 도산면 토계리 산 24-1"
+  },
+  {
+    "grid_id":4564289,
+    "latitude":36.75,
+    "longitude":128.95,
+    "jibun":"경상북도 안동시 예안면 신남리 산 80-1"
+  },
+  {
+    "grid_id":4564290,
+    "latitude":36.75,
+    "longitude":129.05,
+    "jibun":"경상북도 영양군 청기면 당리 693"
+  },
+  {
+    "grid_id":4564291,
+    "latitude":36.75,
+    "longitude":129.15,
+    "jibun":"경상북도 영양군 일월면 칠성리 산 29-1"
+  },
+  {
+    "grid_id":4564292,
+    "latitude":36.75,
+    "longitude":129.25,
+    "jibun":"경상북도 영양군 수비면 신원리 산 26"
+  },
+  {
+    "grid_id":4564293,
+    "latitude":36.75,
+    "longitude":129.35,
+    "jibun":"경상북도 울진군 온정면 선구리 산 117"
+  },
+  {
+    "grid_id":4564294,
+    "latitude":36.75,
+    "longitude":129.45,
+    "jibun":"경상북도 울진군 평해읍 오곡리 산 91-1"
+  },
+  {
+    "grid_id":4567862,
+    "latitude":36.85,
+    "longitude":126.25,
+    "jibun":"충청남도 태안군 원북면 이곡리 산 107"
+  },
+  {
+    "grid_id":4567864,
+    "latitude":36.85,
+    "longitude":126.45,
+    "jibun":"충청남도 서산시 지곡면 무장리 1794"
+  },
+  {
+    "grid_id":4567865,
+    "latitude":36.85,
+    "longitude":126.55,
+    "jibun":"충청남도 당진시 정미면 매방리 478"
+  },
+  {
+    "grid_id":4567866,
+    "latitude":36.85,
+    "longitude":126.65,
+    "jibun":"충청남도 당진시 면천면 죽동리 616-1"
+  },
+  {
+    "grid_id":4567867,
+    "latitude":36.85,
+    "longitude":126.75,
+    "jibun":"충청남도 당진시 순성면 중방리 294-2"
+  },
+  {
+    "grid_id":4567868,
+    "latitude":36.85,
+    "longitude":126.85,
+    "jibun":"충청남도 아산시 인주면 대음리 276-1"
+  },
+  {
+    "grid_id":4567869,
+    "latitude":36.85,
+    "longitude":126.95,
+    "jibun":"충청남도 아산시 영인면 아산리 605"
+  },
+  {
+    "grid_id":4567870,
+    "latitude":36.85,
+    "longitude":127.05,
+    "jibun":"충청남도 아산시 음봉면 동암리 48"
+  },
+  {
+    "grid_id":4567871,
+    "latitude":36.85,
+    "longitude":127.15,
+    "jibun":"충청남도 천안시 서북구 부대동 275"
+  },
+  {
+    "grid_id":4567872,
+    "latitude":36.85,
+    "longitude":127.25,
+    "jibun":"충청남도 천안시 동남구 북면 납안리 404-2"
+  },
+  {
+    "grid_id":4567873,
+    "latitude":36.85,
+    "longitude":127.35,
+    "jibun":"충청북도 진천군 진천읍 연곡리 산 36-1"
+  },
+  {
+    "grid_id":4567874,
+    "latitude":36.85,
+    "longitude":127.45,
+    "jibun":"충청북도 진천군 진천읍 신정리 495"
+  },
+  {
+    "grid_id":4567875,
+    "latitude":36.85,
+    "longitude":127.55,
+    "jibun":"충청북도 진천군 초평면 영구리 270-1"
+  },
+  {
+    "grid_id":4567876,
+    "latitude":36.85,
+    "longitude":127.65,
+    "jibun":"충청북도 괴산군 사리면 노송리 산 55"
+  },
+  {
+    "grid_id":4567877,
+    "latitude":36.85,
+    "longitude":127.75,
+    "jibun":"충청북도 괴산군 소수면 입암리 855"
+  },
+  {
+    "grid_id":4567878,
+    "latitude":36.85,
+    "longitude":127.85,
+    "jibun":"충청북도 괴산군 감물면 오창리 산 15-3"
+  },
+  {
+    "grid_id":4567879,
+    "latitude":36.85,
+    "longitude":127.95,
+    "jibun":"충청북도 괴산군 장연면 추점리 산 109"
+  },
+  {
+    "grid_id":4567880,
+    "latitude":36.85,
+    "longitude":128.05,
+    "jibun":"충청북도 제천시 한수면 송계리 산 15-3"
+  },
+  {
+    "grid_id":4567881,
+    "latitude":36.85,
+    "longitude":128.15,
+    "jibun":"충청북도 제천시 덕산면 월악리 산 1-1"
+  },
+  {
+    "grid_id":4567882,
+    "latitude":36.85,
+    "longitude":128.25,
+    "jibun":"경상북도 문경시 동로면 명전리 산 29-2"
+  },
+  {
+    "grid_id":4567883,
+    "latitude":36.85,
+    "longitude":128.35,
+    "jibun":"충청북도 단양군 대강면 황정리 산 27-3"
+  },
+  {
+    "grid_id":4567884,
+    "latitude":36.85,
+    "longitude":128.45,
+    "jibun":"경상북도 영주시 봉현면 두산리 산 32"
+  },
+  {
+    "grid_id":4567885,
+    "latitude":36.85,
+    "longitude":128.55,
+    "jibun":"경상북도 영주시 안정면 신전리 211-2"
+  },
+  {
+    "grid_id":4567886,
+    "latitude":36.85,
+    "longitude":128.65,
+    "jibun":"경상북도 영주시 상망동 산 42"
+  },
+  {
+    "grid_id":4567887,
+    "latitude":36.85,
+    "longitude":128.75,
+    "jibun":"경상북도 봉화군 상운면 가곡리 산 125"
+  },
+  {
+    "grid_id":4567888,
+    "latitude":36.85,
+    "longitude":128.85,
+    "jibun":"경상북도 봉화군 명호면 고감리 산 185-3"
+  },
+  {
+    "grid_id":4567889,
+    "latitude":36.85,
+    "longitude":128.95,
+    "jibun":"경상북도 봉화군 재산면 상리 산 55"
+  },
+  {
+    "grid_id":4567890,
+    "latitude":36.85,
+    "longitude":129.05,
+    "jibun":"경상북도 봉화군 재산면 갈산리 산 582-1"
+  },
+  {
+    "grid_id":4567891,
+    "latitude":36.85,
+    "longitude":129.15,
+    "jibun":"경상북도 영양군 수비면 신암리 산 19-84"
+  },
+  {
+    "grid_id":4567892,
+    "latitude":36.85,
+    "longitude":129.25,
+    "jibun":"경상북도 영양군 수비면 수하리 산 65"
+  },
+  {
+    "grid_id":4567893,
+    "latitude":36.85,
+    "longitude":129.35,
+    "jibun":"경상북도 울진군 매화면 갈면리 산 97"
+  },
+  {
+    "grid_id":4571464,
+    "latitude":36.95,
+    "longitude":126.45,
+    "jibun":"충청남도 서산시 대산읍 운산리 777-78"
+  },
+  {
+    "grid_id":4571465,
+    "latitude":36.95,
+    "longitude":126.55,
+    "jibun":"충청남도 당진시 고대면 당진포리 1083"
+  },
+  {
+    "grid_id":4571466,
+    "latitude":36.95,
+    "longitude":126.65,
+    "jibun":"충청남도 당진시 송산면 당산리 산 9-12"
+  },
+  {
+    "grid_id":4571467,
+    "latitude":36.95,
+    "longitude":126.75,
+    "jibun":"충청남도 당진시 송악읍 오곡리 산 16-31"
+  },
+  {
+    "grid_id":4571468,
+    "latitude":36.95,
+    "longitude":126.85,
+    "jibun":"경기도 평택시 포승읍 만호리 671"
+  },
+  {
+    "grid_id":4571469,
+    "latitude":36.95,
+    "longitude":126.95,
+    "jibun":"경기도 평택시 현덕면 덕목리 679-4"
+  },
+  {
+    "grid_id":4571470,
+    "latitude":36.95,
+    "longitude":127.05,
+    "jibun":"경기도 평택시 팽성읍 송화리 231-5"
+  },
+  {
+    "grid_id":4571471,
+    "latitude":36.95,
+    "longitude":127.15,
+    "jibun":"충청남도 천안시 서북구 성환읍 수향리 178-3"
+  },
+  {
+    "grid_id":4571472,
+    "latitude":36.95,
+    "longitude":127.25,
+    "jibun":"경기도 안성시 서운면 동촌리 284"
+  },
+  {
+    "grid_id":4571473,
+    "latitude":36.95,
+    "longitude":127.35,
+    "jibun":"충청북도 진천군 백곡면 성대리 산 87"
+  },
+  {
+    "grid_id":4571474,
+    "latitude":36.95,
+    "longitude":127.45,
+    "jibun":"충청북도 음성군 대소면 내산리 산 65-1"
+  },
+  {
+    "grid_id":4571475,
+    "latitude":36.95,
+    "longitude":127.55,
+    "jibun":"충청북도 음성군 금왕읍 삼봉리 428-1"
+  },
+  {
+    "grid_id":4571476,
+    "latitude":36.95,
+    "longitude":127.65,
+    "jibun":"충청북도 음성군 음성읍 소여리 산 6"
+  },
+  {
+    "grid_id":4571477,
+    "latitude":36.95,
+    "longitude":127.75,
+    "jibun":"충청북도 음성군 소이면 비산리 404-7"
+  },
+  {
+    "grid_id":4571478,
+    "latitude":36.95,
+    "longitude":127.85,
+    "jibun":"충청북도 충주시 대소원면 만정리 산 37-4"
+  },
+  {
+    "grid_id":4571479,
+    "latitude":36.95,
+    "longitude":127.95,
+    "jibun":"충청북도 충주시 직동 산 2"
+  },
+  {
+    "grid_id":4571480,
+    "latitude":36.95,
+    "longitude":128.05,
+    "jibun":"충청북도 제천시 한수면 한천리 산 6"
+  },
+  {
+    "grid_id":4571481,
+    "latitude":36.95,
+    "longitude":128.15,
+    "jibun":"충청북도 제천시 수산면 고명리 산 28-3"
+  },
+  {
+    "grid_id":4571482,
+    "latitude":36.95,
+    "longitude":128.25,
+    "jibun":"충청북도 제천시 수산면 성리 산 1"
+  },
+  {
+    "grid_id":4571483,
+    "latitude":36.95,
+    "longitude":128.35,
+    "jibun":"충청북도 단양군 단양읍 덕상리 산 14"
+  },
+  {
+    "grid_id":4571484,
+    "latitude":36.95,
+    "longitude":128.45,
+    "jibun":"충청북도 단양군 단양읍 천동리 산 9-1"
+  },
+  {
+    "grid_id":4571485,
+    "latitude":36.95,
+    "longitude":128.55,
+    "jibun":"경상북도 영주시 순흥면 덕현리 산 74"
+  },
+  {
+    "grid_id":4571486,
+    "latitude":36.95,
+    "longitude":128.65,
+    "jibun":"경상북도 영주시 부석면 상석리 324-2"
+  },
+  {
+    "grid_id":4571487,
+    "latitude":36.95,
+    "longitude":128.75,
+    "jibun":"경상북도 봉화군 물야면 개단리 산 161"
+  },
+  {
+    "grid_id":4571488,
+    "latitude":36.95,
+    "longitude":128.85,
+    "jibun":"경상북도 봉화군 춘양면 학산리 산 73-7"
+  },
+  {
+    "grid_id":4571489,
+    "latitude":36.95,
+    "longitude":128.95,
+    "jibun":"경상북도 봉화군 춘양면 소로리 산 65"
+  },
+  {
+    "grid_id":4571490,
+    "latitude":36.95,
+    "longitude":129.05,
+    "jibun":"경상북도 봉화군 소천면 분천리 산 99"
+  },
+  {
+    "grid_id":4571491,
+    "latitude":36.95,
+    "longitude":129.15,
+    "jibun":"경상북도 울진군 금강송면 광회리 산 1-1"
+  },
+  {
+    "grid_id":4571492,
+    "latitude":36.95,
+    "longitude":129.25,
+    "jibun":"경상북도 울진군 금강송면 삼근리 산 45"
+  },
+  {
+    "grid_id":4571493,
+    "latitude":36.95,
+    "longitude":129.35,
+    "jibun":"경상북도 울진군 근남면 수곡리 558"
+  },
+  {
+    "grid_id":4575068,
+    "latitude":37.05,
+    "longitude":126.85,
+    "jibun":"경기도 화성시 장안면 장안리 586-2"
+  },
+  {
+    "grid_id":4575069,
+    "latitude":37.05,
+    "longitude":126.95,
+    "jibun":"경기도 평택시 청북읍 현곡리 19-1"
+  },
+  {
+    "grid_id":4575070,
+    "latitude":37.05,
+    "longitude":127.05,
+    "jibun":"경기도 평택시 고덕동 1692-289"
+  },
+  {
+    "grid_id":4575071,
+    "latitude":37.05,
+    "longitude":127.15,
+    "jibun":"경기도 안성시 원곡면 칠곡리 421-1"
+  },
+  {
+    "grid_id":4575072,
+    "latitude":37.05,
+    "longitude":127.25,
+    "jibun":"경기도 안성시 대덕면 보동리 285-3"
+  },
+  {
+    "grid_id":4575073,
+    "latitude":37.05,
+    "longitude":127.35,
+    "jibun":"경기도 안성시 삼죽면 진촌리 산 142-7"
+  },
+  {
+    "grid_id":4575074,
+    "latitude":37.05,
+    "longitude":127.45,
+    "jibun":"경기도 안성시 죽산면 용설리 산 99-1"
+  },
+  {
+    "grid_id":4575075,
+    "latitude":37.05,
+    "longitude":127.55,
+    "jibun":"경기도 이천시 율면 산성리 473"
+  },
+  {
+    "grid_id":4575076,
+    "latitude":37.05,
+    "longitude":127.65,
+    "jibun":"충청북도 음성군 생극면 차곡리 산 33"
+  },
+  {
+    "grid_id":4575077,
+    "latitude":37.05,
+    "longitude":127.75,
+    "jibun":"충청북도 충주시 노은면 문성리 산 11"
+  },
+  {
+    "grid_id":4575078,
+    "latitude":37.05,
+    "longitude":127.85,
+    "jibun":"충청북도 충주시 중앙탑면 하구암리 산 102"
+  },
+  {
+    "grid_id":4575079,
+    "latitude":37.05,
+    "longitude":127.95,
+    "jibun":"충청북도 충주시 동량면 대전리 1835"
+  },
+  {
+    "grid_id":4575080,
+    "latitude":37.05,
+    "longitude":128.05,
+    "jibun":"충청북도 충주시 산척면 명서리 산 87-1"
+  },
+  {
+    "grid_id":4575081,
+    "latitude":37.05,
+    "longitude":128.15,
+    "jibun":"충청북도 제천시 금성면 월굴리 산 75-1"
+  },
+  {
+    "grid_id":4575082,
+    "latitude":37.05,
+    "longitude":128.25,
+    "jibun":"충청북도 단양군 적성면 파랑리 617"
+  },
+  {
+    "grid_id":4575083,
+    "latitude":37.05,
+    "longitude":128.35,
+    "jibun":"충청북도 단양군 어상천면 덕문곡리 823"
+  },
+  {
+    "grid_id":4575084,
+    "latitude":37.05,
+    "longitude":128.45,
+    "jibun":"충청북도 단양군 가곡면 향산리 산 17"
+  },
+  {
+    "grid_id":4575085,
+    "latitude":37.05,
+    "longitude":128.55,
+    "jibun":"충청북도 단양군 영춘면 동대리 산 43-1"
+  },
+  {
+    "grid_id":4575086,
+    "latitude":37.05,
+    "longitude":128.65,
+    "jibun":"경상북도 영주시 부석면 남대리 438-10"
+  },
+  {
+    "grid_id":4575087,
+    "latitude":37.05,
+    "longitude":128.75,
+    "jibun":"강원특별자치도 영월군 김삿갓면 내리 산 1"
+  },
+  {
+    "grid_id":4575088,
+    "latitude":37.05,
+    "longitude":128.85,
+    "jibun":"경상북도 봉화군 춘양면 애당리 산 2"
+  },
+  {
+    "grid_id":4575089,
+    "latitude":37.05,
+    "longitude":128.95,
+    "jibun":"경상북도 봉화군 소천면 고선리 산 37"
+  },
+  {
+    "grid_id":4575090,
+    "latitude":37.05,
+    "longitude":129.05,
+    "jibun":"경상북도 봉화군 석포면 석포리 산 1-11"
+  },
+  {
+    "grid_id":4575091,
+    "latitude":37.05,
+    "longitude":129.15,
+    "jibun":"경상북도 봉화군 석포면 석포리 산 1-2"
+  },
+  {
+    "grid_id":4575092,
+    "latitude":37.05,
+    "longitude":129.25,
+    "jibun":"경상북도 울진군 북면 상당리 산 6"
+  },
+  {
+    "grid_id":4575093,
+    "latitude":37.05,
+    "longitude":129.35,
+    "jibun":"경상북도 울진군 북면 사계리 산 7"
+  },
+  {
+    "grid_id":4578668,
+    "latitude":37.15,
+    "longitude":126.85,
+    "jibun":"경기도 화성시 팔탄면 노하리 1323-5"
+  },
+  {
+    "grid_id":4578669,
+    "latitude":37.15,
+    "longitude":126.95,
+    "jibun":"경기도 화성시 정남면 문학리 658-7"
+  },
+  {
+    "grid_id":4578670,
+    "latitude":37.15,
+    "longitude":127.05,
+    "jibun":"경기도 오산시 청학동 273-1"
+  },
+  {
+    "grid_id":4578671,
+    "latitude":37.15,
+    "longitude":127.15,
+    "jibun":"경기도 용인시 처인구 남사읍 북리 550-2"
+  },
+  {
+    "grid_id":4578672,
+    "latitude":37.15,
+    "longitude":127.25,
+    "jibun":"경기도 용인시 처인구 이동읍 묵리 산 74-8"
+  },
+  {
+    "grid_id":4578673,
+    "latitude":37.15,
+    "longitude":127.35,
+    "jibun":"경기도 용인시 처인구 원삼면 두창리 산 5"
+  },
+  {
+    "grid_id":4578674,
+    "latitude":37.15,
+    "longitude":127.45,
+    "jibun":"경기도 이천시 모가면 두미리 산 136-11"
+  },
+  {
+    "grid_id":4578675,
+    "latitude":37.15,
+    "longitude":127.55,
+    "jibun":"경기도 이천시 설성면 암산리 산 43-30"
+  },
+  {
+    "grid_id":4578676,
+    "latitude":37.15,
+    "longitude":127.65,
+    "jibun":"경기도 여주시 점동면 관한리 산 28"
+  },
+  {
+    "grid_id":4578677,
+    "latitude":37.15,
+    "longitude":127.75,
+    "jibun":"충청북도 충주시 앙성면 목미리 산 35"
+  },
+  {
+    "grid_id":4578678,
+    "latitude":37.15,
+    "longitude":127.85,
+    "jibun":"충청북도 충주시 소태면 주치리 653-6"
+  },
+  {
+    "grid_id":4578679,
+    "latitude":37.15,
+    "longitude":127.95,
+    "jibun":"충청북도 충주시 엄정면 가춘리 산 16-1"
+  },
+  {
+    "grid_id":4578680,
+    "latitude":37.15,
+    "longitude":128.05,
+    "jibun":"충청북도 제천시 백운면 평동리 산 71"
+  },
+  {
+    "grid_id":4578681,
+    "latitude":37.15,
+    "longitude":128.15,
+    "jibun":"충청북도 제천시 왕암동 1335"
+  },
+  {
+    "grid_id":4578682,
+    "latitude":37.15,
+    "longitude":128.25,
+    "jibun":"충청북도 제천시 송학면 무도리 산 103-5"
+  },
+  {
+    "grid_id":4578683,
+    "latitude":37.15,
+    "longitude":128.35,
+    "jibun":"충청북도 단양군 어상천면 대전리 산 48"
+  },
+  {
+    "grid_id":4578684,
+    "latitude":37.15,
+    "longitude":128.45,
+    "jibun":"강원특별자치도 영월군 영월읍 흥월리 산 116"
+  },
+  {
+    "grid_id":4578685,
+    "latitude":37.15,
+    "longitude":128.55,
+    "jibun":"강원특별자치도 영월군 김삿갓면 진별리 321"
+  },
+  {
+    "grid_id":4578686,
+    "latitude":37.15,
+    "longitude":128.65,
+    "jibun":"강원특별자치도 영월군 산솔면 화원리 산 105"
+  },
+  {
+    "grid_id":4578687,
+    "latitude":37.15,
+    "longitude":128.75,
+    "jibun":"강원특별자치도 영월군 산솔면 직동리 산 1-82"
+  },
+  {
+    "grid_id":4578688,
+    "latitude":37.15,
+    "longitude":128.85,
+    "jibun":"강원특별자치도 영월군 상동읍 구래리 산 1-35"
+  },
+  {
+    "grid_id":4578689,
+    "latitude":37.15,
+    "longitude":128.95,
+    "jibun":"강원특별자치도 태백시 황지동 737-1"
+  },
+  {
+    "grid_id":4578690,
+    "latitude":37.15,
+    "longitude":129.05,
+    "jibun":"강원특별자치도 태백시 백산동 산 54"
+  },
+  {
+    "grid_id":4578691,
+    "latitude":37.15,
+    "longitude":129.15,
+    "jibun":"강원특별자치도 삼척시 가곡면 동활리 산 44"
+  },
+  {
+    "grid_id":4578692,
+    "latitude":37.15,
+    "longitude":129.25,
+    "jibun":"강원특별자치도 삼척시 원덕읍 기곡리 산 67-6"
+  },
+  {
+    "grid_id":4578693,
+    "latitude":37.15,
+    "longitude":129.35,
+    "jibun":"강원특별자치도 삼척시 원덕읍 월천리 산 57-6"
+  },
+  {
+    "grid_id":4582264,
+    "latitude":37.25,
+    "longitude":126.45,
+    "jibun":"인천광역시 옹진군 영흥면 외리 산 129"
+  },
+  {
+    "grid_id":4582267,
+    "latitude":37.25,
+    "longitude":126.75,
+    "jibun":"경기도 화성시 송산면 고정리 101-2"
+  },
+  {
+    "grid_id":4582268,
+    "latitude":37.25,
+    "longitude":126.85,
+    "jibun":"경기도 화성시 비봉면 삼화리 1125-4"
+  },
+  {
+    "grid_id":4582269,
+    "latitude":37.25,
+    "longitude":126.95,
+    "jibun":"경기도 화성시 매송면 천천리 산 28-10"
+  },
+  {
+    "grid_id":4582270,
+    "latitude":37.25,
+    "longitude":127.05,
+    "jibun":"경기도 수원시 영통구 매탄동 416"
+  },
+  {
+    "grid_id":4582271,
+    "latitude":37.25,
+    "longitude":127.15,
+    "jibun":"경기도 용인시 기흥구 상하동 산 47-10"
+  },
+  {
+    "grid_id":4582272,
+    "latitude":37.25,
+    "longitude":127.25,
+    "jibun":"경기도 용인시 처인구 양지면 주북리 산 30"
+  },
+  {
+    "grid_id":4582273,
+    "latitude":37.25,
+    "longitude":127.35,
+    "jibun":"경기도 이천시 마장면 오천리 327-6"
+  },
+  {
+    "grid_id":4582274,
+    "latitude":37.25,
+    "longitude":127.45,
+    "jibun":"경기도 이천시 장록동 121"
+  },
+  {
+    "grid_id":4582275,
+    "latitude":37.25,
+    "longitude":127.55,
+    "jibun":"경기도 여주시 가남읍 정단리 112-1"
+  },
+  {
+    "grid_id":4582276,
+    "latitude":37.25,
+    "longitude":127.65,
+    "jibun":"경기도 여주시 점봉동 170-2"
+  },
+  {
+    "grid_id":4582277,
+    "latitude":37.25,
+    "longitude":127.75,
+    "jibun":"경기도 여주시 강천면 부평리 621"
+  },
+  {
+    "grid_id":4582278,
+    "latitude":37.25,
+    "longitude":127.85,
+    "jibun":"강원특별자치도 원주시 문막읍 비두리 산 145"
+  },
+  {
+    "grid_id":4582279,
+    "latitude":37.25,
+    "longitude":127.95,
+    "jibun":"강원특별자치도 원주시 판부면 서곡리 산 166"
+  },
+  {
+    "grid_id":4582280,
+    "latitude":37.25,
+    "longitude":128.05,
+    "jibun":"강원특별자치도 원주시 신림면 금창리 산 77-2"
+  },
+  {
+    "grid_id":4582281,
+    "latitude":37.25,
+    "longitude":128.15,
+    "jibun":"강원특별자치도 원주시 신림면 황둔리 1380"
+  },
+  {
+    "grid_id":4582282,
+    "latitude":37.25,
+    "longitude":128.25,
+    "jibun":"강원특별자치도 영월군 주천면 신일리 562-2"
+  },
+  {
+    "grid_id":4582283,
+    "latitude":37.25,
+    "longitude":128.35,
+    "jibun":"강원특별자치도 영월군 한반도면 광전리 산 233"
+  },
+  {
+    "grid_id":4582284,
+    "latitude":37.25,
+    "longitude":128.45,
+    "jibun":"강원특별자치도 영월군 북면 마차리 산 186"
+  },
+  {
+    "grid_id":4582285,
+    "latitude":37.25,
+    "longitude":128.55,
+    "jibun":"강원특별자치도 영월군 영월읍 문산리 산 17"
+  },
+  {
+    "grid_id":4582286,
+    "latitude":37.25,
+    "longitude":128.65,
+    "jibun":"강원특별자치도 정선군 신동읍 운치리 산 203"
+  },
+  {
+    "grid_id":4582287,
+    "latitude":37.25,
+    "longitude":128.75,
+    "jibun":"강원특별자치도 정선군 남면 문곡리 산 63"
+  },
+  {
+    "grid_id":4582288,
+    "latitude":37.25,
+    "longitude":128.85,
+    "jibun":"강원특별자치도 정선군 사북읍 사북리 104-4"
+  },
+  {
+    "grid_id":4582289,
+    "latitude":37.25,
+    "longitude":128.95,
+    "jibun":"강원특별자치도 태백시 원동 산 128"
+  },
+  {
+    "grid_id":4582290,
+    "latitude":37.25,
+    "longitude":129.05,
+    "jibun":"강원특별자치도 삼척시 도계읍 마교리 168-4"
+  },
+  {
+    "grid_id":4582291,
+    "latitude":37.25,
+    "longitude":129.15,
+    "jibun":"강원특별자치도 삼척시 노곡면 상마읍리 산 104"
+  },
+  {
+    "grid_id":4582292,
+    "latitude":37.25,
+    "longitude":129.25,
+    "jibun":"강원특별자치도 삼척시 근덕면 궁촌리 산 310"
+  },
+  {
+    "grid_id":4585867,
+    "latitude":37.35,
+    "longitude":126.75,
+    "jibun":"경기도 시흥시 정왕동 771-3"
+  },
+  {
+    "grid_id":4585868,
+    "latitude":37.35,
+    "longitude":126.85,
+    "jibun":"경기도 안산시 상록구 양상동 산 7"
+  },
+  {
+    "grid_id":4585869,
+    "latitude":37.35,
+    "longitude":126.95,
+    "jibun":"경기도 군포시 당동 679-22"
+  },
+  {
+    "grid_id":4585870,
+    "latitude":37.35,
+    "longitude":127.05,
+    "jibun":"경기도 용인시 수지구 고기동 산 43-8"
+  },
+  {
+    "grid_id":4585871,
+    "latitude":37.35,
+    "longitude":127.15,
+    "jibun":"경기도 광주시 능평동 901"
+  },
+  {
+    "grid_id":4585872,
+    "latitude":37.35,
+    "longitude":127.25,
+    "jibun":"경기도 용인시 처인구 모현읍 왕산리 산 11-2"
+  },
+  {
+    "grid_id":4585873,
+    "latitude":37.35,
+    "longitude":127.35,
+    "jibun":"경기도 광주시 곤지암읍 곤지암리 152-3"
+  },
+  {
+    "grid_id":4585874,
+    "latitude":37.35,
+    "longitude":127.45,
+    "jibun":"경기도 이천시 백사면 경사리 산 46-3"
+  },
+  {
+    "grid_id":4585875,
+    "latitude":37.35,
+    "longitude":127.55,
+    "jibun":"경기도 여주시 흥천면 귀백리 산 4"
+  },
+  {
+    "grid_id":4585876,
+    "latitude":37.35,
+    "longitude":127.65,
+    "jibun":"경기도 여주시 대신면 하림리 산 25-7"
+  },
+  {
+    "grid_id":4585877,
+    "latitude":37.35,
+    "longitude":127.75,
+    "jibun":"경기도 여주시 강천면 도전리 산 98"
+  },
+  {
+    "grid_id":4585878,
+    "latitude":37.35,
+    "longitude":127.85,
+    "jibun":"강원특별자치도 원주시 지정면 간현리 180-5"
+  },
+  {
+    "grid_id":4585879,
+    "latitude":37.35,
+    "longitude":127.95,
+    "jibun":"강원특별자치도 원주시 중앙동 62-1"
+  },
+  {
+    "grid_id":4585880,
+    "latitude":37.35,
+    "longitude":128.05,
+    "jibun":"강원특별자치도 횡성군 강림면 부곡리 산 1"
+  },
+  {
+    "grid_id":4585881,
+    "latitude":37.35,
+    "longitude":128.15,
+    "jibun":"강원특별자치도 횡성군 강림면 월현리 산 544"
+  },
+  {
+    "grid_id":4585882,
+    "latitude":37.35,
+    "longitude":128.25,
+    "jibun":"강원특별자치도 영월군 무릉도원면 도원리 산 1"
+  },
+  {
+    "grid_id":4585883,
+    "latitude":37.35,
+    "longitude":128.35,
+    "jibun":"강원특별자치도 평창군 평창읍 입탄리 82"
+  },
+  {
+    "grid_id":4585884,
+    "latitude":37.35,
+    "longitude":128.45,
+    "jibun":"강원특별자치도 평창군 평창읍 노론리 산 40-1"
+  },
+  {
+    "grid_id":4585885,
+    "latitude":37.35,
+    "longitude":128.55,
+    "jibun":"강원특별자치도 평창군 미탄면 백운리 산 1-1"
+  },
+  {
+    "grid_id":4585886,
+    "latitude":37.35,
+    "longitude":128.65,
+    "jibun":"강원특별자치도 정선군 정선읍 북실리 산 51"
+  },
+  {
+    "grid_id":4585887,
+    "latitude":37.35,
+    "longitude":128.75,
+    "jibun":"강원특별자치도 정선군 화암면 석곡리 1293"
+  },
+  {
+    "grid_id":4585888,
+    "latitude":37.35,
+    "longitude":128.85,
+    "jibun":"강원특별자치도 삼척시 하장면 공전리 산 80-1"
+  },
+  {
+    "grid_id":4585889,
+    "latitude":37.35,
+    "longitude":128.95,
+    "jibun":"강원특별자치도 삼척시 하장면 광동리 산 97"
+  },
+  {
+    "grid_id":4585890,
+    "latitude":37.35,
+    "longitude":129.05,
+    "jibun":"강원특별자치도 삼척시 신기면 고무릉리 산 22"
+  },
+  {
+    "grid_id":4585891,
+    "latitude":37.35,
+    "longitude":129.15,
+    "jibun":"강원특별자치도 삼척시 노곡면 고자리 산 238"
+  },
+  {
+    "grid_id":4585892,
+    "latitude":37.35,
+    "longitude":129.25,
+    "jibun":"강원특별자치도 삼척시 근덕면 동막리 산 15"
+  },
+  {
+    "grid_id":4589464,
+    "latitude":37.45,
+    "longitude":126.45,
+    "jibun":"인천광역시 중구 운서동 2851"
+  },
+  {
+    "grid_id":4589466,
+    "latitude":37.45,
+    "longitude":126.65,
+    "jibun":"인천광역시 미추홀구 용현동 253-4"
+  },
+  {
+    "grid_id":4589467,
+    "latitude":37.45,
+    "longitude":126.75,
+    "jibun":"인천광역시 남동구 장수동 785-3"
+  },
+  {
+    "grid_id":4589468,
+    "latitude":37.45,
+    "longitude":126.85,
+    "jibun":"경기도 광명시 노온사동 173-1"
+  },
+  {
+    "grid_id":4589469,
+    "latitude":37.45,
+    "longitude":126.95,
+    "jibun":"서울특별시 관악구 신림동 산 56-1"
+  },
+  {
+    "grid_id":4589470,
+    "latitude":37.45,
+    "longitude":127.05,
+    "jibun":"서울특별시 서초구 원지동 산 68"
+  },
+  {
+    "grid_id":4589471,
+    "latitude":37.45,
+    "longitude":127.15,
+    "jibun":"경기도 성남시 수정구 신흥동 192-1"
+  },
+  {
+    "grid_id":4589472,
+    "latitude":37.45,
+    "longitude":127.25,
+    "jibun":"경기도 광주시 남한산성면 광지원리 산 158"
+  },
+  {
+    "grid_id":4589473,
+    "latitude":37.45,
+    "longitude":127.35,
+    "jibun":"경기도 광주시 퇴촌면 관음리 산 52"
+  },
+  {
+    "grid_id":4589474,
+    "latitude":37.45,
+    "longitude":127.45,
+    "jibun":"경기도 양평군 강상면 신화리 산 62-1"
+  },
+  {
+    "grid_id":4589475,
+    "latitude":37.45,
+    "longitude":127.55,
+    "jibun":"경기도 양평군 개군면 불곡리 산 28-1"
+  },
+  {
+    "grid_id":4589476,
+    "latitude":37.45,
+    "longitude":127.65,
+    "jibun":"경기도 양평군 지평면 망미리 산 68-1"
+  },
+  {
+    "grid_id":4589477,
+    "latitude":37.45,
+    "longitude":127.75,
+    "jibun":"경기도 양평군 양동면 석곡리 산 59-1"
+  },
+  {
+    "grid_id":4589478,
+    "latitude":37.45,
+    "longitude":127.85,
+    "jibun":"강원특별자치도 횡성군 서원면 옥계리 산 163-1"
+  },
+  {
+    "grid_id":4589479,
+    "latitude":37.45,
+    "longitude":127.95,
+    "jibun":"강원특별자치도 원주시 호저면 광격리 산 11"
+  },
+  {
+    "grid_id":4589480,
+    "latitude":37.45,
+    "longitude":128.05,
+    "jibun":"강원특별자치도 횡성군 우천면 법주리 산 35"
+  },
+  {
+    "grid_id":4589481,
+    "latitude":37.45,
+    "longitude":128.15,
+    "jibun":"강원특별자치도 횡성군 안흥면 소사리 841"
+  },
+  {
+    "grid_id":4589482,
+    "latitude":37.45,
+    "longitude":128.25,
+    "jibun":"강원특별자치도 평창군 방림면 계촌리 산 1"
+  },
+  {
+    "grid_id":4589483,
+    "latitude":37.45,
+    "longitude":128.35,
+    "jibun":"강원특별자치도 평창군 방림면 계촌리 산 370"
+  },
+  {
+    "grid_id":4589484,
+    "latitude":37.45,
+    "longitude":128.45,
+    "jibun":"강원특별자치도 평창군 대화면 하안미리 1783-24"
+  },
+  {
+    "grid_id":4589485,
+    "latitude":37.45,
+    "longitude":128.55,
+    "jibun":"강원특별자치도 정선군 정선읍 회동리 산 1"
+  },
+  {
+    "grid_id":4589486,
+    "latitude":37.45,
+    "longitude":128.65,
+    "jibun":"강원특별자치도 정선군 북평면 북평리 산 277"
+  },
+  {
+    "grid_id":4589487,
+    "latitude":37.45,
+    "longitude":128.75,
+    "jibun":"강원특별자치도 정선군 여량면 여량리 산 12"
+  },
+  {
+    "grid_id":4589488,
+    "latitude":37.45,
+    "longitude":128.85,
+    "jibun":"강원특별자치도 정선군 임계면 용산리 377-3"
+  },
+  {
+    "grid_id":4589489,
+    "latitude":37.45,
+    "longitude":128.95,
+    "jibun":"강원특별자치도 정선군 임계면 도전리 산 64"
+  },
+  {
+    "grid_id":4589490,
+    "latitude":37.45,
+    "longitude":129.05,
+    "jibun":"강원특별자치도 삼척시 미로면 내미로리 808-1"
+  },
+  {
+    "grid_id":4589491,
+    "latitude":37.45,
+    "longitude":129.15,
+    "jibun":"강원특별자치도 삼척시 마달동 산 63"
+  },
+  {
+    "grid_id":4593066,
+    "latitude":37.55,
+    "longitude":126.65,
+    "jibun":"인천광역시 서구 경서동 350-128"
+  },
+  {
+    "grid_id":4593067,
+    "latitude":37.55,
+    "longitude":126.75,
+    "jibun":"인천광역시 계양구 병방동 49-2"
+  },
+  {
+    "grid_id":4593068,
+    "latitude":37.55,
+    "longitude":126.85,
+    "jibun":"서울특별시 강서구 화곡동 980-22"
+  },
+  {
+    "grid_id":4593069,
+    "latitude":37.55,
+    "longitude":126.95,
+    "jibun":"서울특별시 마포구 공덕동 188-108"
+  },
+  {
+    "grid_id":4593070,
+    "latitude":37.55,
+    "longitude":127.05,
+    "jibun":"서울특별시 성동구 성수동1가 13-219"
+  },
+  {
+    "grid_id":4593071,
+    "latitude":37.55,
+    "longitude":127.15,
+    "jibun":"서울특별시 강동구 명일동 40"
+  },
+  {
+    "grid_id":4593072,
+    "latitude":37.55,
+    "longitude":127.25,
+    "jibun":"경기도 남양주시 와부읍 팔당리 산 96"
+  },
+  {
+    "grid_id":4593073,
+    "latitude":37.55,
+    "longitude":127.35,
+    "jibun":"경기도 양평군 양서면 부용리 769"
+  },
+  {
+    "grid_id":4593074,
+    "latitude":37.55,
+    "longitude":127.45,
+    "jibun":"경기도 양평군 옥천면 신복리 산 243-1"
+  },
+  {
+    "grid_id":4593075,
+    "latitude":37.55,
+    "longitude":127.55,
+    "jibun":"경기도 양평군 용문면 연수리 산 72"
+  },
+  {
+    "grid_id":4593076,
+    "latitude":37.55,
+    "longitude":127.65,
+    "jibun":"경기도 양평군 단월면 향소리 743-2"
+  },
+  {
+    "grid_id":4593077,
+    "latitude":37.55,
+    "longitude":127.75,
+    "jibun":"경기도 양평군 청운면 갈운리 산 105"
+  },
+  {
+    "grid_id":4593078,
+    "latitude":37.55,
+    "longitude":127.85,
+    "jibun":"강원특별자치도 횡성군 서원면 유현리 산 186"
+  },
+  {
+    "grid_id":4593079,
+    "latitude":37.55,
+    "longitude":127.95,
+    "jibun":"강원특별자치도 횡성군 공근면 도곡리 198-1"
+  },
+  {
+    "grid_id":4593080,
+    "latitude":37.55,
+    "longitude":128.05,
+    "jibun":"강원특별자치도 횡성군 갑천면 중금리 607"
+  },
+  {
+    "grid_id":4593081,
+    "latitude":37.55,
+    "longitude":128.15,
+    "jibun":"강원특별자치도 횡성군 갑천면 하대리 산 321-1"
+  },
+  {
+    "grid_id":4593082,
+    "latitude":37.55,
+    "longitude":128.25,
+    "jibun":"강원특별자치도 횡성군 둔내면 삽교리 산 218-1"
+  },
+  {
+    "grid_id":4593083,
+    "latitude":37.55,
+    "longitude":128.35,
+    "jibun":"강원특별자치도 평창군 봉평면 면온리 산 354"
+  },
+  {
+    "grid_id":4593084,
+    "latitude":37.55,
+    "longitude":128.45,
+    "jibun":"강원특별자치도 평창군 대화면 신리 903"
+  },
+  {
+    "grid_id":4593085,
+    "latitude":37.55,
+    "longitude":128.55,
+    "jibun":"강원특별자치도 평창군 진부면 화의리 산 100"
+  },
+  {
+    "grid_id":4593086,
+    "latitude":37.55,
+    "longitude":128.65,
+    "jibun":"강원특별자치도 정선군 여량면 구절리 산 3-2"
+  },
+  {
+    "grid_id":4593087,
+    "latitude":37.55,
+    "longitude":128.75,
+    "jibun":"강원특별자치도 강릉시 왕산면 대기리 산 3"
+  },
+  {
+    "grid_id":4593088,
+    "latitude":37.55,
+    "longitude":128.85,
+    "jibun":"강원특별자치도 강릉시 왕산면 송현리 113-10"
+  },
+  {
+    "grid_id":4593089,
+    "latitude":37.55,
+    "longitude":128.95,
+    "jibun":"강원특별자치도 강릉시 옥계면 산계리 산 428"
+  },
+  {
+    "grid_id":4593090,
+    "latitude":37.55,
+    "longitude":129.05,
+    "jibun":"강원특별자치도 동해시 만우동 산 146"
+  },
+  {
+    "grid_id":4596662,
+    "latitude":37.65,
+    "longitude":126.25,
+    "jibun":"인천광역시 강화군 서도면 주문도리 산 171"
+  },
+  {
+    "grid_id":4596664,
+    "latitude":37.65,
+    "longitude":126.45,
+    "jibun":"인천광역시 강화군 양도면 도장리 834-1"
+  },
+  {
+    "grid_id":4596665,
+    "latitude":37.65,
+    "longitude":126.55,
+    "jibun":"경기도 김포시 대곶면 대명리 296-4"
+  },
+  {
+    "grid_id":4596666,
+    "latitude":37.65,
+    "longitude":126.65,
+    "jibun":"경기도 김포시 양촌읍 석모리 926"
+  },
+  {
+    "grid_id":4596667,
+    "latitude":37.65,
+    "longitude":126.75,
+    "jibun":"경기도 고양시 일산동구 장항동 657-81"
+  },
+  {
+    "grid_id":4596668,
+    "latitude":37.65,
+    "longitude":126.85,
+    "jibun":"경기도 고양시 덕양구 성사동 301-1"
+  },
+  {
+    "grid_id":4596669,
+    "latitude":37.65,
+    "longitude":126.95,
+    "jibun":"서울특별시 은평구 진관동 산 25"
+  },
+  {
+    "grid_id":4596670,
+    "latitude":37.65,
+    "longitude":127.05,
+    "jibun":"서울특별시 도봉구 창동 27"
+  },
+  {
+    "grid_id":4596671,
+    "latitude":37.65,
+    "longitude":127.15,
+    "jibun":"경기도 남양주시 퇴계원읍 퇴계원리 124-6"
+  },
+  {
+    "grid_id":4596672,
+    "latitude":37.65,
+    "longitude":127.25,
+    "jibun":"경기도 남양주시 평내동 산 97-8"
+  },
+  {
+    "grid_id":4596673,
+    "latitude":37.65,
+    "longitude":127.35,
+    "jibun":"경기도 남양주시 화도읍 답내리 산 85-79"
+  },
+  {
+    "grid_id":4596674,
+    "latitude":37.65,
+    "longitude":127.45,
+    "jibun":"경기도 가평군 설악면 이천리 74"
+  },
+  {
+    "grid_id":4596675,
+    "latitude":37.65,
+    "longitude":127.55,
+    "jibun":"강원특별자치도 홍천군 서면 동막리 산 136"
+  },
+  {
+    "grid_id":4596676,
+    "latitude":37.65,
+    "longitude":127.65,
+    "jibun":"강원특별자치도 홍천군 서면 대곡리 산 119"
+  },
+  {
+    "grid_id":4596677,
+    "latitude":37.65,
+    "longitude":127.75,
+    "jibun":"강원특별자치도 홍천군 남면 용수리 415-44"
+  },
+  {
+    "grid_id":4596678,
+    "latitude":37.65,
+    "longitude":127.85,
+    "jibun":"강원특별자치도 홍천군 홍천읍 장전평리 산 257"
+  },
+  {
+    "grid_id":4596679,
+    "latitude":37.65,
+    "longitude":127.95,
+    "jibun":"강원특별자치도 홍천군 영귀미면 후동리 산 28"
+  },
+  {
+    "grid_id":4596680,
+    "latitude":37.65,
+    "longitude":128.05,
+    "jibun":"강원특별자치도 홍천군 영귀미면 좌운리 산 7-1"
+  },
+  {
+    "grid_id":4596681,
+    "latitude":37.65,
+    "longitude":128.15,
+    "jibun":"강원특별자치도 횡성군 청일면 봉명리 산 1"
+  },
+  {
+    "grid_id":4596682,
+    "latitude":37.65,
+    "longitude":128.25,
+    "jibun":"강원특별자치도 홍천군 서석면 청량리 산 110"
+  },
+  {
+    "grid_id":4596683,
+    "latitude":37.65,
+    "longitude":128.35,
+    "jibun":"강원특별자치도 평창군 봉평면 흥정리 산 1"
+  },
+  {
+    "grid_id":4596684,
+    "latitude":37.65,
+    "longitude":128.45,
+    "jibun":"강원특별자치도 평창군 용평면 도사리 산 1"
+  },
+  {
+    "grid_id":4596685,
+    "latitude":37.65,
+    "longitude":128.55,
+    "jibun":"강원특별자치도 평창군 진부면 상진부리 산 312"
+  },
+  {
+    "grid_id":4596686,
+    "latitude":37.65,
+    "longitude":128.65,
+    "jibun":"강원특별자치도 평창군 대관령면 용산리 산 247-5"
+  },
+  {
+    "grid_id":4596687,
+    "latitude":37.65,
+    "longitude":128.75,
+    "jibun":"강원특별자치도 강릉시 왕산면 왕산리 산 1"
+  },
+  {
+    "grid_id":4596688,
+    "latitude":37.65,
+    "longitude":128.85,
+    "jibun":"강원특별자치도 강릉시 왕산면 목계리 산 445"
+  },
+  {
+    "grid_id":4596689,
+    "latitude":37.65,
+    "longitude":128.95,
+    "jibun":"강원특별자치도 강릉시 강동면 임곡리 산 228"
+  },
+  {
+    "grid_id":4600264,
+    "latitude":37.75,
+    "longitude":126.45,
+    "jibun":"인천광역시 강화군 송해면 하도리 산 112"
+  },
+  {
+    "grid_id":4600265,
+    "latitude":37.75,
+    "longitude":126.55,
+    "jibun":"경기도 김포시 월곶면 용강리 산 34-4"
+  },
+  {
+    "grid_id":4600266,
+    "latitude":37.75,
+    "longitude":126.65,
+    "jibun":"경기도 김포시 하성면 후평리 50-13"
+  },
+  {
+    "grid_id":4600267,
+    "latitude":37.75,
+    "longitude":126.75,
+    "jibun":"경기도 파주시 교하동 881"
+  },
+  {
+    "grid_id":4600268,
+    "latitude":37.75,
+    "longitude":126.85,
+    "jibun":"경기도 파주시 조리읍 장곡리 23-11"
+  },
+  {
+    "grid_id":4600269,
+    "latitude":37.75,
+    "longitude":126.95,
+    "jibun":"경기도 양주시 장흥면 석현리 193"
+  },
+  {
+    "grid_id":4600270,
+    "latitude":37.75,
+    "longitude":127.05,
+    "jibun":"경기도 의정부시 금오동 438-14"
+  },
+  {
+    "grid_id":4600271,
+    "latitude":37.75,
+    "longitude":127.15,
+    "jibun":"경기도 남양주시 진접읍 부평리 산 99-1"
+  },
+  {
+    "grid_id":4600272,
+    "latitude":37.75,
+    "longitude":127.25,
+    "jibun":"경기도 남양주시 진접읍 팔야리 산 67"
+  },
+  {
+    "grid_id":4600273,
+    "latitude":37.75,
+    "longitude":127.35,
+    "jibun":"경기도 가평군 상면 행현리 산 208"
+  },
+  {
+    "grid_id":4600274,
+    "latitude":37.75,
+    "longitude":127.45,
+    "jibun":"경기도 가평군 청평면 하천리 산 26-6"
+  },
+  {
+    "grid_id":4600275,
+    "latitude":37.75,
+    "longitude":127.55,
+    "jibun":"강원특별자치도 춘천시 남산면 방하리 산 95-18"
+  },
+  {
+    "grid_id":4600276,
+    "latitude":37.75,
+    "longitude":127.65,
+    "jibun":"강원특별자치도 춘천시 남면 추곡리 산 120"
+  },
+  {
+    "grid_id":4600277,
+    "latitude":37.75,
+    "longitude":127.75,
+    "jibun":"강원특별자치도 춘천시 동산면 군자리 산 402"
+  },
+  {
+    "grid_id":4600278,
+    "latitude":37.75,
+    "longitude":127.85,
+    "jibun":"강원특별자치도 홍천군 북방면 성동리 산 175"
+  },
+  {
+    "grid_id":4600279,
+    "latitude":37.75,
+    "longitude":127.95,
+    "jibun":"강원특별자치도 홍천군 화촌면 구성포리 37-1"
+  },
+  {
+    "grid_id":4600280,
+    "latitude":37.75,
+    "longitude":128.05,
+    "jibun":"강원특별자치도 홍천군 화촌면 장평리 1214"
+  },
+  {
+    "grid_id":4600281,
+    "latitude":37.75,
+    "longitude":128.15,
+    "jibun":"강원특별자치도 홍천군 서석면 수하리 1420-23"
+  },
+  {
+    "grid_id":4600282,
+    "latitude":37.75,
+    "longitude":128.25,
+    "jibun":"강원특별자치도 홍천군 서석면 검산리 산 102"
+  },
+  {
+    "grid_id":4600283,
+    "latitude":37.75,
+    "longitude":128.35,
+    "jibun":"강원특별자치도 홍천군 내면 자운리 산 50-1"
+  },
+  {
+    "grid_id":4600284,
+    "latitude":37.75,
+    "longitude":128.45,
+    "jibun":"강원특별자치도 홍천군 내면 창촌리 산 3"
+  },
+  {
+    "grid_id":4600285,
+    "latitude":37.75,
+    "longitude":128.55,
+    "jibun":"강원특별자치도 평창군 진부면 동산리 산 1"
+  },
+  {
+    "grid_id":4600286,
+    "latitude":37.75,
+    "longitude":128.65,
+    "jibun":"강원특별자치도 평창군 대관령면 병내리 산 1-1"
+  },
+  {
+    "grid_id":4600287,
+    "latitude":37.75,
+    "longitude":128.75,
+    "jibun":"강원특별자치도 강릉시 사천면 사기막리 산 1"
+  },
+  {
+    "grid_id":4600288,
+    "latitude":37.75,
+    "longitude":128.85,
+    "jibun":"강원특별자치도 강릉시 성산면 위촌리 139-7"
+  },
+  {
+    "grid_id":4600289,
+    "latitude":37.75,
+    "longitude":128.95,
+    "jibun":"강원특별자치도 강릉시 병산동 22"
+  },
+  {
+    "grid_id":4603867,
+    "latitude":37.85,
+    "longitude":126.75,
+    "jibun":"경기도 파주시 문산읍 내포리 507-1"
+  },
+  {
+    "grid_id":4603868,
+    "latitude":37.85,
+    "longitude":126.85,
+    "jibun":"경기도 파주시 법원읍 동문리 산 69-7"
+  },
+  {
+    "grid_id":4603869,
+    "latitude":37.85,
+    "longitude":126.95,
+    "jibun":"경기도 양주시 광적면 덕도리 930-2"
+  },
+  {
+    "grid_id":4603870,
+    "latitude":37.85,
+    "longitude":127.05,
+    "jibun":"경기도 양주시 은현면 용암리 362"
+  },
+  {
+    "grid_id":4603871,
+    "latitude":37.85,
+    "longitude":127.15,
+    "jibun":"경기도 포천시 설운동 156-6"
+  },
+  {
+    "grid_id":4603872,
+    "latitude":37.85,
+    "longitude":127.25,
+    "jibun":"경기도 포천시 군내면 직두리 산 20-4"
+  },
+  {
+    "grid_id":4603873,
+    "latitude":37.85,
+    "longitude":127.35,
+    "jibun":"경기도 가평군 조종면 신상리 산 57-1"
+  },
+  {
+    "grid_id":4603874,
+    "latitude":37.85,
+    "longitude":127.45,
+    "jibun":"경기도 가평군 가평읍 경반리 산 138-1"
+  },
+  {
+    "grid_id":4603875,
+    "latitude":37.85,
+    "longitude":127.55,
+    "jibun":"경기도 가평군 가평읍 개곡리 436-9"
+  },
+  {
+    "grid_id":4603876,
+    "latitude":37.85,
+    "longitude":127.65,
+    "jibun":"강원특별자치도 춘천시 서면 덕두원리 산 235"
+  },
+  {
+    "grid_id":4603877,
+    "latitude":37.85,
+    "longitude":127.75,
+    "jibun":"강원특별자치도 춘천시 석사동 911-2"
+  },
+  {
+    "grid_id":4603878,
+    "latitude":37.85,
+    "longitude":127.85,
+    "jibun":"강원특별자치도 춘천시 동면 상걸리 산 53"
+  },
+  {
+    "grid_id":4603879,
+    "latitude":37.85,
+    "longitude":127.95,
+    "jibun":"강원특별자치도 홍천군 화촌면 야시대리 산 1-1"
+  },
+  {
+    "grid_id":4603880,
+    "latitude":37.85,
+    "longitude":128.05,
+    "jibun":"강원특별자치도 홍천군 두촌면 괘석리 산 76-5"
+  },
+  {
+    "grid_id":4603881,
+    "latitude":37.85,
+    "longitude":128.15,
+    "jibun":"강원특별자치도 홍천군 내촌면 광암리 산 11-150"
+  },
+  {
+    "grid_id":4603882,
+    "latitude":37.85,
+    "longitude":128.25,
+    "jibun":"강원특별자치도 인제군 상남면 상남리 408"
+  },
+  {
+    "grid_id":4603883,
+    "latitude":37.85,
+    "longitude":128.35,
+    "jibun":"강원특별자치도 인제군 상남면 미산리 산 70"
+  },
+  {
+    "grid_id":4603884,
+    "latitude":37.85,
+    "longitude":128.45,
+    "jibun":"강원특별자치도 홍천군 내면 광원리 산 197-1"
+  },
+  {
+    "grid_id":4603885,
+    "latitude":37.85,
+    "longitude":128.55,
+    "jibun":"강원특별자치도 홍천군 내면 명개리 산 1"
+  },
+  {
+    "grid_id":4603886,
+    "latitude":37.85,
+    "longitude":128.65,
+    "jibun":"강원특별자치도 강릉시 연곡면 삼산리 산 1-1"
+  },
+  {
+    "grid_id":4603887,
+    "latitude":37.85,
+    "longitude":128.75,
+    "jibun":"강원특별자치도 강릉시 연곡면 퇴곡리 22-3"
+  },
+  {
+    "grid_id":4603888,
+    "latitude":37.85,
+    "longitude":128.85,
+    "jibun":"강원특별자치도 강릉시 연곡면 동덕리 산 20"
+  },
+  {
+    "grid_id":4607446,
+    "latitude":37.95,
+    "longitude":124.65,
+    "jibun":"인천광역시 옹진군 백령면 가을리 773-2"
+  },
+  {
+    "grid_id":4607467,
+    "latitude":37.95,
+    "longitude":126.75,
+    "jibun":"경기도 파주시 군내면 읍내리 산 4"
+  },
+  {
+    "grid_id":4607468,
+    "latitude":37.95,
+    "longitude":126.85,
+    "jibun":"경기도 파주시 적성면 답곡리 543"
+  },
+  {
+    "grid_id":4607469,
+    "latitude":37.95,
+    "longitude":126.95,
+    "jibun":"경기도 파주시 적성면 객현리 산 172"
+  },
+  {
+    "grid_id":4607470,
+    "latitude":37.95,
+    "longitude":127.05,
+    "jibun":"경기도 동두천시 상봉암동 산 63-21"
+  },
+  {
+    "grid_id":4607471,
+    "latitude":37.95,
+    "longitude":127.15,
+    "jibun":"경기도 포천시 신북면 갈월리 산 30"
+  },
+  {
+    "grid_id":4607472,
+    "latitude":37.95,
+    "longitude":127.25,
+    "jibun":"경기도 포천시 신북면 만세교리 산 40"
+  },
+  {
+    "grid_id":4607473,
+    "latitude":37.95,
+    "longitude":127.35,
+    "jibun":"경기도 포천시 일동면 화대리 산 194"
+  },
+  {
+    "grid_id":4607474,
+    "latitude":37.95,
+    "longitude":127.45,
+    "jibun":"경기도 가평군 북면 적목리 산 1-1"
+  },
+  {
+    "grid_id":4607475,
+    "latitude":37.95,
+    "longitude":127.55,
+    "jibun":"경기도 가평군 북면 화악리 산 197-1"
+  },
+  {
+    "grid_id":4607476,
+    "latitude":37.95,
+    "longitude":127.65,
+    "jibun":"강원특별자치도 춘천시 서면 오월리 산 46-1"
+  },
+  {
+    "grid_id":4607477,
+    "latitude":37.95,
+    "longitude":127.75,
+    "jibun":"강원특별자치도 춘천시 신북읍 산천리 1189-1"
+  },
+  {
+    "grid_id":4607478,
+    "latitude":37.95,
+    "longitude":127.85,
+    "jibun":"강원특별자치도 춘천시 북산면 청평리 산 92-1"
+  },
+  {
+    "grid_id":4607479,
+    "latitude":37.95,
+    "longitude":127.95,
+    "jibun":"강원특별자치도 춘천시 북산면 조교리 산 1-1"
+  },
+  {
+    "grid_id":4607480,
+    "latitude":37.95,
+    "longitude":128.05,
+    "jibun":"강원특별자치도 인제군 남면 상수내리 산 100"
+  },
+  {
+    "grid_id":4607481,
+    "latitude":37.95,
+    "longitude":128.15,
+    "jibun":"강원특별자치도 인제군 남면 소치리 산 21"
+  },
+  {
+    "grid_id":4607482,
+    "latitude":37.95,
+    "longitude":128.25,
+    "jibun":"강원특별자치도 인제군 상남면 하남리 산 156-1"
+  },
+  {
+    "grid_id":4607483,
+    "latitude":37.95,
+    "longitude":128.35,
+    "jibun":"강원특별자치도 인제군 기린면 방동리 산 241"
+  },
+  {
+    "grid_id":4607484,
+    "latitude":37.95,
+    "longitude":128.45,
+    "jibun":"강원특별자치도 인제군 기린면 진동리 산 34"
+  },
+  {
+    "grid_id":4607485,
+    "latitude":37.95,
+    "longitude":128.55,
+    "jibun":"강원특별자치도 양양군 서면 서림리 산 89"
+  },
+  {
+    "grid_id":4607486,
+    "latitude":37.95,
+    "longitude":128.65,
+    "jibun":"강원특별자치도 양양군 현북면 어성전리 산 1"
+  },
+  {
+    "grid_id":4607487,
+    "latitude":37.95,
+    "longitude":128.75,
+    "jibun":"강원특별자치도 양양군 현남면 후포매리 산 88"
+  },
+  {
+    "grid_id":4611069,
+    "latitude":38.05,
+    "longitude":126.95,
+    "jibun":"경기도 연천군 미산면 광동리 산 41-1"
+  },
+  {
+    "grid_id":4611070,
+    "latitude":38.05,
+    "longitude":127.05,
+    "jibun":"경기도 연천군 군남면 왕림리 300-4"
+  },
+  {
+    "grid_id":4611071,
+    "latitude":38.05,
+    "longitude":127.15,
+    "jibun":"경기도 포천시 창수면 신흥리 산 85"
+  },
+  {
+    "grid_id":4611072,
+    "latitude":38.05,
+    "longitude":127.25,
+    "jibun":"경기도 포천시 영북면 야미리 산 132-1"
+  },
+  {
+    "grid_id":4611073,
+    "latitude":38.05,
+    "longitude":127.35,
+    "jibun":"경기도 포천시 이동면 장암리 산 232"
+  },
+  {
+    "grid_id":4611074,
+    "latitude":38.05,
+    "longitude":127.45,
+    "jibun":"강원특별자치도 화천군 사내면 광덕리 산 273-13"
+  },
+  {
+    "grid_id":4611075,
+    "latitude":38.05,
+    "longitude":127.55,
+    "jibun":"강원특별자치도 화천군 사내면 용담리 산 49"
+  },
+  {
+    "grid_id":4611076,
+    "latitude":38.05,
+    "longitude":127.65,
+    "jibun":"강원특별자치도 춘천시 사북면 지촌리 30-6"
+  },
+  {
+    "grid_id":4611077,
+    "latitude":38.05,
+    "longitude":127.75,
+    "jibun":"강원특별자치도 화천군 간동면 유촌리 산 20-2"
+  },
+  {
+    "grid_id":4611078,
+    "latitude":38.05,
+    "longitude":127.85,
+    "jibun":"강원특별자치도 화천군 간동면 오음리 산 1"
+  },
+  {
+    "grid_id":4611079,
+    "latitude":38.05,
+    "longitude":127.95,
+    "jibun":"강원특별자치도 양구군 양구읍 웅진리 산 49-1"
+  },
+  {
+    "grid_id":4611080,
+    "latitude":38.05,
+    "longitude":128.05,
+    "jibun":"강원특별자치도 양구군 국토정중앙면 원리 산 2-1"
+  },
+  {
+    "grid_id":4611081,
+    "latitude":38.05,
+    "longitude":128.15,
+    "jibun":"강원특별자치도 인제군 인제읍 남북리 산 89"
+  },
+  {
+    "grid_id":4611082,
+    "latitude":38.05,
+    "longitude":128.25,
+    "jibun":"강원특별자치도 인제군 인제읍 고사리 산 1"
+  },
+  {
+    "grid_id":4611083,
+    "latitude":38.05,
+    "longitude":128.35,
+    "jibun":"강원특별자치도 인제군 인제읍 귀둔리 산 242"
+  },
+  {
+    "grid_id":4611084,
+    "latitude":38.05,
+    "longitude":128.45,
+    "jibun":"강원특별자치도 인제군 기린면 진동리 산 71"
+  },
+  {
+    "grid_id":4611085,
+    "latitude":38.05,
+    "longitude":128.55,
+    "jibun":"강원특별자치도 양양군 서면 송천리 산 1"
+  },
+  {
+    "grid_id":4611086,
+    "latitude":38.05,
+    "longitude":128.65,
+    "jibun":"강원특별자치도 양양군 손양면 와리 산 26"
+  },
+  {
+    "grid_id":4614670,
+    "latitude":38.15,
+    "longitude":127.05,
+    "jibun":"경기도 연천군 중면 합수리 357"
+  },
+  {
+    "grid_id":4614671,
+    "latitude":38.15,
+    "longitude":127.15,
+    "jibun":"경기도 연천군 신서면 내산리 산 24-1"
+  },
+  {
+    "grid_id":4614672,
+    "latitude":38.15,
+    "longitude":127.25,
+    "jibun":"경기도 포천시 관인면 탄동리 산 83-1"
+  },
+  {
+    "grid_id":4614673,
+    "latitude":38.15,
+    "longitude":127.35,
+    "jibun":"강원특별자치도 철원군 갈말읍 신철원리 산 26-1"
+  },
+  {
+    "grid_id":4614674,
+    "latitude":38.15,
+    "longitude":127.45,
+    "jibun":"강원특별자치도 철원군 근남면 잠곡리 산 133-1"
+  },
+  {
+    "grid_id":4614675,
+    "latitude":38.15,
+    "longitude":127.55,
+    "jibun":"강원특별자치도 화천군 상서면 구운리 1169"
+  },
+  {
+    "grid_id":4614676,
+    "latitude":38.15,
+    "longitude":127.65,
+    "jibun":"강원특별자치도 화천군 상서면 파포리 산 168"
+  },
+  {
+    "grid_id":4614677,
+    "latitude":38.15,
+    "longitude":127.75,
+    "jibun":"강원특별자치도 화천군 화천읍 풍산리 산 223"
+  },
+  {
+    "grid_id":4614678,
+    "latitude":38.15,
+    "longitude":127.85,
+    "jibun":"강원특별자치도 화천군 화천읍 동촌리 산 297"
+  },
+  {
+    "grid_id":4614679,
+    "latitude":38.15,
+    "longitude":127.95,
+    "jibun":"강원특별자치도 양구군 양구읍 군량리 683-3"
+  },
+  {
+    "grid_id":4614680,
+    "latitude":38.15,
+    "longitude":128.05,
+    "jibun":"강원특별자치도 양구군 국토정중앙면 가오작리 545-1"
+  },
+  {
+    "grid_id":4614681,
+    "latitude":38.15,
+    "longitude":128.15,
+    "jibun":"강원특별자치도 인제군 인제읍 가아리 산 1"
+  },
+  {
+    "grid_id":4614682,
+    "latitude":38.15,
+    "longitude":128.25,
+    "jibun":"강원특별자치도 인제군 북면 한계리 산 128"
+  },
+  {
+    "grid_id":4614683,
+    "latitude":38.15,
+    "longitude":128.35,
+    "jibun":"강원특별자치도 인제군 북면 용대리 산 12-21"
+  },
+  {
+    "grid_id":4614684,
+    "latitude":38.15,
+    "longitude":128.45,
+    "jibun":"강원특별자치도 속초시 설악동 산 41"
+  },
+  {
+    "grid_id":4614685,
+    "latitude":38.15,
+    "longitude":128.55,
+    "jibun":"강원특별자치도 속초시 설악동 산 122"
+  },
+  {
+    "grid_id":4618270,
+    "latitude":38.25,
+    "longitude":127.05,
+    "jibun":"경기도 연천군 신서면 갈현리 485"
+  },
+  {
+    "grid_id":4618271,
+    "latitude":38.25,
+    "longitude":127.15,
+    "jibun":"강원특별자치도 철원군 철원읍 대마리 산 45"
+  },
+  {
+    "grid_id":4618272,
+    "latitude":38.25,
+    "longitude":127.25,
+    "jibun":"강원특별자치도 철원군 동송읍 대위리 979"
+  },
+  {
+    "grid_id":4618273,
+    "latitude":38.25,
+    "longitude":127.35,
+    "jibun":"강원특별자치도 철원군 갈말읍 토성리 223-2"
+  },
+  {
+    "grid_id":4618274,
+    "latitude":38.25,
+    "longitude":127.45,
+    "jibun":"강원특별자치도 철원군 서면 와수리 798-2"
+  },
+  {
+    "grid_id":4618275,
+    "latitude":38.25,
+    "longitude":127.55,
+    "jibun":"강원특별자치도 철원군 근남면 마현리 산 326"
+  },
+  {
+    "grid_id":4618276,
+    "latitude":38.25,
+    "longitude":127.65,
+    "jibun":"강원특별자치도 화천군 상서면 산양리 산 65"
+  },
+  {
+    "grid_id":4618277,
+    "latitude":38.25,
+    "longitude":127.75,
+    "jibun":"강원특별자치도 화천군 화천읍 풍산리 산 269"
+  },
+  {
+    "grid_id":4618278,
+    "latitude":38.25,
+    "longitude":127.85,
+    "jibun":"강원특별자치도 화천군 화천읍 동촌리 산 305"
+  },
+  {
+    "grid_id":4618279,
+    "latitude":38.25,
+    "longitude":127.95,
+    "jibun":"강원특별자치도 양구군 방산면 송현리 산 1"
+  },
+  {
+    "grid_id":4618280,
+    "latitude":38.25,
+    "longitude":128.05,
+    "jibun":"강원특별자치도 양구군 동면 월운리 산 1"
+  },
+  {
+    "grid_id":4618281,
+    "latitude":38.25,
+    "longitude":128.15,
+    "jibun":"강원특별자치도 인제군 서화면 심적리 산 1"
+  },
+  {
+    "grid_id":4618282,
+    "latitude":38.25,
+    "longitude":128.25,
+    "jibun":"강원특별자치도 인제군 서화면 서화리 산 1"
+  },
+  {
+    "grid_id":4618283,
+    "latitude":38.25,
+    "longitude":128.35,
+    "jibun":"강원특별자치도 인제군 북면 한계리 산 일대"
+  },
+  {
+    "grid_id":4618284,
+    "latitude":38.25,
+    "longitude":128.45,
+    "jibun":"강원특별자치도 고성군 토성면 도원리 산 1"
+  },
+  {
+    "grid_id":4618285,
+    "latitude":38.25,
+    "longitude":128.55,
+    "jibun":"강원특별자치도 고성군 토성면 천진리 산 40"
+  },
+  {
+    "grid_id":4621882,
+    "latitude":38.35,
+    "longitude":128.25,
+    "jibun":"강원특별자치도 인제군 서화면 가전리 산 2"
+  },
+  {
+    "grid_id":4621883,
+    "latitude":38.35,
+    "longitude":128.35,
+    "jibun":"강원특별자치도 고성군 간성읍 장신리 산 1-1"
+  },
+  {
+    "grid_id":4621884,
+    "latitude":38.35,
+    "longitude":128.45,
+    "jibun":"강원특별자치도 고성군 간성읍 탑동리 산 72-1"
+  },
+  {
+    "grid_id":4625483,
+    "latitude":38.45,
+    "longitude":128.35,
+    "jibun":"강원특별자치도 고성군 수동면 고미성리 산 1"
+  },
+  {
+    "grid_id":4625484,
+    "latitude":38.45,
+    "longitude":128.45,
+    "jibun":"강원특별자치도 고성군 거진읍 화포리 4-7"
+  },
+  {
+    "grid_id":4629083,
+    "latitude":38.55,
+    "longitude":128.35,
+    "jibun":"강원특별자치도 고성군 현내면 검장리 산 16"
+  }
+]
