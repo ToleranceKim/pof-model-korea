@@ -50,6 +50,11 @@
 *.rar
 *.7z
 
+# JSON data files
+*.geojson
+*.json
+*.txt
+
 ### Project-specific ###
 CLAUDE.md
 .DS_Store
