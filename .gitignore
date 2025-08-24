@@ -19,6 +19,12 @@
 *.parquet
 *.pdf
 
+# Weather/forecast data files
+*.grib2
+*.grib2.*
+*.idx
+*.nc
+
 # Image files
 *.jpg
 *.jpeg
