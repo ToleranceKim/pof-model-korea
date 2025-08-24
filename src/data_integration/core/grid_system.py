@@ -133,3 +133,25 @@ def grid2latlon_vectorized(grid_ids: np.ndarray) -> Tuple[np.ndarray, np.ndarray
     lons = lon_bins.astype(float) * GRID_RESOLUTION
 
     return (lats, lons)
+
+def add_coordinates_to_dataframe(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    DataFrame에 grid_id를 기반으로 lat, lon 좌표 컬럼을 추가합니다.
+    
+    Args:
+        df: grid_id 컬럼이 포함된 DataFrame
+        
+    Returns:
+        lat, lon 컬럼이 추가된 DataFrame
+        
+    Raises:
+        ValueError: grid_id 컬럼이 없거나 DataFrame이 비어있는 경우
+        
+    Example:
+        >>> df = pd.DataFrame({'grid_id': [4593070, 4506690]})
+        >>> df_with_coords = add_coordinates_to_dataframe(df)
+        >>> print(df_with_coords)
+        # grid_id, lat, lon 컬럼 포함
+    """
+    # TODO(human): DataFrame 통합 함수 구현
+    pass
