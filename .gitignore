@@ -17,6 +17,39 @@
 *.tif
 *.nc
 *.parquet
+*.pdf
+
+# Image files
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.bmp
+*.tiff
+*.svg
+*.webp
+
+# Document files
+*.doc
+*.docx
+*.ppt
+*.pptx
+*.xls
+*.xlsx
+
+# Archive files
+*.zip
+*.tar
+*.gz
+*.rar
+*.7z
+
+### Project-specific ###
+CLAUDE.md
+.DS_Store
+*_PRESENTATION*.md
+*_PORTFOLIO*.md
+*_GUIDE*.md
 
 ### Python ###
 # Byte-compiled / optimized / DLL files
