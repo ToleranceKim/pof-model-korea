@@ -153,5 +153,18 @@ def add_coordinates_to_dataframe(df: pd.DataFrame) -> pd.DataFrame:
         >>> print(df_with_coords)
         # grid_id, lat, lon 컬럼 포함
     """
-    # TODO(human): DataFrame 통합 함수 구현
-    pass
+    # DataFrame 검증
+    if df.empty:
+        raise ValueError("빈 DataFrame입니다.")
+    if 'grid_id' not in df.columns:
+        raise ValueError("'grid_id' 컬럼이 없습니다.")
+
+    # 벡터화 변환 사용
+    lats, lons = grid2latlon_vectorized(df['grid_id'].values)
+
+    # 새 컬럼 추가
+    df_result = df.copy()
+    df_result['lat'] = lats
+    df_result['lon'] = lons
+    return df_result
+
