@@ -1,4 +1,4 @@
-# Global Probability-of-Fire (PoF) Replication for Korea
+# Global Probability-of-Fire (PoF) Model for Korea
 
 이 프로젝트는 ECMWF에서 개발한 글로벌 산불 예측 모델(PoF)을 한국 지역에 맞게 구현하는 것을 목표로 합니다.
 기상 데이터, 연료 조건, 지형 정보 등 19개 변수를 활용하여 0.1° 격자 단위로 산불 발생 확률을 예측합니다.
