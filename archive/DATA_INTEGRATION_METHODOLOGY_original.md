@@ -652,5 +652,240 @@ logs:
 
 ---
 
-*마지막 업데이트: 2024년 12월*
+## 9. 라벨(AF_Flag) 통합 기준 상세
+
+### 9.1 화재 탐지 알고리즘
+
+#### MODIS Active Fire Detection
+- **센서**: Terra/Aqua MODIS
+- **채널**:
+  - 4μm (화재 탐지 주 채널)
+  - 11μm (배경 온도)
+  - 차이값: ΔT = T4μm - T11μm
+- **탐지 조건**:
+  1. T4μm > 310K (주간) / 305K (야간)
+  2. ΔT > 10K (주간) / 8K (야간)
+  3. 공간 일관성 테스트 통과
+- **신뢰도 등급**:
+  - Low (0-30%): 제외
+  - Nominal (30-80%): **포함** ← 기준선
+  - High (80-100%): 포함
+
+#### VIIRS Enhanced Fire Detection
+- **센서**: Suomi-NPP/NOAA-20 VIIRS
+- **해상도**: 375m (MODIS 1km보다 개선)
+- **장점**: 소규모 화재 탐지 능력 향상
+- **2012년부터 운영** (보조 데이터)
+
+### 9.2 시공간 집계 로직
+
+#### 공간 집계 (0.1° 격자)
+```python
+def aggregate_fire_to_grid(fire_points, grid_resolution=0.1):
+    """
+    개별 화재 포인트를 0.1도 격자로 집계
+
+    원리:
+    - 0.1° ≈ 11km × 11km (한국 위도)
+    - 격자 내 1개 이상 화재 → af_flag = 1
+    - 격자 내 0개 화재 → af_flag = 0
+    """
+    for grid in all_grids:
+        fires_in_grid = fire_points.within(grid.bounds)
+        if len(fires_in_grid) > 0:
+            grid.af_flag = 1
+        else:
+            grid.af_flag = 0
+    return grid_fires
+```
+
+#### 시간 집계 (일 단위)
+```python
+def aggregate_daily(fire_data):
+    """
+    UTC 00:00 - 23:59 기준 일 집계
+
+    고려사항:
+    - 한국 시간 = UTC + 9시간
+    - 위성 통과 시각 변동성 처리
+    - Terra: 10:30 AM/PM (local)
+    - Aqua: 1:30 AM/PM (local)
+    """
+    daily_fire = fire_data.groupby(['grid_id', 'date']).agg({
+        'fire_count': 'sum',
+        'confidence': 'max',
+        'frp': 'mean'  # Fire Radiative Power
+    })
+    daily_fire['af_flag'] = (daily_fire['fire_count'] > 0).astype(int)
+    return daily_fire
+```
+
+### 9.3 라벨 설정 근거
+
+#### 양성(Positive, af_flag=1) 기준
+1. **직접 탐지**: MODIS/VIIRS 열 이상 탐지
+2. **신뢰도 필터**: Confidence ≥ 30% (nominal 이상)
+3. **크기 임계값**: 최소 탐지 가능 크기 (~0.5ha)
+4. **지속 시간**: 순간 탐지 (지속성 불요)
+
+#### 음성(Negative, af_flag=0) 기준
+1. **무탐지**: 해당 일자 격자 내 화재 신호 없음
+2. **구름 차폐 처리**:
+   - 구름으로 인한 미탐지 → 0 (보수적 접근)
+   - QA 플래그 확인하여 'clear' 픽셀만 사용
+
+### 9.4 육지 격자 제한 근거
+
+#### 지번 기반 육지 마스킹
+```python
+# 지번 데이터 활용 육지 격자 선정
+land_grids = load_jibun_master()  # 1,007개 격자
+
+# 육지만 추출하는 이유:
+# 1. 바다/강 화재는 무의미
+# 2. 계산 효율성 (4,800 → 1,007 격자)
+# 3. 클래스 균형 개선
+```
+
+#### 산림 필터링 추가
+```python
+FOREST_CODES = [1, 2, 3, 4, 5]  # IGBP 산림 분류
+forest_grids = land_grids[land_grids.lc_type1.isin(FOREST_CODES)]
+# 결과: 581개 격자 (산림 지역만)
+```
+
+### 9.5 클래스 불균형 처리
+
+#### 현황
+- 전체 데이터: 0.3955% positive (296/74,844)
+- 산림 필터링 후: ~0.8% positive
+- 극심한 불균형 (99.2% negative)
+
+#### 처리 전략
+1. **모델 레벨**:
+   ```python
+   scale_pos_weight = negative_count / positive_count  # ~250
+   ```
+
+2. **샘플링 (선택적)**:
+   - Undersampling: negative 클래스 축소
+   - SMOTE: positive 클래스 증강
+   - Focal Loss: 어려운 샘플 가중
+
+3. **평가 지표**:
+   - Accuracy 대신 **F1-score, PR-AUC** 사용
+   - Confusion Matrix 세부 분석
+
+### 9.6 한계점 및 개선 방향
+
+#### 현재 한계
+1. **탐지 한계**:
+   - 구름/연기 차폐 → 미탐지
+   - 야간 소규모 화재 → 미탐지
+   - 캐노피 하부 화재 → 미탐지
+
+2. **시간 해상도**:
+   - 위성 통과 시각 제한 (하루 2-4회)
+   - 단기 화재 놓칠 가능성
+
+3. **공간 해상도**:
+   - 0.1° 격자는 ~121km²
+   - 격자 내 정확한 위치 불명
+
+#### 개선 방향
+1. **다중 센서 융합**:
+   - Sentinel-3 SLSTR 추가
+   - Himawari-8 정지궤도 (10분 주기)
+   - Landsat 고해상도 검증
+
+2. **지상 검증 데이터**:
+   - 산림청 산불 발생 대장 연계
+   - 119 출동 기록 매칭
+
+3. **머신러닝 후처리**:
+   - False positive 필터링
+   - 연기 플룸 탐지 추가
+
+---
+
+## 10. 데이터 통합 검증 프로토콜
+
+### 10.1 단계별 검증 체크포인트
+
+#### Step 1: Weather + AF_Flag 결합 검증
+```python
+def validate_weather_af_join(weather, af_flag, result):
+    """1차 결합 검증"""
+    # 1. 행 수 일관성
+    assert len(result) == len(af_flag), "육지 격자 기준 유지 실패"
+
+    # 2. 시간 범위
+    assert result.date.min() >= '2000-11-02', "MODIS 이전 데이터 포함"
+
+    # 3. Grid ID 일관성
+    assert result.grid_id.nunique() == 1007, "육지 격자 수 불일치"
+
+    # 4. 중복 체크
+    assert not result[['grid_id','date']].duplicated().any(), "중복 존재"
+
+    print("✓ Weather-AF 결합 검증 통과")
+```
+
+#### Step 2: 한국 영역 필터링 검증
+```python
+def validate_korea_filter(data_before, data_after):
+    """한국 경계 필터링 검증"""
+    # 1. 좌표 범위
+    assert data_after.latitude.between(33, 39).all()
+    assert data_after.longitude.between(124, 132).all()
+
+    # 2. 축소율 확인
+    reduction = 1 - len(data_after)/len(data_before)
+    assert 0.4 < reduction < 0.6, f"비정상 축소율: {reduction:.1%}"
+
+    print("✓ 한국 영역 필터링 검증 통과")
+```
+
+#### Step 3: 정적 변수 결합 검증
+```python
+def validate_static_merge(data, static_vars):
+    """정적 변수 병합 검증"""
+    for var in static_vars:
+        missing_rate = data[var].isna().mean()
+        assert missing_rate < 0.1, f"{var} 과다 결측: {missing_rate:.1%}"
+
+    print("✓ 정적 변수 결합 검증 통과")
+```
+
+### 10.2 최종 데이터셋 품질 검증
+
+```python
+def validate_final_dataset(df):
+    """최종 통합 데이터 검증"""
+
+    # 1. 필수 컬럼 존재
+    required_cols = ['grid_id', 'date', 'af_flag', 't2m', 'td2m',
+                    'wind10m', 'tp', 'lc_type1']
+    assert all(col in df.columns for col in required_cols)
+
+    # 2. 날짜 연속성
+    date_range = pd.date_range('2000-11-02', '2024-12-31', freq='D')
+    missing_dates = set(date_range) - set(df.date)
+    assert len(missing_dates) < 100, f"과다 누락 날짜: {len(missing_dates)}"
+
+    # 3. 물리적 타당성
+    assert (df.t2m > 200).all() and (df.t2m < 350).all()
+    assert (df.tp >= 0).all() and (df.tp < 1).all()
+
+    # 4. 클래스 분포
+    pos_rate = df.af_flag.mean()
+    assert 0.001 < pos_rate < 0.05, f"비정상 화재율: {pos_rate:.2%}"
+
+    print("✅ 최종 데이터셋 검증 완료")
+    return True
+```
+
+---
+
+*마지막 업데이트: 2025년 1월 17일*
 *작성자: POF-Korea 프로젝트 팀*
