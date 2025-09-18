@@ -1,11 +1,15 @@
 # POF-Korea 데이터 검증 체크리스트
 
+> **⚠️ DEPRECATED**: 이 문서는 초기 계획 버전입니다. 최신 정보는 `/DATA_INTEGRATION_COMPLETE.md`를 참조하세요.
+> - 실제 화재 비율: 육지 0.34%, 산림 0.21%
+> - 실제 변수 수: 26-28개
+
 ## 개요
 본 문서는 POF-Korea 프로젝트의 데이터 통합 과정에서 수행해야 할 검증 항목들을 체계적으로 정리한 체크리스트입니다.
 
 ---
 
-## ✅ 1. 데이터 수집 단계 검증
+## 1. 데이터 수집 단계 검증
 
 ### 1.1 ERA5 기상 데이터
 - [ ] **시간 범위**: 2000-01-01 ~ 2024-12-31 완전성
@@ -32,7 +36,7 @@
 
 ---
 
-## ✅ 2. 전처리 단계 검증
+## 2. 전처리 단계 검증
 
 ### 2.1 Grid ID 변환
 ```python
@@ -66,7 +70,7 @@ def verify_grid_conversion():
 
 ---
 
-## ✅ 3. 데이터 통합 단계 검증
+## 3. 데이터 통합 단계 검증
 
 ### 3.1 Weather + AF_Flag 결합
 - [ ] **Join 키**: (grid_id, date) 일치
@@ -118,7 +122,7 @@ def verify_grid_conversion():
 
 ---
 
-## ✅ 4. 데이터 품질 검증
+## 4. 데이터 품질 검증
 
 ### 4.1 물리적 타당성
 ```python
@@ -167,7 +171,7 @@ assert (df.LFMC > 0).all() and (df.LFMC < 300).all()
 
 ---
 
-## ✅ 5. 최종 출력 검증
+## 5. 최종 출력 검증
 
 ### 5.1 파일 형식
 - [ ] **Parquet 형식**: 압축 효율성
@@ -193,7 +197,7 @@ assert (df.LFMC > 0).all() and (df.LFMC < 300).all()
 
 ---
 
-## ✅ 6. 자동화 검증 스크립트
+## 6. 자동화 검증 스크립트
 
 ### 6.1 통합 검증 실행
 ```bash
@@ -245,7 +249,7 @@ def generate_report(validation_results):
     """
 
     for item, result in validation_results.items():
-        status = "✅ 통과" if result['passed'] else "❌ 실패"
+        status = "[PASS]" if result['passed'] else "[FAIL]"
         report += f"""
         <tr>
             <td>{item}</td>
@@ -268,7 +272,7 @@ def generate_report(validation_results):
 
 ---
 
-## 📋 빠른 체크리스트 (Quick Check)
+## 빠른 체크리스트 (Quick Check)
 
 ### 필수 확인 사항 (Critical)
 - [ ] Grid ID 1,007개 (육지)
@@ -286,7 +290,7 @@ def generate_report(validation_results):
 
 ---
 
-## 🔄 검증 주기
+## 검증 주기
 
 | 검증 유형 | 주기 | 담당 |
 |---------|------|------|
@@ -297,7 +301,7 @@ def generate_report(validation_results):
 
 ---
 
-## 📞 문제 발생 시 대응
+## 문제 발생 시 대응
 
 1. **데이터 누락**:
    - 1차: 재다운로드 시도

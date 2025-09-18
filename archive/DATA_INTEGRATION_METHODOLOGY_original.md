@@ -1,5 +1,9 @@
 # POF-Korea 데이터 통합 방법론 가이드
 
+> **⚠️ DEPRECATED**: 이 문서는 초기 계획 버전입니다. 최신 정보는 `/DATA_INTEGRATION_COMPLETE.md`를 참조하세요.
+> - 실제 화재 비율: 산림 필터링 후 0.21% (0.8%가 아님)
+> - 실제 변수 수: 26-28개
+
 ## 개요
 본 문서는 한국 지역 화재 확률 예측 모델(POF-Korea)의 데이터 통합 파이프라인을 상세히 기술합니다. 
 이 가이드를 통해 전체 데이터 결합 과정을 재현할 수 있습니다.
@@ -399,7 +403,7 @@ def validate_row_consistency(original, merged):
     """결합 후 행 수 폭증 여부 확인"""
     assert original.shape[0] == merged.shape[0], \
         f"행 수 불일치: {original.shape[0]} → {merged.shape[0]}"
-    print("✓ 행 수 일관성 검증 통과")
+    print("[OK] 행 수 일관성 검증 통과")
 ```
 
 ### 4.2 Grid ID 범위 검증
@@ -415,7 +419,7 @@ def validate_grid_coverage(df):
     
     assert min(lats) >= 33 and max(lats) <= 39, "위도 범위 벗어남"
     assert min(lons) >= 124 and max(lons) <= 132, "경도 범위 벗어남"
-    print(f"✓ Grid 범위: {min(lats):.1f}°-{max(lats):.1f}°N, "
+    print(f"[OK] Grid 범위: {min(lats):.1f}°-{max(lats):.1f}°N, "
           f"{min(lons):.1f}°-{max(lons):.1f}°E")
 ```
 
@@ -432,9 +436,9 @@ def validate_temporal_continuity(df):
     
     missing_dates = set(date_range) - set(df['date'].unique())
     if missing_dates:
-        print(f"⚠ 누락된 날짜: {len(missing_dates)}일")
+        print(f"[WARNING] 누락된 날짜: {len(missing_dates)}일")
     else:
-        print("✓ 시계열 연속성 검증 통과")
+        print("[OK] 시계열 연속성 검증 통과")
 ```
 
 ### 4.4 결측값 검증
@@ -465,7 +469,7 @@ def validate_interpolation(df, year_range=(2011, 2021)):
                 diff = test_period.loc[mask, f'{col}_filled'] - test_period.loc[mask, col]
                 assert diff.abs().max() < 0.001, f"{col} 보간 오류"
     
-    print("✓ 보간 정확성 검증 통과")
+    print("[OK] 보간 정확성 검증 통과")
 ```
 
 ---
@@ -828,7 +832,7 @@ def validate_weather_af_join(weather, af_flag, result):
     # 4. 중복 체크
     assert not result[['grid_id','date']].duplicated().any(), "중복 존재"
 
-    print("✓ Weather-AF 결합 검증 통과")
+    print("[OK] Weather-AF 결합 검증 통과")
 ```
 
 #### Step 2: 한국 영역 필터링 검증
@@ -843,7 +847,7 @@ def validate_korea_filter(data_before, data_after):
     reduction = 1 - len(data_after)/len(data_before)
     assert 0.4 < reduction < 0.6, f"비정상 축소율: {reduction:.1%}"
 
-    print("✓ 한국 영역 필터링 검증 통과")
+    print("[OK] 한국 영역 필터링 검증 통과")
 ```
 
 #### Step 3: 정적 변수 결합 검증
@@ -854,7 +858,7 @@ def validate_static_merge(data, static_vars):
         missing_rate = data[var].isna().mean()
         assert missing_rate < 0.1, f"{var} 과다 결측: {missing_rate:.1%}"
 
-    print("✓ 정적 변수 결합 검증 통과")
+    print("[OK] 정적 변수 결합 검증 통과")
 ```
 
 ### 10.2 최종 데이터셋 품질 검증
@@ -881,7 +885,7 @@ def validate_final_dataset(df):
     pos_rate = df.af_flag.mean()
     assert 0.001 < pos_rate < 0.05, f"비정상 화재율: {pos_rate:.2%}"
 
-    print("✅ 최종 데이터셋 검증 완료")
+    print("[COMPLETE] 최종 데이터셋 검증 완료")
     return True
 ```
 
